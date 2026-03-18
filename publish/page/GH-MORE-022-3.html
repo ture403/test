@@ -95,9 +95,14 @@
     </div>
 
     111 작성하신 스크립트에서 발생할 수 있는 잠재적인 오류(요소를 찾지 못할 경우의 예외 처리 등)를 방지하고, 성능을 위해 약간의 최적화를
-    더한 수정본입니다. 특히 scroll-area 요소가 동적으로 생성되거나 HTML에 없을 경우 에러가 나지 않도록 처리했습니다. JavaScript
+    더한 수정본입니다. 특히 scroll-area 요소가 동적으로 생성되거나 HTML에 없을 경우 에러가 나지 않도록 처리했습니다. JavaScript ipt (input)
+    요소에 **포커스가 되었을 때(키보드가 올라올 때)**만 스크롤을 완전히 차단하고, 포커스가 해제되면 다시 스크롤이 가능하도록 로직을
+    수정했습니다. 가장 확실한 방법은 focus와 blur 이벤트를 사용하여 특정 클래스(예: is-keyboard-open)를 body에 넣고 빼는 방식입니다. 수정된
+    전체 스크립트 JavaScript
     <script>
       const getEl = (id) => document.getElementById(id);
+      const inputEl = document.querySelector(".ipt");
+      let isKeyboardOpen = false;
 
       function updateDebugInfo() {
         const winH = window.innerHeight;
@@ -112,37 +117,51 @@
         if (getEl("v-h")) getEl("v-h").innerText = Math.round(vH);
         if (getEl("v-scroll")) getEl("v-scroll").innerText = Math.round(vOffset);
 
-        // 3. 키보드가 올라왔을 때 브라우저 뷰포트 강제 고정
-        if (vOffset !== 0) {
+        // 3. 키보드가 올라온 상태에서 화면이 밀리면 강제로 0으로 고정
+        if (vOffset > 0 || isKeyboardOpen) {
           window.scrollTo(0, 0);
         }
       }
 
-      // --- [핵심 추가] 브라우저 바운스 및 강제 스크롤 방지 ---
+      // --- [핵심: IPT 포커스 조건 설정] ---
 
-      // 터치 이동 시 뷰포트가 위로 밀리는 현상 방지
+      if (inputEl) {
+        // 인풋을 눌렀을 때 (키보드 올라옴)
+        inputEl.addEventListener("focus", () => {
+          isKeyboardOpen = true;
+          document.body.classList.add("is-keyboard-open");
+          // 포커스 직후 뷰포트 변화 대응을 위해 약간의 지연 후 실행
+          setTimeout(updateDebugInfo, 300);
+        });
+
+        // 인풋 포커스 해제될 때 (키보드 내려감)
+        inputEl.addEventListener("blur", () => {
+          isKeyboardOpen = false;
+          document.body.classList.remove("is-keyboard-open");
+          setTimeout(updateDebugInfo, 100);
+        });
+      }
+
+      // 터치 이동 차단 (isKeyboardOpen 상태일 때만)
       document.addEventListener(
         "touchmove",
-        (e) => {
-          // 키보드가 올라온 상태(vOffset > 0)에서
-          // 실제 스크롤 영역(#scroll-area)이 아닌 곳을 터치하면 이벤트를 막음
-          if (window.visualViewport && window.visualViewport.offsetTop > 0) {
-            if (!e.target.closest("#scroll-area")) {
-              e.preventDefault();
-            }
+        function (e) {
+          if (isKeyboardOpen) {
+            // 키보드가 떠 있는 동안은 모든 스크롤(드래그)을 막음
+            e.preventDefault();
           }
         },
         { passive: false },
       );
 
-      // 스크롤 이벤트 발생 시 즉시 0으로 복구
+      // 브라우저 강제 스크롤 방지
       window.addEventListener("scroll", () => {
-        if (window.visualViewport && window.visualViewport.offsetTop !== 0) {
+        if (isKeyboardOpen) {
           window.scrollTo(0, 0);
         }
       });
 
-      // 비주얼 뷰포트 리스너
+      // 비주얼 뷰포트 리스너 (실시간 높이 대응)
       if (window.visualViewport) {
         window.visualViewport.addEventListener("resize", updateDebugInfo);
         window.visualViewport.addEventListener("scroll", updateDebugInfo);
@@ -150,11 +169,6 @@
 
       window.addEventListener("load", updateDebugInfo);
       window.addEventListener("resize", updateDebugInfo);
-
-      const scrollArea = document.getElementById("scroll-area");
-      if (scrollArea) {
-        scrollArea.addEventListener("scroll", updateDebugInfo);
-      }
     </script>
   </body>
 </html>

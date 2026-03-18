@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>헬스 커넥트 연동</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>헬스커넥트 연동</h2>
+                </div>
+            </header>
+
+            <div class="sub-wrap has-header">
+                <div class="health-connect-wrap">
+                    <div class="health-connect-box">
+                        <div class="title">
+                            <i class="ico-health-aos"></i>
+                            헬스커넥트
+                        </div>
+                        <div class="switch">
+                            <input type="checkbox" id="switchTg" />
+                            <label for="switchTg">
+                                <span class="sr-only">설정</span>
+                            </label>
+                        </div>
+                    </div>
+                    <ul class="dot-list">
+                        <li>
+                            스마트폰으로 측정된 걸음 수는 헬스커넥트 연동 시
+                            온이원 서비스에 반영됩니다.
+                        </li>
+                        <li>
+                            스마트 워치를 사용하시는 경우, 헬스커넥트에서 해당
+                            앱(삼성헬스 등)을 연동하시면 걸음 수를 가져올 수
+                            있습니다.
+                        </li>
+                        <li>
+                            연동 진행 시, 다음 화면의
+                            <span class="tc1">
+                                앱 액세스 권한 설정에서 '모두 허용'
+                            </span>
+                            을 선택해 주세요.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

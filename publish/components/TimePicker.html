@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module">
+            import { createTimePicker } from "../../utils/timepicker.js";
+            createTimePicker();
+        </script>
+    </head>
+    <body>
+        <!-- Time Picker -->
+        <div class="time-picker-container">
+            <p class="text-b-sm-m">날짜 선택</p>
+            <div class="time-picker">
+                <div class="time-picker-top">
+                    <div class="time-box hour active" id="hourBox">07</div>
+                    <!-- input mode 일시 active inputMode로 class 추가-->
+                    <div class="time-separator">:</div>
+                    <div class="time-box minute" id="minuteBox">00</div>
+                    <div class="period-selector">
+                        <button class="period-btn am active" id="amBtn">
+                            오전
+                        </button>
+                        <button class="period-btn pm" id="pmBtn">오후</button>
+                    </div>
+                </div>
+                <div class="time-picker-clock">
+                    <div class="clock-face" id="clockFace">
+                        <div class="clock-hand" id="clockHand"></div>
+                        <div class="clock-center" id="clockCenter">7</div>
+                    </div>
+                </div>
+                <div class="time-picker-bottom">
+                    <button type="button">
+                        <i class="ico-keyboard"></i>
+                    </button>
+                    <div>
+                        <button type="button" class="btn">취소</button>
+                        <button type="button" class="btn">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Time Picker -->
+    </body>
+</html>

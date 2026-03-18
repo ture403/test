@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>심박수 - 1주</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>심박수</h2>
+                </div>
+            </header>
+
+            <div class="sub-wrap has-header">
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li><button type="button">1주</button></li>
+                        <li><button type="button">1개월</button></li>
+                        <li class="active">
+                            <button type="button">3개월</button>
+                        </li>
+                        <li><button type="button">6개월</button></li>
+                        <li><button type="button">1년</button></li>
+                    </ul>
+                </div>
+                <div class="health-sect2">
+                    <div class="calendar-header-week">
+                        <button type="button" class="nav-btn">
+                            <i class="ico-prev"></i>
+                            <span class="sr-only">이전</span>
+                        </button>
+                        <h3 class="header-title">02.16 ~ 02.22</h3>
+                        <button type="button" class="nav-btn dim">
+                            <i class="ico-next"></i>
+                            <span class="sr-only">다음</span>
+                        </button>
+                    </div>
+                    <div class="health-sect2-info">
+                        <div class="health-sect2-info-detail">
+                            <div class="text-b-md-sb hc3">평균 심박수</div>
+                            <div class="dt-data">
+                                <span class="text-h1">104</span>
+                                <span class="text-h6">bpm</span>
+                            </div>
+                        </div>
+                        <div class="graph">
+                            <img
+                                src="../../assets/images/graph6.png"
+                                alt="그래프 영역"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="health-sect3">
+                    <div class="card-history-wp is-first">
+                        <!--child 속성제거, is-first클래스 추가-->
+                        <div class="card-date">02.20 ~ 02.26</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">49~170 bpm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-history-wp">
+                        <div class="card-date">02.20 ~ 02.26</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">49~170 bpm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!----260206 더보기버튼 삭제 ----->
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

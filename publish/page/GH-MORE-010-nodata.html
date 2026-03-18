@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강목표 선택</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <!-- top-header-nav trans 에서 trans 삭제 -->
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                </div>
+            </header>
+            <div class="sub-wrap has-header no-button">
+                <div class="health-target-wrap no-data">
+                    <!-- 현재 진행 가능한 루틴팩이 없을시 -->
+                    <h6 class="text-h6">
+                        현재 진행 가능한 루틴팩이 없어요
+                    </h6>
+                    <span class="text-b-sm-m">
+                        내 건강 목표에 맞는 패키지 상품을 구매하고 체계적인
+                        루틴 관리를 시작해 보세요
+                    </span>                    
+                </div>
+                <div class="health-target-bottom-cont">
+                                <div class="target-item">
+                                    <div class="target-item-tit">
+                                        <i class="t-brain"></i>
+                                        <h4 class="text-b-lg">뇌 건강</h4>
+                                    </div>
+                                    <div class="text-c-lg-r">
+                                        체지방 줄이는 생활습관을 알려드려요.
+                                        블라블라블라 2줄까지 표시함
+                                    </div>
+                                    <div class="target-item-package">
+                                        <h5>관련 패키지</h5>
+                                        <div class="target-item-package-my">
+                                            <div class="tmy-package">
+                                                <div class="tmy-package-img"></div>
+                                                <div class="tmy-package-info">
+                                                    <div class="t1">
+                                                        먹어서 찐 살 먹어서 빼자
+                                                    </div>
+                                                    <div class="t2">
+                                                        8주 체지방컷 + 8주 루틴
+                                                    </div>
+                                                    <div class="t3">
+                                                        잔티젠+마그네슘+바나바잎추출물
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="target-item">
+                                    <div class="target-item-tit">
+                                        <i class="t-stress"></i>
+                                        <h4 class="text-b-lg">
+                                            스트레스/수면/피로개선
+                                        </h4>
+                                    </div>
+                                    <div class="text-c-lg-r">
+                                        체지방 줄이는 생활습관을 알려드려요.
+                                        블라블라블라 2줄까지 표시함
+                                    </div>
+                                    <div class="target-item-package">
+                                        <h5>관련 패키지</h5>
+                                        <div class="target-item-package-my">
+                                            <div class="tmy-package">
+                                                <div class="tmy-package-img"></div>
+                                                <div class="tmy-package-info">
+                                                    <div class="t1">
+                                                        먹어서 찐 살 먹어서 빼자
+                                                    </div>
+                                                    <div class="t2">
+                                                        8주 체지방컷 + 8주 루틴
+                                                    </div>
+                                                    <div class="t3">
+                                                        잔티젠+마그네슘+바나바잎추출물
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="target-item">
+                                    <div class="target-item-tit">
+                                        <i class="t-eyes"></i>
+                                        <h4 class="text-b-lg">눈 건강</h4>
+                                    </div>
+                                    <div class="text-c-lg-r">
+                                        체지방 줄이는 생활습관을 알려드려요.
+                                        블라블라블라 2줄까지 표시함
+                                    </div>
+                                    <div class="target-item-package">
+                                        <h5>관련 패키지</h5>
+                                        <div class="target-item-package-my">
+                                            <div class="tmy-package">
+                                                <div class="tmy-package-img"></div>
+                                                <div class="tmy-package-info">
+                                                    <div class="t1">
+                                                        먹어서 찐 살 먹어서 빼자
+                                                    </div>
+                                                    <div class="t2">
+                                                        8주 체지방컷 + 8주 루틴
+                                                    </div>
+                                                    <div class="t3">
+                                                        잔티젠+마그네슘+바나바잎추출물
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+
+        <script>
+            const targetChks = document.querySelectorAll(".checkFormCir");
+            targetChks.forEach((tg) => {
+                tg.addEventListener("click", (e) => {
+                    e.currentTarget.parentElement.classList.toggle(
+                        "is-selected",
+                    );
+                });
+            });
+
+            const btnTg = document.querySelector(".btn-tg");
+            const targetOverlay = document.querySelector(
+                ".health-target-overlay",
+            );
+            btnTg.addEventListener("click", () => {
+                targetOverlay.classList.toggle("is-active");
+            });
+        </script>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>wheel-picker sample</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+    </head>
+    <body>
+        <!---몸무게---->
+        <div class="wheel-picker-wrapper">
+            <div class="highlight-bar">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="picker-columns">
+                <div class="wheel-column" id="kg-integer">
+                    <div class="wheel-items"></div>
+                </div>
+                <div class="dot">.</div>
+                <div class="wheel-column decimal" id="kg-decimals">
+                    <div class="wheel-items"></div>
+                </div>
+                <div class="unit-label">kg</div>
+            </div>
+        </div>
+        <!---걸음수--->
+        <div class="wheel-picker-wrapper">
+            <div class="highlight-bar wide">
+                <div></div>
+            </div>
+            <div class="picker-columns">
+                <div class="wheel-column" id="steps">
+                    <div class="wheel-items"></div>
+                </div>
+                <div class="unit-label w-onewy">걸음</div>
+            </div>
+        </div>
+        <!---시간--->
+        <div class="wheel-picker-wrapper timer">
+            <div class="highlight-bar">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="picker-columns">
+                <div class="wheel-column" id="time-integer">
+                    <div class="wheel-items"></div>
+                </div>
+                <div class="unit-label w-center">시간</div>
+                <div class="wheel-column decimal" id="time-decimals">
+                    <div class="wheel-items"></div>
+                </div>
+                <div class="unit-label">분</div>
+            </div>
+        </div>
+        <!---혈압--->
+        <div style="margin-top: 2rem">
+            <div class="picker-title-columns">
+                <div class="text-b-sm-m">
+                    수축기
+                    <span class="unit">(mmHg)</span>
+                </div>
+                <div class="text-b-sm-m">
+                    이완기
+                    <span class="unit">(mmHg)</span>
+                </div>
+            </div>
+            <div class="wheel-picker-wrapper">
+                <div class="highlight-bar">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="picker-columns">
+                    <div class="wheel-column" id="sbp-integer">
+                        <div class="wheel-items"></div>
+                    </div>
+                    <div class="wheel-column" id="dbp-decimals">
+                        <div class="wheel-items"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--- 혈당 wheelpicker---->
+        <div style="margin-top: 2rem">
+            <div class="wheel-picker-wrapper">
+                <div class="highlight-bar">
+                    <div></div>
+                </div>
+                <div class="picker-columns">
+                    <div class="wheel-column" id="bl-sugar">
+                        <div class="wheel-items"></div>
+                    </div>
+                    <div class="unit-label w-onewy">mmHg</div>
+                </div>
+            </div>
+        </div>
+        <script type="module">
+            import { createWheel } from "../../utils/wheelpicker.js";
+
+            const weightInteger = createWheel({
+                container: document.getElementById("kg-integer"),
+                min: 30,
+                max: 200,
+                initialValue: 60,
+                step: 1,
+            });
+
+            const weightDecimal = createWheel({
+                container: document.getElementById("kg-decimals"),
+                min: 0,
+                max: 9,
+                initialValue: 1,
+                step: 1,
+            });
+
+            function getWeight() {
+                return `${weightInteger.getValue()}.${weightDecimal.getValue()}`;
+            }
+        </script>
+        <script type="module">
+            import { createWheel } from "../../utils/wheelpicker.js";
+
+            createWheel({
+                container: document.getElementById("steps"),
+                min: 1000,
+                max: 10000,
+                initialValue: 8000,
+                step: 10,
+                onChange: (val) => {
+                    console.log("걸음수:", val);
+                },
+            });
+        </script>
+        <script type="module">
+            import { createWheel } from "../../utils/wheelpicker.js";
+
+            const timeInteger = createWheel({
+                container: document.getElementById("time-integer"),
+                min: 0,
+                max: 23,
+                initialValue: 1,
+                step: 1,
+            });
+
+            const timeDecimal = createWheel({
+                container: document.getElementById("time-decimals"),
+                min: 0,
+                max: 99,
+                initialValue: 1,
+                step: 10,
+            });
+
+            function getTime() {
+                return `${timeInteger.getValue()}.${timeDecimal.getValue()}`;
+            }
+        </script>
+        <script type="module">
+            import { createWheel } from "../../utils/wheelpicker.js";
+
+            const sbpInteger = createWheel({
+                container: document.getElementById("sbp-integer"),
+                min: 99,
+                max: 200,
+                initialValue: 120,
+                step: 1,
+            });
+
+            const dbptInteger = createWheel({
+                container: document.getElementById("dbp-decimals"),
+                min: 30,
+                max: 110,
+                initialValue: 78,
+                step: 1,
+            });
+
+            function getBpless() {
+                return `${sbpInteger.getValue()}.${dbptInteger.getValue()}`;
+            }
+        </script>
+        <script type="module">
+            import { createWheel } from "../../utils/wheelpicker.js";
+
+            createWheel({
+                container: document.getElementById("bl-sugar"),
+                min: 0,
+                max: 100,
+                initialValue: 80,
+                step: 1,
+                onChange: (val) => {
+                    console.log("걸음수:", val);
+                },
+            });
+        </script>
+    </body>
+</html>

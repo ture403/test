@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>약 추가</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>약 추가</h2>
+                    <button type="button" class="btn-trash">
+                        <i class="ico-trash"></i>
+                        <span>삭제</span>
+                    </button>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="add-med-wrap">
+                    <div class="search-box">
+                        <i class="ico-sh-search"></i>
+                        <input
+                            type="text"
+                            placeholder="약이나 영양제 이름을 검색할 수 있습니다."
+                        />
+                    </div>
+                    <div class="title-type">
+                        <h3 class="text-h6">복용 주기</h3>
+                    </div>
+                    <div class="weekly-cycle">
+                        <div class="weekly-cycle-name on">일</div>
+                        <div class="weekly-cycle-name">월</div>
+                        <div class="weekly-cycle-name">화</div>
+                        <div class="weekly-cycle-name on">수</div>
+                        <div class="weekly-cycle-name">목</div>
+                        <div class="weekly-cycle-name">금</div>
+                        <div class="weekly-cycle-name on">토</div>
+                    </div>
+                    <div class="title-type">
+                        <h3 class="text-h6">복용 시간 (알림 시간)</h3>
+                    </div>
+                    <div class="add-med-times">
+                        <div class="add-med-time">
+                            <input type="time" value="08:00" />
+                            <button type="button">
+                                <i class="ico-trash"></i>
+                                <span class="sr-only">삭제</span>
+                            </button>
+                        </div>
+                        <div class="add-med-time">
+                            <input type="time" value="13:00" />
+                            <button type="button">
+                                <i class="ico-trash"></i>
+                                <span class="sr-only">삭제</span>
+                            </button>
+                        </div>
+                        <div class="add-med-time">
+                            <input type="time" value="19:00" />
+                            <button type="button">
+                                <i class="ico-trash"></i>
+                                <span class="sr-only">삭제</span>
+                            </button>
+                        </div>
+                        <div class="add-med-time">
+                            <input type="time" value="19:00" />
+                            <button type="button">
+                                <i class="ico-trash"></i>
+                                <span class="sr-only">삭제</span>
+                            </button>
+                        </div>
+                        <div class="add-med-time">
+                            <input type="time" value="19:00" />
+                            <button type="button">
+                                <i class="ico-trash"></i>
+                                <span class="sr-only">삭제</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-bor">
+                        <i class="ico-plus"></i>
+                        <span>알림 추가</span>
+                    </button>
+
+                    <ul class="link-arr-lists">
+                        <li>
+                            <div class="link-arr">
+                                <span class="text-b-lg-sb">시작일</span>
+                                <span class="text-b-lg-sb hc1">
+                                    7월 23일 수요일 (오늘)
+                                </span>
+                                <i class="ico-arr"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="link-arr">
+                                <span class="text-b-lg-sb">복용 기간</span>
+                                <span class="text-b-lg-sb hc1">
+                                    기간 제한 없음
+                                </span>
+                                <i class="ico-arr"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-button-fixed">
+                    <button type="button" class="btn-fill btn-primary">
+                        <strong>저장</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

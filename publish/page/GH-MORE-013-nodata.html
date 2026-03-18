@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>루틴 리포트</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>루틴 리포트</h2>
+                </div>
+            </header>
+
+            <div class="sub-wrap has-header">
+                <!-- 리포트 좌우 스크롤가능탭 -->
+                <div class="tab-wrap scroll-x">
+                    <ul class="tab">
+                        <!-- 신규업로드 리포트 있을시 li에 new 클래스추가 -->
+                        <li class="active new">
+                            <button type="button">혈당건강1</button>
+                        </li>
+                        <li><button type="button">혈당건강2</button></li>
+                        <li><button type="button">체지방감소</button></li>
+                        <li>
+                            <button type="button">
+                                스트레스 수면 피로개선
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!--루틴상품안내-->
+                <div class="report-item-wrap">
+                    <!--건강유형안내-->
+                    <div class="health-case-wrap">
+                        <div class="health-case-info">
+                            <span class="tag-h">눈 건강</span>
+                            <div class="text-h7">
+                                사려깊은 호르몬 플래너
+                                <p class="txts">
+                                    맑고 또렷한 시력 관리를 담당해요
+                                </p>
+                            </div>
+                        </div>
+                        <!--건강유형별 캐릭터--->
+                        <i class="ht-cs-eye"></i>
+                    </div>
+                    <!--루틴상품상세 진행도-->
+                    <div class="routine-item-info">
+                        <div class="item-info-wrap">
+                            <div class="item-info-thum">
+                                <img
+                                    src="../../assets/images/product_hello-paper-3pc.jpg"
+                                />
+                            </div>
+                            <div class="item-info-txts">
+                                <div class="item-name">PrimeCOre</div>
+                                <div class="item-term">
+                                    <p class="term-title">
+                                        혈당 건강 루틴 전체 진행기간
+                                        <!-- 삭제 <i class="ico-i"></i> -->
+                                    </p>
+                                    <p class="term-date">
+                                        2025.01.02 ~ 2025.01.29
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 진행 표기바 진행완료 된 주차엔 complete 마지막주차 ing 추가-->
+                        <ul class="compWk-bar">
+                            <li class="compWk-item is-first complete gold">
+                                <span>1주차</span>
+                            </li>
+                            <li class="compWk-item is-mid complete silver">
+                                <span>2주차</span>
+                            </li>
+                            <li class="compWk-item is-mid complete ing bronze">
+                                <span>3주차</span>
+                            </li>
+                            <li class="compWk-item is-mid is-last">
+                                <span>4주차</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="report-detail-wrap">
+                    <ul class="inner-tab">
+                        <li>
+                            <button type="button">1주차</button>
+                        </li>
+                        <li><button type="button">2주차</button></li>
+                        <li><button type="button">3주차</button></li>
+                        <li class="is-active">
+                            <button type="button">4주차</button>
+                        </li>
+                    </ul>
+                    <div class="report-datail">
+                        <!-- 데이터없을시 -->
+                        <div class="health-data-wrap no-data">
+                            <span class="text-b-md-m">
+                                아직 발급되지 않은 리포트예요
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

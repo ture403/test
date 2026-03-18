@@ -1,0 +1,78 @@
+:root {
+  /* Font Family */
+  --font-base: 'Pretendard', -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, 'Apple SD Gothic Neo',
+               'Noto Sans KR', Arial, sans-serif;
+
+ --font-family-primary: 'Pretendard', -apple-system, sans-serif;              
+ --font-size-base: 1.6rem;
+
+  /* Letter Spacing */
+  --ls-tight: -0.05em; /* -0.5px 기준 */
+  --ls-normal: 0;
+
+  /* Header Styles */
+--header-large-32: 700 3.2rem/140% var(--font-family-primary);
+--header-large-30: 700 3.0rem/140% var(--font-family-primary);
+--header-large-26: 700 2.6rem/140% var(--font-family-primary);
+--header-medium-24: 700 2.4rem/140% var(--font-family-primary);
+--header-medium-22: 700 2.2rem/140% var(--font-family-primary);
+--header-small-20: 700 2.0rem/140% var(--font-family-primary);
+--header-small-18: 700 1.8rem/140% var(--font-family-primary);
+--header-small-m-18: 500 1.8rem/140% var(--font-family-primary);
+
+   /* Body Styles */
+--body-large-16: 700 1.6rem/140% var(--font-family-primary);
+--body-large-sb-16: 600 1.6rem/140% var(--font-family-primary);
+--body-large-m-16: 500 1.6rem/140% var(--font-family-primary);
+--body-medium-15: 700 1.5rem/100% var(--font-family-primary);
+--body-medium-sb-15: 600 1.5rem/140% var(--font-family-primary);
+--body-medium-m-15: 500 1.5rem/140% var(--font-family-primary);
+--body-medium-r-15: 400 1.5rem/150% var(--font-family-primary);
+--body-small-14: 700 1.4rem/140% var(--font-family-primary);
+--body-small-sb-14: 600 1.4rem/140% var(--font-family-primary);
+--body-small-m-14: 500 1.4rem/140% var(--font-family-primary);
+--body-small-r-14: 400 1.4rem/140% var(--font-family-primary);
+
+  /* Caption Styles */
+--caption-large-sb-13: 600 1.3rem/140% var(--font-family-primary);
+--caption-large-m-13: 500 1.3rem/140% var(--font-family-primary);
+--caption-large-r-13: 400 1.3rem/145% var(--font-family-primary);
+--caption-medium-sb-12: 600 1.2rem/140% var(--font-family-primary);
+--caption-medium-m-12: 500 1.2rem/140% var(--font-family-primary);
+--caption-small-m-11: 500 1.1rem/140% var(--font-family-primary);
+
+--lh-body: 1.4;
+
+}
+
+
+.text-h1 { font: var(--header-large-32); }
+.text-h2 { font: var(--header-large-30); }
+.text-h3 { font: var(--header-large-26); }
+.text-h4 { font: var(--header-medium-24); }
+.text-h5 { font: var(--header-medium-22); }
+.text-h6 { font: var(--header-small-20); }
+.text-h7 { font: var(--header-small-18); }
+
+.text-b-lg { font: var(--body-large-16); }
+.text-b-lg-sb { font: var(--body-large-sb-16); }
+.text-b-md { font: var(--body-medium-15); }
+.text-b-md-sb { font: var(--body-medium-sb-15); }
+.text-b-md-m { font: var(--body-medium-m-15); }
+.text-b-md-r { font: var(--body-medium-r-15); }
+.text-b-sm { font: var(--body-small-14); }
+.text-b-sm-sb { font: var(--body-small-sb-14); }
+.text-b-sm-m { font: var(--body-small-m-14); }
+.text-b-sm-r { font: var(--body-small-r-14); }
+
+.text-c-lg-sb { font: var(--caption-large-sb-13); }
+.text-c-lg-m { font: var(--caption-large-m-13); }
+.text-c-lg-r { font: var(--caption-large-r-13); }
+.text-c-md-sb { font: var(--caption-medium-sb-12); }
+.text-c-md-m { font: var(--caption-medium-m-12); }
+.text-c-sm-m { font: var(--caption-small-m-11); }
+
+
+
+

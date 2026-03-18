@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>에러 500</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <div class="sub-wrap">
+                <div class="notice-wrapper">
+                    <i class="img-error"></i>
+                    <h7 class="text-h7">페이지를 연결할 수 없어요</h7>
+                    <p class="text-b-sm-r">
+                        일시적인 오류로 페이지를 연결할 수 없어요
+                        <br />
+                        다시 시도해주세요
+                    </p>
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <button type="button" class="btn-fill btn-primary">
+                    <strong>새로고침</strong>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

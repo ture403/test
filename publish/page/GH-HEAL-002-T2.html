@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>내건강 > 건강통계 > AI 건강 분석</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>건강 통계</h2>
+                </div>
+            </header>
+            <!-- hase-header gray 추가 -->
+            <div class="sub-wrap has-header gray">
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li><button type="button">건강 데이터</button></li>
+                        <li class="active">
+                            <button type="button">AI 건강 분석</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headth-ai-wrap">
+                    <div class="health-gauge">
+                        <div class="health-gauge-top">
+                            <div>
+                                <span>분석일</span>
+                                <span class="bar"></span>
+                                <span>2024-10-26</span>
+                            </div>
+                            <button type="button">
+                                <i class="ico-refresh"></i>
+                                <span>건강분석 업데이트</span>
+                            </button>
+                        </div>
+                        <!-- 고속노화 -->
+                        <div class="health-gauge-tit">
+                            <h3 class="text-h3">
+                                길동님의 노화 상태는
+                                <br />
+                                <strong class="g1">고속노화</strong>
+                                예요
+                                <button class="ico-info">정보</button>
+                            </h3>
+                        </div>
+                        <div class="gauge">
+                            <img
+                                src="../../assets/images/g1.svg"
+                                alt="고속노화"
+                            />
+                        </div>
+
+                        <!-- 평균노화 -->
+                        <div class="health-gauge-tit">
+                            <h3 class="text-h3">
+                                길동님의 노화 상태는
+                                <br />
+                                <strong class="g2">평균노화</strong>
+                                예요
+                                <button class="ico-info">정보</button>
+                            </h3>
+                        </div>
+                        <div class="gauge">
+                            <img
+                                src="../../assets/images/g2.svg"
+                                alt="평균노화"
+                            />
+                        </div>
+
+                        <!-- 저속 노화 -->
+                        <div class="health-gauge-tit">
+                            <h3 class="text-h3">
+                                길동님의 노화 상태는
+                                <br />
+                                <strong class="g3">저속노화</strong>
+                                예요
+                                <button class="ico-info">정보</button>
+                            </h3>
+                        </div>
+                        <div class="gauge">
+                            <img
+                                src="../../assets/images/g3.svg"
+                                alt="저속노화"
+                            />
+                        </div>
+
+                        <div class="health-gauge-result">
+                            <span class="tag-t">노화 등수</span>
+                            <div class="age-ranks">
+                                <span class="my">80</span>
+                                <span class="total">
+                                    <em>/ 100</em>
+                                    명
+                                </span>
+                            </div>
+                        </div>
+                        <div class="health-gauge-result2">
+                            <div class="rt-info">
+                                <i class="rt-1"></i>
+                                <span class="text-c-lg-m">신체 나이</span>
+                                <div class="age">
+                                    <em>34</em>
+                                    <span>세</span>
+                                </div>
+                                <span class="text-c-md-m">
+                                    내 실제 나이 40 세
+                                </span>
+                            </div>
+                            <div class="rt-info">
+                                <i class="rt-2"></i>
+                                <span class="text-c-lg-m">기대 수명</span>
+                                <div class="age">
+                                    <em>??</em>
+                                    <span>세</span>
+                                </div>
+                                <span class="text-c-md-m">
+                                    또래 남성 77.2 세
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="health-ai-area">
+                        <div class="title-type">
+                            <h3 class="text-h5">
+                                주요 신체 기능의
+                                <br />
+                                <span class="hc1">노화도</span>
+                                를 살펴볼까요?
+                            </h3>
+                            <button type="button" class="btn-help">
+                                <i class="ico-info"></i>
+                                <span>종합 노화도</span>
+                            </button>
+                        </div>
+                        <div class="graph">
+                            <img
+                                src="../../assets/images/area.png"
+                                alt="그래프영역"
+                            />
+                        </div>
+                        <ul class="health-ai-area-lists">
+                            <li>
+                                <a href="" class="link-arr">
+                                    <span class="text-b-lg-sb">대사</span>
+                                    <span class="tag-a">고속노화</span>
+                                    <i class="ico-arr"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="link-arr">
+                                    <span class="text-b-lg-sb">면역체계</span>
+                                    <span class="tag-e">평균노화</span>
+                                    <i class="ico-arr"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="link-arr">
+                                    <span class="text-b-lg-sb">관절 · 뼈</span>
+                                    <span class="tag-b">저속노화</span>
+                                    <i class="ico-arr"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="health-ai-area2">
+                        <div class="title-type">
+                            <h3 class="text-h5">
+                                노화 속도에 따른
+                                <br />
+                                <span class="hc1">질병 위험</span>
+                                을 알려드려요
+                            </h3>
+                        </div>
+                        <div class="card-risks">
+                            <div class="card-risk">
+                                <div class="card-risk-link">
+                                    <div class="risk">
+                                        <i class="ico-risk1"></i>
+                                        <span class="text-b-md-sb">
+                                            고위험 질환
+                                        </span>
+                                    </div>
+                                    <span class="text-b-lg-sb">2개</span>
+                                    <i class="ico-arr"></i>
+                                </div>
+                                <div class="card-risk-desc">
+                                    <p class="text-b-sm-m hc3">
+                                        골다공증성 골절에 특히 주의하세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-risk">
+                                <div class="card-risk-link">
+                                    <div class="risk">
+                                        <i class="ico-risk2"></i>
+                                        <span class="text-b-md-sb">
+                                            위험 질환
+                                        </span>
+                                    </div>
+                                    <span class="text-b-lg-sb">1개</span>
+                                    <i class="ico-arr"></i>
+                                </div>
+                                <div class="card-risk-desc">
+                                    <p class="text-b-sm-m hc3">
+                                        대장암에 특히 주의하세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-risk">
+                                <div class="card-risk-link">
+                                    <div class="risk">
+                                        <i class="ico-risk3"></i>
+                                        <span class="text-b-md-sb">
+                                            경고 질환
+                                        </span>
+                                    </div>
+                                    <span class="text-b-lg-sb gc2">0개</span>
+                                    <i class="ico-arr"></i>
+                                </div>
+                                <div class="card-risk-desc">
+                                    <p class="text-b-sm-m gc1">
+                                        해당하는 질환이 없어요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-risk">
+                                <div class="card-risk-link">
+                                    <div class="risk">
+                                        <i class="ico-risk4"></i>
+                                        <span class="text-b-md-sb">
+                                            주의 질환
+                                        </span>
+                                    </div>
+                                    <span class="text-b-lg-sb">6개</span>
+                                    <i class="ico-arr"></i>
+                                </div>
+                                <div class="card-risk-desc">
+                                    <p class="text-b-sm-m hc3">
+                                        치매에 특히 주의하세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-risk">
+                                <div class="card-risk-link">
+                                    <div class="risk">
+                                        <i class="ico-risk5"></i>
+                                        <span class="text-b-md-sb">
+                                            양호 질환
+                                        </span>
+                                    </div>
+                                    <span class="text-b-lg-sb">2개</span>
+                                    <i class="ico-arr"></i>
+                                </div>
+                                <div class="card-risk-desc">
+                                    <p class="text-b-sm-m hc3">
+                                        심혈관질환에 특히 주의하세요.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="health-ai-area3">
+                        <p class="text-b-md-m">사망률 1위 질환</p>
+                        <div class="title-type">
+                            <h3 class="text-h5">
+                                동일 연령대 남성의
+                                <br />
+                                <span class="hc1">암 질환</span>
+                                도 미리 확인해요
+                            </h3>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                        <div class="d-rank-wrap">
+                            <div class="d-rank123">
+                                <div class="d-rank1">
+                                    <span class="tit">갑상선암</span>
+                                    <div class="gbar">1위</div>
+                                </div>
+                                <div class="d-rank2">
+                                    <span class="tit">대장암</span>
+                                    <div class="gbar">2위</div>
+                                </div>
+                                <div class="d-rank3">
+                                    <span class="tit">
+                                        비호지킨
+                                        <br />
+                                        림프종(혈액암)
+                                    </span>
+                                    <div class="gbar">3위</div>
+                                </div>
+                            </div>
+                            <div class="d-rank4">
+                                <span class="text-b-sm-m gc2">4위</span>
+                                <span class="tit">비호지킨 림프종(혈액암)</span>
+                            </div>
+                            <div class="d-rank5">
+                                <span class="text-b-sm-m gc2">5위</span>
+                                <span class="tit">고환암</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="health-ai-area3">
+                        <p class="text-b-md-m">노화 추적하고 관리하기</p>
+                        <div class="title-type">
+                            <h3 class="text-h5">
+                                <span class="hc1">모든 신체 노화도</span>
+                                를
+                                <br />
+                                확인해보세요
+                            </h3>
+                        </div>
+                        <div class="img-banner">
+                            <img
+                                src="../../assets/images/ai-frame.svg"
+                                alt="AI 건강분석 화면"
+                            />
+                        </div>
+                        <div class="btn-full-wrap">
+                            <a href="#" class="btn-fill btn-primary">
+                                <strong>AI 건강분석 풀버전에서 확인하기</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="health-ai-noti">
+                        <p>
+                            - 최근 10년간의 국가건강검진 정보 또는 5년간의
+                            건강보험심사평가원 정보와 고객의 일일건강입력정보를
+                            기반으로 연세의료원, 연세대학교 CONNECT-AI 연구센터,
+                            온택트헬스의 AI 전문가들이 직접 참여하여 제공하는
+                            분석 결과입니다.
+                        </p>
+                        <p>
+                            - 주요 질환 위험도 분석에 표시된 정상 범위는 가장
+                            최신 연도의 국민건강보험공단의 참고치를 따릅니다.
+                        </p>
+                        <p>- 위 화면은 Onione에서 구성한 화면입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

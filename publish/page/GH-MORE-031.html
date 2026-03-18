@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>딥링크 연결페이지</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav"></div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="notice-wrapper">
+                    <i class="img-deeplink"></i>
+                    <h7 class="text-h6">
+                        <span class="hc1">헬스케어</span>
+                        서비스는
+                        <br />
+                        앱에서 확인하실 수 있습니다.
+                    </h7>
+                    <p class="text-b-sm-m">
+                        안전한 건강 데이터 관리를 위해 앱 전용 서비스로
+                        제공됩니다.
+                    </p>
+                    <div class="download-btn-wrap">
+                        <button type="button" class="btn-fill btn-primary">
+                            <i class="ico-googleplay"></i>
+                            <strong>서비스 이용하기</strong>
+                        </button>
+                        <button type="button" class="btn-fill btn-primary">
+                            <i class="ico-appstore"></i>
+                            <strong>서비스 이용하기</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

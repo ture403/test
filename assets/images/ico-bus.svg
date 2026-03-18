@@ -1,0 +1,9 @@
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="22" height="22" fill="white"/>
+<path d="M5 5.48607C5 4.72852 5.4343 4.04306 6.16383 3.83894C7.14963 3.56313 8.76169 3.25 11 3.25C13.2383 3.25 14.8504 3.56313 15.8362 3.83894C16.5657 4.04306 17 4.72852 17 5.48607V14.25C17 15.3546 16.1046 16.25 15 16.25H7C5.89543 16.25 5 15.3546 5 14.25V5.48607Z" fill="#CACACA"/>
+<rect x="6" y="15.25" width="2" height="3" rx="1" fill="#CACACA"/>
+<rect x="14" y="15.25" width="2" height="3" rx="1" fill="#CACACA"/>
+<rect x="7" y="6.25" width="8" height="4" rx="0.5" fill="white"/>
+<circle cx="8" cy="13.25" r="1" fill="white"/>
+<circle cx="14" cy="13.25" r="1" fill="white"/>
+</svg>

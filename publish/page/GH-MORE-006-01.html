@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>가져오기 랜딩1</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="randing-wrap">
+                    <div class="line-step-wrapper">
+                        <div class="line-step is-active"></div>
+                        <div class="line-step"></div>
+                        <div class="line-step"></div>
+                        <div class="line-step"></div>
+                    </div>
+
+                    <div class="title-type__sub">
+                        <h3 class="text-h5">어떤 정보를 가져올까요?</h3>
+                        <p class="text-b-sm-r">
+                            건강 분석을 하려면
+                            <br />
+                            홍길동 님의 건강 정보가 꼭 필요해요
+                        </p>
+                    </div>
+                    <div class="auth-wrapper">
+                        <div class="auth-info is-selected">
+                            <button type="button" class="checkFormCir"></button>
+                            <div>병의원 진료 내역</div>
+                        </div>
+                        <div class="auth-info">
+                            <button type="button" class="checkFormCir"></button>
+                            <div>건강검진 결과</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <button type="button" class="btn-fill btn-primary">
+                    <strong>다음</strong>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            const targetChks = document.querySelectorAll(".checkFormCir");
+            targetChks.forEach((tg) => {
+                tg.addEventListener("click", (e) => {
+                    e.currentTarget.parentElement.classList.toggle(
+                        "is-selected",
+                    );
+                });
+            });
+
+            const btnTg = document.querySelector(".btn-tg");
+            const targetOverlay = document.querySelector(
+                ".health-target-overlay",
+            );
+            btnTg.addEventListener("click", () => {
+                targetOverlay.classList.toggle("is-active");
+            });
+        </script>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

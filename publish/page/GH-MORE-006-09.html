@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>AI건강분석 불러오기</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+        <!-- 로딩애니메이션 Lottie Player -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>건강 통계</h2>
+                </div>
+            </header>
+            <!-- hase-header gray 삭제 데이터 로딩 되면 gray추가 -->
+            <div class="sub-wrap has-header">
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li><button type="button">건강 데이터</button></li>
+                        <li class="active">
+                            <button type="button">AI 건강 분석</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="randing-wrap loading-data">
+                    <!-- 로딩애니메이션 -->
+                    <div class="loading-img-wrapper">
+                        <lottie-player
+                            src="../../assets/json/animation_scrapping_loading.json"
+                            background="transparent"
+                            class="scrapping-animation"
+                            speed="1"
+                            loop
+                            autoplay
+                        ></lottie-player>
+                    </div>
+                    <!-- 안내 텍스트-->
+                    <div class="loading-text-wrap" style="--total: 3">
+                        <h5 class="text-h5 rolling-text" style="--i: 0">
+                            AI가 건강 정보를 분석 중이에요
+                            <br />
+                            곧 분석 결과가 나와요
+                        </h5>
+                        <h5 class="text-h5 rolling-text" style="--i: 1">
+                            분석에는 몇 분 정도 걸릴 수 있어요
+                            <br />
+                            데이터 양과 복잡도에 따라 달라져요
+                        </h5>
+                        <h5 class="text-h5 rolling-text" style="--i: 2">
+                            보다 정확하고 유용한 결과를
+                            <br />
+                            드리기 위해 최선을 다하고 있어요
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

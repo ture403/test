@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강검진 불러오기</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+        <!-- 로딩애니메이션 Lottie Player -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="randing-wrap loading-data">
+                    <!-- 로딩애니메이션 -->
+                    <div class="loading-img-wrapper">
+                        <lottie-player
+                            src="../../assets/json/animation_data_analysis.json"
+                            background="transparent"
+                            class="data-animation"
+                            speed="1"
+                            loop
+                            autoplay
+                        ></lottie-player>
+                    </div>
+                    <!-- 안내 텍스트 : 3문장일경우
+                    <div class="loading-text-wrap" style="--total: 3">
+                        <h5 class="text-h5 rolling-text" style="--i: 0">
+                            건강검진 결과를
+                            <br />
+                            가져오고 있어요
+                        </h5>
+                        <h5 class="text-h5 rolling-text" style="--i: 1">
+                            기록을 가져오는 데
+                            <br />
+                            최대 1~2분 정도 소요돼요
+                        </h5>
+                        <h5 class="text-h5 rolling-text" style="--i: 2">
+                            데이터를 안전하게 가져오고 있어요
+                            <br />
+                            잠시만 기다려 주세요
+                        </h5>
+                    </div>
+                    -->
+                    <!-- 안내 텍스트 : 2문장일 경우-->
+                    <div class="loading-text-wrap" style="--total: 2">
+                        <h5 class="text-h5 rolling-text" style="--i: 0">
+                            기록을 가져오는 데
+                            <br />
+                            최대 1~2분 정도 소요돼요
+                        </h5>
+                        <h5 class="text-h5 rolling-text" style="--i: 1">
+                            데이터를 안전하게 가져오고 있어요
+                            <br />
+                            잠시만 기다려 주세요
+                        </h5>
+                    </div>
+                    <!-- 불러오는 데이터리스트 -->
+                    <div class="auth-loading-wrap">
+                        <!-- 기본 -->
+                        <div class="loading-item is-completed">
+                            <div class="circle"></div>
+                            <div class="text">병의원 진료내역</div>
+                        </div>
+                        <!-- 마지막단계 -->
+                        <div class="loading-item is-active is-last">
+                            <div class="circle"></div>
+                            <div class="text">건강검진 결과</div>
+                        </div>
+                    </div>
+                    <!-- 불러오는 데이터리스트 : 진료내역 정보 없음 -->
+                    <div class="auth-loading-wrap">
+                        <!-- 기본 -->
+                        <div class="loading-item is-error">
+                            <div class="circle"></div>
+                            <div class="text">병의원 진료내역</div>
+                        </div>
+                        <!-- 마지막단계 -->
+                        <div class="loading-item is-active is-last">
+                            <div class="circle"></div>
+                            <div class="text">건강검진 결과</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

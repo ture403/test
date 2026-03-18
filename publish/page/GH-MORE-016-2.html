@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>걸음수 - 목표설정</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+            <!-- 전체 화면 모달 -->
+            <div class="modal-overlay modal-fullscreen is-active" id="modalFullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"></h2>
+                        <button class="modal-close" onclick="closeModal('modalFullscreen')"><i class="ico-x"></i><span class="sr-only">닫기</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body-cont">
+                            <div class="title-type">
+                                <h3 class="text-h5">
+                                    하루 목표 걸음수를 </br> 
+                                    설정해주세요
+                                </h3>
+                            </div>
+                            <ul class="link-arr-lists">
+                                <!-- 인풋형태로 교체 -->
+                                <li>                            
+                                        <div class="input-center-wrapper">                        
+                                            <div class="input-box full-form">
+                                                <input
+                                                    type="number"
+                                                    class="input"
+                                                    placeholder="8,000"
+                                                />
+                                                <div class="unit">걸음</div>     
+                                                </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-fill btn-primary">
+                            <strong>추가</strong>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        <script type="module">
+        import { createWheel } from '../../utils/wheelpicker.js';
+
+        createWheel({
+        container: document.getElementById('steps'),
+        min: 1000,
+        max: 10000,
+        initialValue: 8000,
+        step: 10,
+        onChange: val => {
+            console.log('걸음수:', val);
+        }
+        });
+        </script>
+    </body>
+</html>

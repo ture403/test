@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>main</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+        <script type="module" src="../../utils/ui_main.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="header-top">
+                    <h1>
+                        <a href=""><span class="logo">GLOBONxONIONE</span></a>
+                    </h1>
+                    <div class="aside">
+                        <button type="button" class="ht-search">
+                            <i class="ico-h-search"></i>
+                            <span class="sr-only">검색</span>
+                        </button>
+                        <button type="button" class="ht-cart">
+                            <i class="ico-h-cart"></i>
+                            <span class="sr-only">장바구니</span>
+                            <em>3</em>
+                        </button>
+                        <!-- 알림 있을때 is-active 추가 -->
+                        <button type="button" class="ht-alarm is-active">
+                            <i class="ico-h-alarm"></i>
+                            <span class="sr-only">알림</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrap">
+                <div class="main-section1">
+                    <div class="visual">
+                        <h2 class="text-h3">
+                            내 생활 패턴에 딱 맞춘
+                            <strong>한팩</strong>
+                            <br />
+                            <strong>한달</strong>
+                            먼저 시작하세요
+                        </h2>
+                    </div>
+                    <!----상담하기 영역 기능중복으로 삭제 : 20260313
+                    <div class="cs-char-wrap">
+                        <div class="cs-char">
+                            <span>상담하기</span>
+                        </div>
+                        <div class="cs-box">
+                            <div class="cs-box-in open">
+                                <div class="cs-box-toggle">
+                                    <button type="button">
+                                        <i class="ico-arr-down"></i>
+                                    </button>
+                                </div>
+                                <div class="cs-box-desc">
+                                    <p>
+                                        내 몸이 진짜 원하는 영양소는 따로 있다는
+                                        사실, 알고 계셨나요? AI 알고리즘이
+                                        당신의 라이프스타일을 분석해
+                                        <span class="hc1">진짜 필요한</span>
+                                        영양 한 팩을 처방합니다. 함께 제공되는
+                                        <span class="hc1">시너지 루틴</span>
+                                        으로 건강 관리의 효과를 두 배로
+                                        높여보세요.
+                                    </p>
+                                    <p>
+                                        망설이는 순간에도 내 몸은 변화를
+                                        기다리고 있습니다.
+                                        <br />
+                                        지금 앱에서 무료 분석 받고, 첫 구독
+                                        혜택까지 놓치지 마세요!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    --->
+                </div>
+                <div class="main-seaction2">
+                    <div class="title-type">
+                        <h3 class="text-h5">준비되어있는 추천 패키지</h3>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-package">
+                                    <img
+                                        src="../../assets/images/card-item-package01.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-package">
+                                    <img
+                                        src="../../assets/images/card-item-package02.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-package">
+                                    <img
+                                        src="../../assets/images/card-item-package03.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-package">
+                                    <img
+                                        src="../../assets/images/card-item-package01.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-seaction3">
+                    <div class="main-seaction3-top">
+                        <div class="ab-nio-tit">
+                            조금 더 상세한 분석을 해드려요.
+                        </div>
+                        <div class="ab-nio-start">
+                            나만의 맞춤 영양제와 루틴 프로그램 시작하기
+                        </div>
+                        <div class="chat-link">
+                            <button
+                                type="button"
+                                class="btn-fill btn-primary nio-chat"
+                            >
+                                니오에게 맞춤 루틴 추천받기
+                            </button>
+                        </div>
+                    </div>
+                    <div class="title-type">
+                        <h3 class="text-h5">나의 루틴 통계</h3>
+                        <div class="more">
+                            <a href="#" class="btn-detail">
+                                <span>자세히 보기</span>
+                                <i class="ico-arr"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 태그와 폰트class변경 -->
+                    <div class="routine-lists">
+                        <div class="routine ty1">
+                            <div class="title">
+                                <span class="tag-b">기본</span>
+                                <h4 class="text-b-lg">
+                                    잊지말고 영양제 챙겨먹기
+                                </h4>
+                            </div>
+                            <div class="check-board">
+                                <span class="chk">1</span>
+                                <span class="chk"></span>
+                                <span class="lose"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="chk">7</span>
+                                <span class="lose"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="lose">14</span>
+                                <span class="chk">15</span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="lose"></span>
+                                <span class="chk"></span>
+                                <span class="lose">21</span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="chk"></span>
+                                <span class="cur">25</span>
+                                <span></span>
+                                <span></span>
+                                <span>28</span>
+                            </div>
+                            <div class="result">
+                                <div class="result-1">
+                                    <i class="ico-pie pie-75"></i>
+                                    <!-- pie-0 | pie-25 | pie-75 | pie-100 --->
+                                    <span class="text-c-lg-sb">67%</span>
+                                </div>
+                                <div class="result-2">
+                                    <i class="ico-chk"></i>
+                                    <span class="text-c-lg-sb">19회 성공!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="routine ty2">
+                            <div class="title">
+                                <span class="tag-d">식사</span>
+                                <h4 class="text-b-lg">
+                                    아침식사로 단백질 메뉴 챙기기
+                                </h4>
+                            </div>
+                            <div class="board">
+                                <div class="check-board">
+                                    <span class="chk">1</span>
+                                    <span class="lose"></span>
+                                    <span class="lose"></span>
+                                    <span class="chk"></span>
+                                    <span class="chk"></span>
+                                    <span class="cur">6</span>
+                                    <span>7</span>
+                                </div>
+                                <div class="result">
+                                    <div class="result-1">
+                                        <i class="ico-pie pie-75"></i>
+                                        <span class="text-c-lg-sb">67%</span>
+                                    </div>
+                                    <div class="result-2">
+                                        <i class="ico-chk"></i>
+                                        <span class="text-c-lg-sb">
+                                            3회 성공!
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="routine ty3">
+                            <div class="title">
+                                <span class="tag-e">생활</span>
+                                <h4 class="text-b-lg">
+                                    자기전에 10분 모관운동하기
+                                </h4>
+                            </div>
+                            <div class="board">
+                                <div class="check-board">
+                                    <span class="chk">1</span>
+                                    <span class="lose"></span>
+                                    <span class="lose"></span>
+                                    <span class="chk"></span>
+                                    <span class="chk"></span>
+                                    <span class="cur">6</span>
+                                    <span>7</span>
+                                </div>
+                                <div class="result">
+                                    <div class="result-1">
+                                        <i class="ico-pie pie-75"></i>
+                                        <span class="text-c-lg-sb">67%</span>
+                                    </div>
+                                    <div class="result-2">
+                                        <i class="ico-chk"></i>
+                                        <span class="text-c-lg-sb">
+                                            4회 성공!
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="btn-more-wrap">
+                        <button type="button">
+                            <i class="ico-arr2"></i>
+                            <span>더보기</span>
+                        </button>
+                    </div> -->
+                </div>
+                <div class="main-section4">
+                    <div class="title-type">
+                        <h3 class="text-h5">HOT ITEM</h3>
+                        <div class="more">
+                            <a href="#" class="btn-detail">
+                                <span>더 보기</span>
+                                <i class="ico-arr"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="product-hot-lists">
+                        <li>
+                            <a href="#" class="product-hot">
+                                <div class="thumb">
+                                    <img
+                                        src="../../assets/images/prod-hot1.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="desc">
+                                    <h4>루테인지안잔스틴&아스타잔틴</h4>
+                                    <div class="info">
+                                        <span class="sale">20%</span>
+                                        <span class="price">
+                                            <strong>57,900</strong>
+                                            <em>원</em>
+                                        </span>
+                                        <span class="del">40,000원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="product-hot">
+                                <div class="thumb">
+                                    <img
+                                        src="../../assets/images/prod-hot2.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="desc">
+                                    <h4>루테인지안잔스틴&아스타잔틴</h4>
+                                    <div class="info">
+                                        <span class="sale">20%</span>
+                                        <span class="price">
+                                            <strong>57,900</strong>
+                                            <em>원</em>
+                                        </span>
+                                        <span class="del">40,000원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="product-hot">
+                                <div class="thumb">
+                                    <img
+                                        src="../../assets/images/prod-hot3.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="desc">
+                                    <h4>루테인지안잔스틴&아스타잔틴</h4>
+                                    <div class="info">
+                                        <span class="sale">20%</span>
+                                        <span class="price">
+                                            <strong>57,900</strong>
+                                            <em>원</em>
+                                        </span>
+                                        <span class="del">40,000원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-section5">
+                    <div class="title-type">
+                        <h3 class="text-h5">
+                            <span class="hc1">구매자</span>
+                            들의 특별한 이야기
+                        </h3>
+                        <div class="more">
+                            <a href="#" class="btn-detail">
+                                <span>더 보기</span>
+                                <i class="ico-arr"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-b-sm-r">
+                        먼저 경험해보신 분들의 이야기를 들어보세요
+                    </div>
+                    <ul class="review-lists">
+                        <li>
+                            <a href="#" class="review-item">
+                                <img
+                                    src="../../assets/images/prod1.png"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="review-item">
+                                <img
+                                    src="../../assets/images/prod2.png"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <img src="../../assets/images/prod3.png" alt="" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-section6">
+                    <div class="title-type">
+                        <h3 class="text-h5">내가 찜한 상품</h3>
+                        <div class="more">
+                            <a href="#" class="btn-detail">
+                                <span>전체 보기</span>
+                                <i class="ico-arr"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim active">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card2.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like on"></i>
+                                    </div>
+                                    <div class="info">
+                                        <span>
+                                            ZMA, 운동 후 회복, 베지 캡슐 90정
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card3.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like on"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-section6">
+                    <div class="title-type">
+                        <h3 class="text-h5">최근에 본 상품</h3>
+                        <div class="more">
+                            <a href="#" class="btn-detail">
+                                <span>전체 보기</span>
+                                <i class="ico-arr"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-b-sm-r">
+                        아직 고민 중이신가요? 회원님이 최근에 본 상품들이예요.
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim active">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card2.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like on"></i>
+                                    </div>
+                                    <div class="info">
+                                        <span>
+                                            ZMA, 운동 후 회복, 베지 캡슐 90정
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card3.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like on"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-section7">
+                    <div class="title-type">
+                        <h3 class="text-h5">건강 꿀팁</h3>
+                        <div class="more">
+                            <a href="#" class="btn-detail">
+                                <span>더 보기</span>
+                                <i class="ico-arr"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-tip">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/@card-news-thum2.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <span>
+                                            치매 유발하는 의외의 실내 환경, 당장
+                                            바꿔야 할 것은?
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-tip">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/prod-tip2.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <span>
+                                            아직도 우유, 치즈만? 뼈 건강을
+                                            지키는 의외의 음식
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-tip">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/prod-tip2.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <span>
+                                            아직도 우유, 치즈만? 뼈 건강을
+                                            지키는 의외의 음식
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-section8">
+                    <img src="../../assets/images/main-banner.png" alt="" />
+                </div>
+            </div>
+
+            <div data-include-path="../components/_inc/footer.html"></div>
+            <div data-include-path="../components/_inc/bottom-nav.html"></div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

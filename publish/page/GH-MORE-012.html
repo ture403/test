@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>루틴</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>루틴</h2>
+                    <button type="button" class="btn-resist">
+                        <i class="ico-plus"></i>
+                        <span>가족등록</span>
+                    </button>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="weekly-calendar-top">
+                    <!-- weekly Calendar -->
+                    <div class="weekly-container">
+                        <div class="weekly-header">
+                            <h3 class="header-title" id="regularTitle">
+                                2026. 01
+                                <span class="picker-arrow">▼</span>
+                            </h3>
+                            <button type="button" class="btn-bor btn-md">
+                                <span>주간 리포트</span>
+                            </button>
+                        </div>
+                        <div class="weekly-grid">
+                            <div class="weekly-day-col sun">
+                                <div class="weekly-day-name">일</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <svg
+                                            class="weekly-donut"
+                                            width="34"
+                                            height="34"
+                                            viewBox="0 0 34 34"
+                                        >
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#E9ECF3"
+                                                stroke-width="4"
+                                            />
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#39B695"
+                                                stroke-width="4"
+                                                stroke-linecap="round"
+                                                stroke-dasharray="94.25"
+                                                stroke-dashoffset="70"
+                                                transform="rotate(-90 17 17)"
+                                            />
+                                        </svg>
+                                        <span class="weekly-date-num">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">월</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <svg
+                                            class="weekly-donut"
+                                            width="34"
+                                            height="34"
+                                            viewBox="0 0 34 34"
+                                        >
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#E9ECF3"
+                                                stroke-width="4"
+                                            />
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#39B695"
+                                                stroke-width="4"
+                                                stroke-linecap="round"
+                                                stroke-dasharray="94.25"
+                                                stroke-dashoffset="40"
+                                                transform="rotate(-90 17 17)"
+                                            />
+                                        </svg>
+                                        <span class="weekly-date-num">13</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">화</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">14</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">수</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">15</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col selected">
+                                <div class="weekly-day-name">목</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">16</span>
+                                        <span class="weekly-date-tx">오늘</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col today">
+                                <div class="weekly-day-name">금</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">17</span>
+                                        <span class="weekly-date-tx">내일</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">토</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">18</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="routine-sect">
+                    <div class="title-type">
+                        <h3 class="text-c-lg-m">오늘, 2025.11.18 (화)</h3>
+                        <button class="btn-trashb">
+                            <i class="ico-trash"></i>
+                            <span>전체 삭제</span>
+                        </button>
+                    </div>
+                    <ul class="card-routines">
+                        <li>
+                            <div class="card-routine">
+                                <span class="checkForm">
+                                    <input type="checkbox" id="rut01" />
+                                    <label for="rut01">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            <em class="tag-d">식사</em>
+                                            <span>
+                                                견과류로 비타민E 보충하기
+                                            </span>
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-routine">
+                                <span class="checkForm">
+                                    <input type="checkbox" id="rut02" checked />
+                                    <label for="rut02">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            <em class="tag-d">식사</em>
+                                            <span>
+                                                견과류로 비타민E 보충하기
+                                            </span>
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-routine">
+                                <span class="checkForm">
+                                    <input type="checkbox" id="rut03" />
+                                    <label for="rut03">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            <em class="tag-d">식사</em>
+                                            <span>
+                                                견과류로 비타민E 보충하기
+                                            </span>
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-routine">
+                                <span class="checkForm">
+                                    <input type="checkbox" id="rut04" />
+                                    <label for="rut04">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            <em class="tag-e">생활</em>
+                                            <span>
+                                                견과류로 비타민E 보충하기
+                                            </span>
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="bottom-button-fixed">
+                        <button type="button" class="btn-fill btn-primary">
+                            <strong>루틴팩 추가하기</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단 슬라이드 모달 -->
+        <div class="modal-overlay modal-bottom is-active" id="modalBottom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">루틴 실천 기록</h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalBottom')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- 루틴 -->
+                    <div class="calendar" data-type="routine">
+                        <div class="calendar-header">
+                            <button class="prev-btn">
+                                <i class="ico-prev"></i>
+                                <span class="sr-only">이전</span>
+                            </button>
+                            <button class="calendar-title">
+                                <span class="year-month"></span>
+                                <i class="icon-arrow"></i>
+                            </button>
+                            <button class="next-btn">
+                                <i class="ico-next"></i>
+                                <span class="sr-only">다음</span>
+                            </button>
+                        </div>
+
+                        <div class="calendar-weekdays"></div>
+                        <div class="calendar-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+        <script type="module">
+            import { createCalendarCore } from "../../utils/calendar.core.js"; // 경로 주의!
+
+            window.addEventListener("load", function () {
+                const container = document.querySelector(
+                    '.calendar[data-type="routine"]',
+                );
+
+                if (container) {
+                    createCalendarCore({
+                        container: container,
+                        type: "routine",
+                        routineData: {
+                            "2026-03-01": 10, // 오늘 날짜(3월) 기준으로 넣어야 보입니다.
+                            "2026-03-13": 100, // 현재 날짜 기준 예시
+                            "2026-03-14": 50,
+                            "2026-02-18": 100, // 2월 데이터
+                            "2026-02-19": 80,
+                        },
+                    });
+                }
+            });
+        </script>
+        <script src="../../utils/plugin/dayjs.min.js"></script>
+        <script src="../../utils/plugin/weekday.js"></script>
+        <script src="../../utils/plugin/isoWeek.js"></script>
+        <script src="../../utils/plugin/isToday.js"></script>
+        <script type="module" src="../../utils/calendar_routine.js"></script>
+    </body>
+</html>

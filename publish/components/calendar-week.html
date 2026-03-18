@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendar-week</title>
+    <link rel="stylesheet" href="../../assets/styles/style.css" />
+    <link rel="stylesheet" href="../../assets/styles/calendar.css">
+</head>
+<body>
+    
+
+
+<!-- Calendar weekly-->
+<div class="weekly-container">
+    <div class="weekly-header">
+        <button type="button" class="nav-btn">
+            <i class="ico-prev"></i><span class="sr-only">이전</span>
+        </button>
+        <div class="weekly-title">02.16 ~ 02.22</div>
+        <button type="button" class="nav-btn dim">
+        <i class="ico-next"></i><span class="sr-only">다음</span>
+        </button>
+    </div>
+    <div class="weekly-grid">
+        <div class="weekly-day-col sun">
+            <div class="weekly-day-name">일</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">25</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col">
+            <div class="weekly-day-name">월</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">26</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col">
+            <div class="weekly-day-name">화</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">27</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col">
+            <div class="weekly-day-name">수</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">28</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col selected">
+            <div class="weekly-day-name">목</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">29</span>
+                    <span class="weekly-date-tx">어제</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col today">
+            <div class="weekly-day-name">금</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">30</span>
+                    <span class="weekly-date-tx">오늘</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col sat">
+            <div class="weekly-day-name">토</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">31</span>
+                    <span class="weekly-date-tx">내일</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+
+<!-- Calendar -->
+<div class="weekly-container">
+    <div class="weekly-header">
+        <h3 class="header-title" id="regularTitle">
+            2026. 01
+            <span class="picker-arrow">▼</span>
+        </h3>
+        <button type="button" class="btn-bor btn-md"><span>주간 리포트</span></button>
+    </div>
+    <div class="weekly-grid">
+        <div class="weekly-day-col sun">
+            <div class="weekly-day-name">일</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap"> 
+                    <svg class="weekly-donut"  width="34" height="34" viewBox="0 0 34 34">
+                        <circle cx="17" cy="17" r="15" fill="transparent" stroke="#E9ECF3" stroke-width="4" />
+                        <circle cx="17" cy="17" r="15" fill="transparent" stroke="#39B695" stroke-width="4" 
+                        stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="70"    transform="rotate(-90 17 17)" />
+                    </svg>                
+                    <span class="weekly-date-num">12</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col">
+            <div class="weekly-day-name">월</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">  
+                    <svg class="weekly-donut"  width="34" height="34" viewBox="0 0 34 34">
+                        <circle cx="17" cy="17" r="15" fill="transparent" stroke="#E9ECF3" stroke-width="4" />
+                        <circle cx="17" cy="17" r="15" fill="transparent" stroke="#39B695" stroke-width="4" 
+                        stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="40"    transform="rotate(-90 17 17)" />
+                    </svg>                    
+                    <span class="weekly-date-num">13</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col">
+            <div class="weekly-day-name">화</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">14</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col">
+            <div class="weekly-day-name">수</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">15</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col selected">
+            <div class="weekly-day-name">목</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">16</span>
+                    <span class="weekly-date-tx">오늘</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col today">
+            <div class="weekly-day-name">금</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">17</span>
+                    <span class="weekly-date-tx">내일</span>
+                </div>
+            </div>
+        </div>
+        <div class="weekly-day-col">
+            <div class="weekly-day-name">토</div>
+            <div class="weekly-chart-area">
+                <div class="weekly-donut-wrap">                      
+                    <span class="weekly-date-num">18</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

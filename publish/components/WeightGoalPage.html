@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>wheel-picke</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+    </head>
+    <body>
+        <div class="picker-modal-overlay">
+            <div class="picker-modal-container">
+                <div class="picker-header">
+                    <h3>몸무게 선택</h3>
+                </div>
+                <!---몸무게---->
+                <div class="wheel-picker-wrapper">
+                    <div class="highlight-bar">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="picker-columns">
+                        <div class="wheel-column" id="integer">
+                            <div class="wheel-items"></div>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="wheel-column decimal" id="decimals">
+                            <div class="wheel-items"></div>
+                        </div>
+                        <div class="unit-label">kg</div>
+                    </div>
+                </div>
+
+                <div class="picker-footer">
+                    <button class="btn-bor" onClick="{onClose}">취소</button>
+                    <button class="btn-fill btn-primary" onClick="{handleAdd}">
+                        추가
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module">
+            import { createWheel } from "../../utils/wheelpicker.js";
+
+            const weightInteger = createWheel({
+                container: document.getElementById("integer"),
+                min: 30,
+                max: 200,
+                initialValue: 60,
+                step: 1,
+            });
+
+            const weightDecimal = createWheel({
+                container: document.getElementById("decimals"),
+                min: 0,
+                max: 9,
+                initialValue: 1,
+                step: 1,
+            });
+
+            function getWeight() {
+                return `${weightInteger.getValue()}.${weightDecimal.getValue()}`;
+            }
+        </script>
+    </body>
+</html>

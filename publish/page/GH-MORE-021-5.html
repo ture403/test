@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>날짜선택</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <!-- 전체 화면 모달 -->
+        <div
+            class="modal-overlay modal-fullscreen is-active"
+            id="modalFullscreen"
+        >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"></h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalFullscreen')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-cont">
+                        <div class="title-type">
+                            <h3 class="text-h5">몸무게 정보를 입력해주세요</h3>
+                        </div>
+                        <ul class="link-arr-lists">
+                            <li>
+                                <a href="#" class="link-arr">
+                                    <div class="tit">
+                                        <i class="ico-date"></i>
+                                        <span class="text-b-lg-sb">날짜</span>
+                                    </div>
+                                    <span class="text-b-lg-sb hc1">오늘</span>
+                                    <i class="ico-arr"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link-arr">
+                                    <div class="tit">
+                                        <i class="ico-clock"></i>
+                                        <span class="text-b-lg-sb">시간</span>
+                                    </div>
+                                    <span class="text-b-lg-sb hc1">
+                                        오후 2:32
+                                    </span>
+                                    <i class="ico-arr"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link-arr">
+                                    <div class="tit">
+                                        <i class="ico-wht"></i>
+                                        <span class="text-b-lg-sb">몸무게</span>
+                                    </div>
+                                    <span class="text-b-lg-sb hc1">60 kg</span>
+                                    <i class="ico-arr"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-fill btn-primary">
+                        <strong>추가</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 중앙 모달 -->
+        <div class="modal-overlay modal-center is-active" id="modalCenter">
+            <div class="modal-content">
+                <!-- Time Picker -->
+                <div class="time-picker-container">
+                    <p class="text-b-sm-m">날짜 선택</p>
+                    <div class="time-picker">
+                        <div class="time-picker-top">
+                            <div class="time-box hour active" id="hourBox">
+                                07
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-box minute" id="minuteBox">00</div>
+                            <div class="period-selector">
+                                <button class="period-btn am active" id="amBtn">
+                                    오전
+                                </button>
+                                <button class="period-btn pm" id="pmBtn">
+                                    오후
+                                </button>
+                            </div>
+                        </div>
+                        <div class="time-picker-clock">
+                            <div class="clock-face" id="clockFace">
+                                <div class="clock-hand" id="clockHand"></div>
+                                <div class="clock-center" id="clockCenter">
+                                    7
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-picker-bottom">
+                            <button type="button">
+                                <i class="ico-keyboard"></i>
+                            </button>
+                            <div>
+                                <button type="button" class="btn">취소</button>
+                                <button type="button" class="btn">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Time Picker -->
+            </div>
+        </div>
+        <script type="module">
+            import { createTimePicker } from "../../utils/timepicker.js";
+            createTimePicker();
+        </script>
+    </body>
+</html>

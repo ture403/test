@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강목표 선택</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <!-- top-header-nav trans 에서 trans 삭제 -->
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="health-target-wrap">
+                    <div class="title-type">
+                        <h3 class="text-h5">
+                            이루고 싶은
+                            <br />
+                            건강 목표를 선택하세요
+                        </h3>
+                    </div>
+                    <!-- 현재 진행 가능한 루틴팩 리스트 -->
+                    <div class="target-item is-selected">
+                        <button type="button" class="checkFormCir"></button>
+                        <div class="target-item-tit">
+                            <!-- 건강유형 아이콘 클래스변경 -->
+                            <i class="ico-hc-diet"></i>
+                            <h4 class="text-b-lg">체지방 감소</h4>
+                        </div>
+                        <div class="text-c-lg-r">
+                            체지방 줄이는 생활습관을 알려드려요. 블라블라블라
+                            2줄까지 표시함
+                        </div>
+                        <div class="target-item-package">
+                            <h5>내가 구매한 패키지</h5>
+                            <div class="target-item-package-my">
+                                <div class="tmy-package">
+                                    <div class="tmy-package-img"></div>
+                                    <div class="tmy-package-info">
+                                        <div class="t1">
+                                            먹어서 찐 살 먹어서 빼자
+                                        </div>
+                                        <div class="t2">
+                                            8주 체지방컷 + 8주 루틴
+                                        </div>
+                                        <div class="t3">
+                                            잔티젠+마그네슘+바나바잎추출물
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tmy-package">
+                                    <div class="tmy-package-img"></div>
+                                    <div class="tmy-package-info">
+                                        <div class="t1">
+                                            먹어서 찐 살 먹어서 빼자
+                                        </div>
+                                        <div class="t2">
+                                            8주 체지방컷 + 8주 루틴
+                                        </div>
+                                        <div class="t3">
+                                            잔티젠+마그네슘+바나바잎추출물
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="target-item">
+                        <button type="button" class="checkFormCir"></button>
+                        <div class="target-item-tit">
+                            <!-- 건강유형 아이콘 클래스변경 -->
+                            <i class="ico-hc-muscle"></i>
+                            <h4 class="text-b-lg">근력 강화</h4>
+                        </div>
+                        <div class="text-c-lg-r">
+                            체지방 줄이는 생활습관을 알려드려요. 블라블라블라
+                            2줄까지 표시함
+                        </div>
+                        <div class="target-item-package">
+                            <h5>내가 구매한 패키지</h5>
+                            <div class="target-item-package-my">
+                                <div class="tmy-package">
+                                    <div class="tmy-package-img"></div>
+                                    <div class="tmy-package-info">
+                                        <div class="t1">
+                                            먹어서 찐 살 먹어서 빼자
+                                        </div>
+                                        <div class="t2">
+                                            8주 체지방컷 + 8주 루틴
+                                        </div>
+                                        <div class="t3">
+                                            잔티젠+마그네슘+바나바잎추출물
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="health-target-overlay">
+                    <div class="health-target-bottom">
+                        <div class="health-target-bottom-top">
+                            <h3 class="text-b-md-sb">
+                                다른 건강 목표 둘러보기
+                            </h3>
+                            <button type="button" class="btn-tg">
+                                <i class="ico-arr-down"></i>
+                            </button>
+                            <p class="text-b-sm-r">
+                                관련 패키지를 구매하면 함께 오픈 됩니다.
+                            </p>
+                        </div>
+
+                        <div class="health-target-bottom-scroll">
+                            <div class="health-target-bottom-cont">
+                                <div class="target-item">
+                                    <div class="target-item-tit">
+                                        <!-- 건강유형 아이콘 클래스변경 -->
+                                        <i class="ico-hc-brain"></i>
+                                        <h4 class="text-b-lg">뇌 건강</h4>
+                                    </div>
+                                    <div class="text-c-lg-r">
+                                        체지방 줄이는 생활습관을 알려드려요.
+                                        블라블라블라 2줄까지 표시함
+                                    </div>
+                                    <div class="target-item-package">
+                                        <h5>관련 패키지</h5>
+                                        <div class="target-item-package-my">
+                                            <div class="tmy-package">
+                                                <div
+                                                    class="tmy-package-img"
+                                                ></div>
+                                                <div class="tmy-package-info">
+                                                    <div class="t1">
+                                                        먹어서 찐 살 먹어서 빼자
+                                                    </div>
+                                                    <div class="t2">
+                                                        8주 체지방컷 + 8주 루틴
+                                                    </div>
+                                                    <div class="t3">
+                                                        잔티젠+마그네슘+바나바잎추출물
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="target-item">
+                                    <div class="target-item-tit">
+                                        <!-- 건강유형 아이콘 클래스변경 -->
+                                        <i class="ico-hc-stress"></i>
+                                        <h4 class="text-b-lg">
+                                            스트레스/수면/피로개선
+                                        </h4>
+                                    </div>
+                                    <div class="text-c-lg-r">
+                                        체지방 줄이는 생활습관을 알려드려요.
+                                        블라블라블라 2줄까지 표시함
+                                    </div>
+                                    <div class="target-item-package">
+                                        <h5>관련 패키지</h5>
+                                        <div class="target-item-package-my">
+                                            <div class="tmy-package">
+                                                <div
+                                                    class="tmy-package-img"
+                                                ></div>
+                                                <div class="tmy-package-info">
+                                                    <div class="t1">
+                                                        먹어서 찐 살 먹어서 빼자
+                                                    </div>
+                                                    <div class="t2">
+                                                        8주 체지방컷 + 8주 루틴
+                                                    </div>
+                                                    <div class="t3">
+                                                        잔티젠+마그네슘+바나바잎추출물
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="target-item">
+                                    <div class="target-item-tit">
+                                        <!-- 건강유형 아이콘 클래스변경 -->
+                                        <i class="ico-hc-eyes"></i>
+                                        <h4 class="text-b-lg">눈 건강</h4>
+                                    </div>
+                                    <div class="text-c-lg-r">
+                                        체지방 줄이는 생활습관을 알려드려요.
+                                        블라블라블라 2줄까지 표시함
+                                    </div>
+                                    <div class="target-item-package">
+                                        <h5>관련 패키지</h5>
+                                        <div class="target-item-package-my">
+                                            <div class="tmy-package">
+                                                <div
+                                                    class="tmy-package-img"
+                                                ></div>
+                                                <div class="tmy-package-info">
+                                                    <div class="t1">
+                                                        먹어서 찐 살 먹어서 빼자
+                                                    </div>
+                                                    <div class="t2">
+                                                        8주 체지방컷 + 8주 루틴
+                                                    </div>
+                                                    <div class="t3">
+                                                        잔티젠+마그네슘+바나바잎추출물
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <button type="button" class="btn-fill btn-primary">
+                    <strong>다음</strong>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            const targetChks = document.querySelectorAll(".checkFormCir");
+            targetChks.forEach((tg) => {
+                tg.addEventListener("click", (e) => {
+                    e.currentTarget.parentElement.classList.toggle(
+                        "is-selected",
+                    );
+                });
+            });
+
+            const btnTg = document.querySelector(".btn-tg");
+            const targetOverlay = document.querySelector(
+                ".health-target-overlay",
+            );
+            btnTg.addEventListener("click", () => {
+                targetOverlay.classList.toggle("is-active");
+            });
+        </script>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>가져오기 랜딩4</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="randing-wrap">
+                    <div class="line-step-wrapper">
+                        <div class="line-step"></div>
+                        <div class="line-step"></div>
+                        <div class="line-step"></div>
+                        <div class="line-step is-active"></div>
+                    </div>
+
+                    <div class="title-type__sub">
+                        <h3 class="text-h5">
+                            건강검진 결과를 가져오려면
+                            <br />
+                            추가 인증이 필요해요
+                        </h3>
+                        <p>
+                            <span>인증수단</span>
+                            간편 인증 정보를 확인해주세요
+                        </p>
+                    </div>
+                    <div class="auth-wrapper">
+                        <div class="input-cell">
+                            <div class="label">이름</div>
+                            <div class="input-box">
+                                <input
+                                    type="text"
+                                    class="input"
+                                    placeholder="이름을 입력해주세요"
+                                />
+                            </div>
+                        </div>
+                        <div class="input-cell">
+                            <div class="label">생년월일</div>
+                            <div class="input-box">
+                                <input
+                                    type="text"
+                                    class="input"
+                                    placeholder="1999.01.11"
+                                />
+                            </div>
+                        </div>
+                        <div class="input-cell">
+                            <div class="label">휴대폰번호</div>
+                            <div class="input-box">
+                                <input
+                                    type="text"
+                                    class="input"
+                                    placeholder="휴대폰번호"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="term-wrapper bottom-fixed">
+                    <div class="term-title">
+                        <button type="button" class="checkFormCir"></button>
+                        <p>(필수)개인정보 제3자 제공동의</p>
+                    </div>
+                    <span class="hc1 text-c-lg-m">내용보기</span>
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <div class="btn-group">
+                    <button type="button" class="btn-bor">
+                        <span>취소</span>
+                    </button>
+                    <!-- 비활성화시 
+                    <button type="button" class="btn-fill btn-disabled">
+                        <strong>인증요청</strong>
+                    </button>
+                    -->
+                    <button
+                        type="button"
+                        class="btn-fill btn-primary"
+                        onclick="openModal(event)"
+                        modal-id="modalAuthNext"
+                    >
+                        <strong>인증요청</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 하단 슬라이드 모달 : 인증진행 -->
+        <div class="modal-overlay modal-bottom" id="modalAuthNext">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="auth-next">
+                        <i class="ico-kakao"></i>
+
+                        <h6 class="text-h6">
+                            선택하신 간편인증 앱에서
+                            <br />
+                            인증을 진행해주세요
+                        </h6>
+                        <p class="text-b-sm-r">
+                            인증 요청 푸시 메시지를 클릭해서 인증 완료 후
+                            <br />
+                            하단 간편인증 완료 버튼을 클릭해주세요
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn-fill btn-primary"
+                        onclick="closeModal('modalAuthNext')"
+                    >
+                        인증 완료
+                    </button>
+                    <button
+                        type="button"
+                        class="btn-bor no-bor"
+                        onclick="closeModal('modalAuthNext')"
+                    >
+                        취소
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const targetChks = document.querySelectorAll(".checkFormCir");
+            targetChks.forEach((tg) => {
+                tg.addEventListener("click", (e) => {
+                    e.currentTarget.parentElement.classList.toggle(
+                        "is-selected",
+                    );
+                });
+            });
+
+            const btnTg = document.querySelector(".btn-tg");
+            const targetOverlay = document.querySelector(
+                ".health-target-overlay",
+            );
+            btnTg.addEventListener("click", () => {
+                targetOverlay.classList.toggle("is-active");
+            });
+        </script>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

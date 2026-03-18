@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>알람 셋팅</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        </script>
+        </head>
+    <body>
+    <!-- 전체 화면 모달 -->
+    <div class="modal-overlay modal-fullscreen is-active" id="modalFullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">알람 설정</h2>
+                <button class="modal-close" onclick="closeModal('modalFullscreen')"><i class="ico-x"></i><span class="sr-only">닫기</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-cont">
+                    <div class="alarm-st-wrap">
+                        <div class="health-connect-box">
+                            <div class="title">
+                                <i class="ico-alarm"></i>
+                                앱 푸시
+                            </div>
+                            <div class="switch">
+                                <input type="checkbox" id="switchTg" />
+                                <label for="switchTg">
+                                    <span class="sr-only">설정</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

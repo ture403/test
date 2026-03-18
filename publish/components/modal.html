@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>modal</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+
+        <style>
+            .button-group {
+                padding: 1.6rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>모바일 모달 샘플</h1>
+        <div class="button-group">
+            <button
+                class="btn-fill"
+                onclick="openModal(event)"
+                modal-id="modalCenter"
+            >
+                <span>중앙 모달 열기</span>
+            </button>
+            <button
+                class="btn-fill"
+                onclick="openModal(event)"
+                modal-id="modalCenter2"
+            >
+                <span>중앙 모달 열기-2</span>
+            </button>
+            <button
+                class="btn-fill"
+                onclick="openModal(event)"
+                modal-id="modalCenter3"
+            >
+                <span>중앙 모달 열기-3</span>
+            </button>
+            <button
+                class="btn-fill"
+                onclick="openModal(event)"
+                modal-id="modalCenter4"
+            >
+                <span>중앙 모달 열기-4</span>
+            </button>
+            <button
+                class="btn-fill"
+                onclick="openModal(event)"
+                modal-id="modalBottom"
+            >
+                하단 슬라이드 모달 열기
+            </button>
+            <button
+                class="btn-fill"
+                onclick="openModal(event)"
+                modal-id="modalBottom-Nohead"
+            >
+                헤더없는 하단 슬라이드 모달 열기
+            </button>
+            <button
+                class="btn-fill"
+                onclick="openModal(event)"
+                modal-id="modalFullscreen"
+            >
+                전체 화면 모달 열기
+            </button>
+            <button
+                class="btn-fill"
+                onclick="toastOpen(event)"
+                modal-id="toastMessage"
+            >
+                토스트메세지 열기
+            </button>
+        </div>
+
+        <!-- 중앙 모달 -->
+        <div class="modal-overlay modal-center" id="modalCenter">
+            <div class="modal-content">
+                <div class="modal-header flex-center">
+                    <h2 class="modal-title">알림</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-center">
+                        
+                    <p>
+                        BMI(체질량지수)는 키와 체중으로 비만도를 가늠하는
+                        일반적인 지표에요.
+                    </p>
+                    <br />
+                    <p>
+                        하지만 근육량 등 체성분을 고려하지 않기 때문에, 근육이
+                        많은 경우 BMI가 높게 나와도 실제 비만은 아닐 수 있어요.
+                        따라서 모든 사람에게 정확히 적용되는 것은 아니에요.
+                    </p>
+
+                    <div class="modal-center-btn">
+                        <button
+                            type="button"
+                            class="btn hc1"
+                            onclick="closeModal('modalCenter')"
+                        >
+                            확인
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal-overlay modal-center" id="modalCenter2">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">알림</h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalCenter2')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        BMI(체질량지수)는 키와 체중으로 비만도를 가늠하는
+                        일반적인 지표에요.
+                    </p>
+                    <br />
+                    <p>
+                        하지만 근육량 등 체성분을 고려하지 않기 때문에, 근육이
+                        많은 경우 BMI가 높게 나와도 실제 비만은 아닐 수 있어요.
+                        따라서 모든 사람에게 정확히 적용되는 것은 아니에요.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay modal-center" id="modalCenter3">
+            <div class="modal-content">
+                <div class="modal-header flex-center">
+                    <h2 class="modal-title">오늘 기록된 몸무게 있습니다.</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-center">
+                        <p class="text-b-md-r hc3">이전 기록을 유지할까요?</p>
+                    </div>
+                    <div class="modal-center-btn">
+                        <button
+                            type="button"
+                            class="btn hc3"
+                            onclick="closeModal('modalCenter3')"
+                        >
+                            삭제
+                        </button>
+                        <button
+                            type="button"
+                            class="btn hc1"
+                            onclick="closeModal('modalCenter3')"
+                        >
+                            유지
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay modal-center" id="modalCenter4">
+            <div class="modal-content">
+                <div class="modal-header flex-center">
+                    <h2 class="modal-title">
+                        설정된 몸무게 목표를 삭제할까요?
+                    </h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-center">
+                        <p class="text-b-md-r hc3">삭제 후 복구할 수 없어요.</p>
+                    </div>
+                    <div class="modal-center-btn">
+                        <button
+                            type="button"
+                            class="btn hc3"
+                            onclick="closeModal('modalCenter4')"
+                        >
+                            취소
+                        </button>
+                        <button
+                            type="button"
+                            class="btn hc2"
+                            onclick="closeModal('modalCenter4')"
+                        >
+                            삭제
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단 슬라이드 모달 -->
+        <div class="modal-overlay modal-bottom" id="modalBottom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">복용 관리</h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalBottom')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="med-manage">
+                        <div class="med-manage1">
+                            <div class="info">
+                                <div class="text-b-lg">
+                                    인진오령산가인삼액(1)
+                                </div>
+                                <div class="text-b-sm-sb hc3">
+                                    <span>일</span>
+                                    <span class="hc1">월</span>
+                                    <span>화</span>
+                                    <span class="hc1">수</span>
+                                    <span class="hc1">목</span>
+                                    <span class="hc1">금</span>
+                                </div>
+                                <div class="text-c-lg-m">
+                                    <span>
+                                        <i class="ico-repeat"></i>
+                                        하루 1번
+                                    </span>
+                                    <span class="bar"></span>
+                                    <span>1시, 8시</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn">수정</button>
+                        </div>
+                        <div class="med-manage2">
+                            <div class="rut-item selected">
+                                <div class="pill-icon-mde">
+                                    <i class="pill-taken"></i>
+                                    <span class="text-b-sm-m">약 먹었어요</span>
+                                </div>
+                            </div>
+                            <div class="rut-item">
+                                <div class="pill-icon-mde">
+                                    <i class="pill-ignored"></i>
+                                    <span class="text-b-sm-m">
+                                        다음에 먹을게요
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 헤더없는 하단 슬라이드 모달 -->
+        <div class="modal-overlay modal-bottom" id="modalBottom-Nohead">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tip-tit">
+                        앉아서 다리 들어올리기
+                    </div>
+                    <div class="tip-comment">
+                        의자에 앉아 다리를 올리는 운동을 해보세요. 허벅지와 엉덩이 근육을 자극해 하체 근육 강화 및 근육량을 늘려 체중 증량에 도움이 돼요. 의자 끝부분에 앉아 다리를 수평으로 들어 올려요. 엄지발가락을 배꼽 방향으로 당겨 30초 동안 유지 후 풀어주세요. 3~5회 반복합니다.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-fill" onclick="closeModal('modalBottom-Nohead')">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 전체 화면 모달 -->
+        <div class="modal-overlay modal-fullscreen" id="modalFullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">상세 정보</h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalFullscreen')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-fill btn-primary">
+                        <strong>추가하기</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 토스트 메세지 형태 모달 -->
+        <div class="modal-overlay modal-center type-toast" id="toastMessage">
+    <div class="modal-content">
+        <div class="modal-body">
+            0에서 300 사이의 숫자를 입력해주세요
+        </div>
+    </div>
+    </body>
+</html>

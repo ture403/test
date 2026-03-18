@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>루틴 리포트</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>루틴 리포트</h2>
+                </div>
+            </header>
+
+            <div class="sub-wrap has-header">
+                <!-- 리포트 좌우 스크롤가능탭 -->
+                <div class="tab-wrap scroll-x">
+                    <ul class="tab">
+                        <!-- 신규업로드 리포트 있을시 li에 new 클래스추가 -->
+                        <li class="active new">
+                            <button type="button">혈당건강1</button>
+                        </li>
+                        <li><button type="button">혈당건강2</button></li>
+                        <li><button type="button">체지방감소</button></li>
+                        <li>
+                            <button type="button">
+                                스트레스 수면 피로개선
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!--루틴상품안내-->
+                <div class="report-item-wrap">
+                    <!--건강유형안내-->
+                    <div class="health-case-wrap">
+                        <div class="health-case-info">
+                            <span class="tag-h">눈 건강</span>
+                            <div class="text-h7">
+                                사려깊은 호르몬 플래너
+                                <p class="txts">
+                                    맑고 또렷한 시력 관리를 담당해요
+                                </p>
+                            </div>
+                        </div>
+                        <!--건강유형별 캐릭터--->
+                        <i class="ht-cs-eyes"></i>
+                    </div>
+                    <!--루틴상품상세 진행도-->
+                    <div class="routine-item-info">
+                        <div class="item-info-wrap">
+                            <div class="item-info-thum">
+                                <img
+                                    src="../../assets/images/product_hello-paper-3pc.jpg"
+                                />
+                            </div>
+                            <div class="item-info-txts">
+                                <div class="item-name">PrimeCOre</div>
+                                <div class="item-term">
+                                    <p class="term-title">
+                                        혈당 건강 루틴 전체 진행기간
+                                        <!-- 삭제 <i class="ico-i"></i> -->
+                                    </p>
+                                    <p class="term-date">
+                                        2025.01.02 ~ 2025.01.29
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 진행 표기바 진행완료 된 주차엔 complete 마지막주차 ing 추가-->
+                        <ul class="compWk-bar">
+                            <li class="compWk-item is-first complete gold">
+                                <span>1주차</span>
+                            </li>
+                            <li class="compWk-item is-mid complete silver">
+                                <span>2주차</span>
+                            </li>
+                            <li class="compWk-item is-mid complete ing bronze">
+                                <span>3주차</span>
+                            </li>
+                            <li class="compWk-item is-mid is-last">
+                                <span>4주차</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="report-detail-wrap">
+                    <ul class="inner-tab">
+                        <li class="is-active">
+                            <button type="button">1주차</button>
+                        </li>
+                        <li><button type="button">2주차</button></li>
+                        <li><button type="button">3주차</button></li>
+                        <li><button type="button">4주차</button></li>
+                    </ul>
+                    <div class="report-datail">
+                        <div class="total-review">
+                            <div class="ss-title">1주 차 실천율</div>
+                            <i class="img-tt-gold"></i>
+                            <!-- gold 높음 silver중간 bronze낮음
+                            <i class="img-tt-silver"></i>
+                            <i class="img-tt-bronze"></i>
+                            -->
+                            <div class="percent">33%</div>
+                        </div>
+                        <!-- 평가 : 높음 ev-top-->
+                        <div class="review-box ev-top">
+                            <div class="review-box-header">
+                                <div class="review-box-info">
+                                    <div class="review-box-title-group">
+                                        <span class="tag-c">기본</span>
+                                        <h3 class="review-box-title">
+                                            영양제 잊지말고 먹기
+                                        </h3>
+                                    </div>
+                                    <div class="review-box-status">
+                                        <p>
+                                            루틴 기록
+                                            <span class="status-point">
+                                                높음
+                                            </span>
+                                        </p>
+                                        <!-- <p class="status-slice"></p>
+                                        <p>
+                                            복약 기록
+                                            <span class="status-point">
+                                                높음
+                                            </span>
+                                        </p> -->
+                                    </div>
+                                    <p class="review-box-summary">
+                                        완벽한 실천이에요! 최고의 건강 습관을
+                                        만들었어요.
+                                    </p>
+                                </div>
+                                <!-- is-top is-md is-bt 로 텍스트 조정가능-->
+                                <div class="review-box-visual is-md">
+                                    <i class="report-md"></i>
+                                    <span class="review-box-grade">
+                                        기초완성
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="review-box-body">
+                                <p class="review-box-desc">
+                                    정말 대단해요. 지난 7일 동안 하루도 빠짐없이
+                                    영양제 챙기기 약속을 지키셨네요. 꾸준히 챙겨
+                                    드신 만큼 내 몸도 긍정적인 변화를 느끼고
+                                    있을 거예요. 이 건강한 느낌 그대로, 다음
+                                    주도 활기차게 이어가 봐요.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 평가 : 보통 ev-middle -->
+                        <div class="review-box ev-middle">
+                            <div class="review-box-header">
+                                <div class="review-box-info">
+                                    <div class="review-box-title-group">
+                                        <span class="tag-d">식사</span>
+                                        <h3 class="review-box-title">
+                                            적색육 먹고 철분 보충하기
+                                        </h3>
+                                    </div>
+                                    <div class="review-box-status">
+                                        <p>
+                                            루틴 기록
+                                            <span class="status-point">
+                                                보통
+                                            </span>
+                                        </p>
+                                        <!-- <p class="status-slice"></p>
+                                        <p>
+                                            복약 기록
+                                            <span class="status-point">
+                                                보통
+                                            </span>
+                                        </p> -->
+                                    </div>
+                                    <p class="review-box-summary">
+                                        균형있게 잘 진행 중이에요. 변화가
+                                        느껴지시죠?
+                                    </p>
+                                </div>
+                                <!-- is-top is-md is-bt 로 텍스트 조정가능-->
+                                <div class="review-box-visual is-top">
+                                    <i class="report-top"></i>
+                                    <span class="review-box-grade">
+                                        식단도전
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="review-box-body">
+                                <p class="review-box-desc">
+                                    붉은 육류와 영양제 루틴이 조화롭게 자리
+                                    잡았네요. {추천성분}(으)로 뇌 구석구석
+                                    산소가 잘 전달되도록 흐름을 안정화하며
+                                    건강을 더 탄탄하게 관리해 보세요.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 평가 : 낮음 ev-bottom -->
+                        <div class="review-box ev-bottom">
+                            <div class="review-box-header">
+                                <div class="review-box-info">
+                                    <div class="review-box-title-group">
+                                        <span class="tag-e">생활</span>
+                                        <h3 class="review-box-title">
+                                            적색육 먹고 철분 보충하기
+                                        </h3>
+                                    </div>
+                                    <div class="review-box-status">
+                                        <p>
+                                            루틴 기록
+                                            <span class="status-point">
+                                                낮음
+                                            </span>
+                                        </p>
+                                        <!-- <p class="status-slice"></p>
+                                        <p>
+                                            복약 기록
+                                            <span class="status-point">
+                                                낮음
+                                            </span>
+                                        </p> -->
+                                    </div>
+                                    <p class="review-box-summary">
+                                        오늘부터 새롭게 시작해봐요. 한 번만
+                                        해볼까요?
+                                    </p>
+                                </div>
+                                <div class="review-box-visual">
+                                    <i class="report-bt"></i>
+                                    <span class="review-box-grade">
+                                        생활건강
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="review-box-body">
+                                <p class="review-box-desc">
+                                    수면 6시간을 기본으로 깊고 끊김 없는 잠까지
+                                    관리하려는 계획은 장기적인 뇌 건강을
+                                    실현하는 데 있어 매우 명확하고 훌륭한 다음
+                                    단계 전략입니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

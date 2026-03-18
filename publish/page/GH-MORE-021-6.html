@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>목표설정</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+    <!-- 전체 화면 모달 -->
+    <div class="modal-overlay modal-fullscreen is-active" id="modalFullscreen">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"></h2>
+            <button class="modal-close" onclick="closeModal('modalFullscreen')">
+            <i class="ico-x"></i><span class="sr-only">닫기</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-cont">
+                <div class="title-type">
+                    <h3 class="text-h5">목표 몸무게를 설정해보세요</h3>
+                </div>
+                <div class="goal-setting1">
+                    <p class="text-b-sm-m gc2">최근 몸무게 : 63.2 kg</p>
+                    <!-- wheel picker -->
+                    <div class="wheel-picker-wrapper">
+                        <div class="highlight-bar">
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="picker-columns">                        
+                            <div class="wheel-column" id="integer">
+                                <div class="wheel-items">
+                                </div>
+                            </div>
+                            <div class="dot">.</div>
+                            <div class="wheel-column" id="decimals">
+                                <div class="wheel-items">
+                                </div>
+                            </div> 
+                            <div class="unit-label">kg</div>                       
+                        </div>
+                    </div>
+                    <!-- //wheel picker -->
+
+                    <div class="goal-setting-tip">
+                        <h4 class="text-b-sm-sb hc1">TIP</h4>
+                        <p class="text-b-sm-m">지금 나의 신체질량지수(BMI)는 어느 정도일까요?</p>
+                        <div class="bmi-box-wrap">
+                            <div class="bmi-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="bmi-boxs">
+                                <div class="bmi-box">
+                                    <div class="wbx">
+                                        <span class="hc1">저체중</span>
+                                        <span>~53.5 kg</span>
+                                    </div>
+                                </div>
+                                <div class="bmi-box">
+                                    <div class="wbx">
+                                        <span class="hc1">정상</span>
+                                        <span>~66.5 kg</span>
+                                    </div>
+                                </div>
+                                <div class="bmi-box">
+                                    <div class="wbx">
+                                        <span class="hc1">과체중</span>
+                                        <span>~72.3 kg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-space"></div>
+                <div class="goal-setting2">
+                <p class="text-b-sm-m hc3">목표 달성 기간 설정</p>
+                <div class="title-type">
+                    <h3 class="text-h5">언제까지<br />목표를 달성하고 싶으세요?</h3>
+                </div>
+                <div class="goal-period-bx">
+                    <div class="row">
+                        <div class="text-b-sm-m hc3 start">시작일</div>
+                        <div class="text-b-sm-m">오늘 (2026. 01. 09)</div>
+                    </div>
+                    <div class="row">
+                        <div class="text-b-sm-m hc3 end">종료일</div>
+                        <div class="text-b-sm-m hc1"><strong>2026. 07. 09</strong></div>
+                    </div>
+                </div>
+                <div class="range-bottom-buttons">
+                    <button class="quick-btn">설정안함</button>
+                    <button class="quick-btn">1개월 후</button>
+                    <button class="quick-btn">3개월 후</button>
+                    <button class="quick-btn active">6개월 후</button>
+                </div>
+                <div class="calendar-setting">
+                    <button type="button" class="btn-toggle">
+                        <i class="ico-date"></i>
+                        <span class="text-b-sm-m">직접선택</span>
+                        <i class="ico-arr-down"></i>
+                    </button>
+
+                    <!-- 기본 -->
+                    <div class="calendar" data-type="basic">
+                        <div class="calendar-header">
+                            <button class="prev-btn">
+                                <i class="ico-prev"></i><span class="sr-only">이전</span>
+                            </button>
+                            <button class="calendar-title">
+                                <span class="year-month"></span>
+                            </button>
+                            <button class="next-btn">
+                                <i class="ico-next"></i><span class="sr-only">다음</span>
+                            </button>
+                        </div>
+                        <div class="calendar-weekdays"></div>
+                        <div class="calendar-grid"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-fill btn-primary">
+            <strong>저장</strong>
+            </button>
+        </div>
+        </div>
+    </div>
+
+        <script type="module">
+            import { createWheel } from '../../utils/wheelpicker.js';
+
+            const weightInteger = createWheel({
+            container: document.getElementById('integer'),
+            min: 30,
+            max: 200,
+            initialValue: 60,
+            step: 1
+            });
+
+            const weightDecimal = createWheel({
+            container: document.getElementById('decimals'),
+            min: 0,
+            max: 9,
+            initialValue: 1,
+            step: 1
+            });
+
+        function getWeight() {
+            return `${weightInteger.getValue()}.${weightDecimal.getValue()}`;
+        }
+
+        const btnTg = document.querySelector('.btn-toggle');
+        const sett = document.querySelector('.calendar-setting');
+
+        btnTg.addEventListener('click', () => {
+            sett.classList.toggle('is-open');
+        })
+
+        </script>
+        <script src="../../utils/plugin/dayjs.min.js"></script>
+        <script src="../../utils/plugin/weekday.js"></script>
+        <script src="../../utils/plugin/isoWeek.js"></script>
+        <script src="../../utils/plugin/isToday.js"></script>
+        <script type="module" src="../../utils/calendar_basic.js"></script>
+    </body>
+</html>

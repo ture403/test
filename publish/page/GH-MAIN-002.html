@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강정보</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>건강정보</h2>
+                </div>
+            </header>
+            <div class="sub-wrap has-header gray">
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li class="active">
+                            <button type="button">전체 정보</button>
+                        </li>
+                        <li><button type="button">내가 찜한 정보</button></li>
+                    </ul>
+                </div>
+                <div class="headth-data-wrap">
+                    <div class="card-data-fileter">
+                        <button
+                            class="dropdown-button no-bor"
+                            onclick="openModal(event)"
+                            modal-id="modalFilter-healthCase"
+                        >
+                            건강 유형 선택
+                        </button>
+                        <button
+                            class="filter-button"
+                            onclick="openModal(event)"
+                            modal-id="modalFilter"
+                        >
+                            인기순
+                        </button>
+                    </div>
+                    <div class="card-data-list card-news">
+                        <div class="health-card">
+                            <div class="card-title">
+                                <span class="tag-g">
+                                    스트레스/수면/피로개선
+                                </span>
+                                <p class="text-b-md-sb">
+                                    치매 유발하는 실내 환경, 당장 바꾸어야 할
+                                    것은?
+                                </p>
+                            </div>
+                            <div class="card-thum">
+                                <img
+                                    src="../../assets/images/@card-news-thum.png"
+                                    alt="카드뉴스썸네일"
+                                />
+                            </div>
+                        </div>
+                        <div class="bookmark-wrap">
+                            <button
+                                type="button"
+                                class="btn-bookmark is-active"
+                                onclick="toastOpen(event)"
+                                modal-id="toastMessage"
+                            >
+                                <i class="ico-bookmark"></i>
+                                <span class="btn-bookmark-text">찜하기</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-data-list card-news">
+                        <div class="health-card">
+                            <div class="card-title">
+                                <span class="tag-g">
+                                    스트레스/수면/피로개선
+                                </span>
+                                <p class="text-b-md-sb">
+                                    치매 유발하는 실내 환경, 당장 바꾸어야 할
+                                    것은?
+                                </p>
+                            </div>
+                            <div class="card-thum">
+                                <img
+                                    src="../../assets/images/@card-news-thum.png"
+                                    alt="카드뉴스썸네일"
+                                />
+                            </div>
+                        </div>
+                        <div class="bookmark-wrap">
+                            <button
+                                type="button"
+                                class="btn-bookmark"
+                                onclick="toastOpen(event)"
+                                modal-id="toastMessage"
+                            >
+                                <i class="ico-bookmark"></i>
+                                <span class="btn-bookmark-text">찜하기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 하단 슬라이드 모달 건강유형선택 -->
+        <div class="modal-overlay modal-bottom" id="modalFilter-healthCase">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">건강 유형 선택</h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalFilter-healthCase')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="healthCase-list">
+                        <li class="is-active">
+                            <i class="ico-hc-all"></i>
+                            <p>전체</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-brain"></i>
+                            <p>뇌 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-stress"></i>
+                            <p>스트레스/ 수면 /피로개선</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-eyes"></i>
+                            <p>눈 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-skin"></i>
+                            <p>피부 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-liver"></i>
+                            <p>간 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-stomach"></i>
+                            <p>소화 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-intestine"></i>
+                            <p>장 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-diet"></i>
+                            <p>다이어트</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-sugar"></i>
+                            <p>혈당 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-man-senior"></i>
+                            <p>갱년기 남성</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-woman-senior"></i>
+                            <p>갱년기 여성</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-blood-vessel"></i>
+                            <p>이상지질혈증</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-pressure"></i>
+                            <p>혈압 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-shield"></i>
+                            <p>면역 / 황산화</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-bone"></i>
+                            <p>관절 / 뼈 건강</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-muscle"></i>
+                            <p>근력 개선</p>
+                        </li>
+                        <li>
+                            <i class="ico-hc-hair"></i>
+                            <p>모발 건강</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 하단 슬라이드 모달 : 인기 순, 최신순 정렬 -->
+        <div class="modal-overlay modal-bottom" id="modalFilter">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="radiobx-wrap text-type">
+                        <label
+                            class="radio-item"
+                            onclick="closeModal('modalFilter')"
+                        >
+                            <input type="radio" name="status" value="like" />
+                            <span class="box">인기순</span>
+                        </label>
+                        <label
+                            class="radio-item"
+                            onclick="closeModal('modalFilter')"
+                        >
+                            <input type="radio" name="status" value="new" />
+                            <span class="box">발행 최신순</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 토스트 메세지 찜 리스트에 추가되었습니다 -->
+        <div class="modal-overlay modal-center type-toast" id="toastMessage">
+            <div class="modal-content">
+                <div class="modal-body">찜 리스트에 추가되었습니다</div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

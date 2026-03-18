@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>몸무게 - 데이터없음</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>몸무게</h2>
+                </div>
+            </header>
+
+            <div class="sub-wrap has-header">
+                <div class="health-sect1">
+                    <div class="health-sect1-top">
+                        <div class="switch-bmi">
+                            <div class="switch">
+                                <input type="checkbox" id="switchTg" />
+                                <label for="switchTg">
+                                    <span class="sr-only">설정</span>
+                                </label>
+                            </div>
+                            <span class="text-b-md-m">BMI로 보기</span>
+                            <i
+                                class="ico-i"
+                                onclick="openModal(event)"
+                                modal-id="modalBmi"
+                            ></i>
+                        </div>
+                        <button
+                            class="btn-trashb"
+                            onclick="openModal(event)"
+                            modal-id="modalGoalDel"
+                        >
+                            <i class="ico-trash"></i>
+                            <span>목표삭제</span>
+                        </button>
+                    </div>
+                    <!-- 데이터 없을시 -->
+                    <div class="health-sect1-info">
+                        <div class="card-no-data">
+                            <p class="text-b-sm-m">
+                                아직 목표 몸무게가 없어요
+                                <br />
+                                아래 버튼을 눌러 목표 몸무게를 등록해 보세요
+                            </p>
+                            <button class="btn-edit">
+                                <i class="ico-edit"></i>
+                                <span>등록하기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li class="active">
+                            <button type="button">1주</button>
+                        </li>
+                        <li><button type="button">1개월</button></li>
+                        <li><button type="button">3개월</button></li>
+                        <li><button type="button">6개월</button></li>
+                        <li><button type="button">1년</button></li>
+                    </ul>
+                </div>
+                <div class="health-sect2">
+                    <div class="calendar-header-week">
+                        <button type="button" class="nav-btn dim">
+                            <i class="ico-prev"></i>
+                            <span class="sr-only">이전</span>
+                        </button>
+                        <h3 class="header-title">02.16 ~ 02.22</h3>
+                        <button type="button" class="nav-btn dim">
+                            <i class="ico-next"></i>
+                            <span class="sr-only">다음</span>
+                        </button>
+                    </div>
+                    <div class="health-sect2-info">
+                        <div class="health-sect2-info-detail">
+                            <div class="text-b-md-sb hc3">평균 몸무게</div>
+                            <div class="dt-data">
+                                <span class="text-h1">-</span>
+                                <span class="text-h6">kg</span>
+                            </div>
+                            <div class="dt-data-bg">
+                                <div class="text-b-sm-m">
+                                    <span class="tc6">최소</span>
+                                    <span>-</span>
+                                </div>
+                                <span class="bar"></span>
+                                <div class="text-b-sm-m">
+                                    <span class="tc7">최대</span>
+                                    <span>-</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph">
+                            <img
+                                src="../../assets/images/graph-nodata.png"
+                                alt="그래프 영역"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="health-sect3">
+                    <div class="health-data-wrap no-data">
+                        <span class="text-b-md">입력된 몸무게가 없어요</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <button type="button" class="btn-fill btn-primary">
+                    <strong>몸무게 입력하기</strong>
+                </button>
+            </div>
+        </div>
+        <!-- 모달 : BMI 체질량 지수 -->
+        <div class="modal-overlay modal-bottom"  id="modalBmi">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tip-tit">
+                        앉아서 다리 들어올리기
+                    </div>
+                    <div class="tip-comment">
+                        의자에 앉아 다리를 올리는 운동을 해보세요. 허벅지와 엉덩이 근육을 자극해 하체 근육 강화 및 근육량을 늘려 체중 증량에 도움이 돼요. 의자 끝부분에 앉아 다리를 수평으로 들어 올려요. 엄지발가락을 배꼽 방향으로 당겨 30초 동안 유지 후 풀어주세요. 3~5회 반복합니다.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-fill" onclick="closeModal('modalBmi')">
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- // 모달 : BMI 체질량 지수 -->
+        <!-- 모달 : 목표삭제 -->
+        <div class="modal-overlay modal-center" id="modalGoalDel">
+            <div class="modal-content">
+                <div class="modal-header flex-center">
+                    <h2 class="modal-title">
+                        설정된 몸무게 목표를 삭제할까요?
+                    </h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-center">
+                        <p class="text-b-md-r hc3">삭제 후 복구할 수 없어요.</p>
+                    </div>
+                    <div class="modal-center-btn">
+                        <button
+                            type="button"
+                            class="btn hc3"
+                            onclick="closeModal('modalGoalDel')"
+                        >
+                            취소
+                        </button>
+                        <button
+                            type="button"
+                            class="btn hc2"
+                            onclick="closeModal('modalGoalDel')"
+                        >
+                            삭제
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // 모달 : 목표삭제-->
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

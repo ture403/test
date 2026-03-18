@@ -1,0 +1,157 @@
+.time-picker-container {
+    max-width: 400px;
+}
+.time-picker-container .text-b-sm-m{
+    padding: 2.4rem 2.4rem 2rem;
+}
+.time-picker {
+   padding: 0 2.4rem
+}
+
+.time-picker-top {
+    display: flex;
+    justify-content: center;
+}
+
+.time-picker-top .hour,
+.time-picker-top .minute {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 140%;
+    width: 9.6rem;
+    height: 8rem;
+    border-radius: 0.8rem;
+}
+.time-separator {
+    font-size: 5.7rem;
+    font-weight: 400;
+    width: 2.4rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.time-picker-top .time-box {
+    color: #282828;
+    background: #F2F3F5;
+}
+
+.time-picker-top .time-box.active {
+    color: var(--text-primary);
+    background: #E7FCF6;
+
+}
+
+.time-picker-top .active.inputMode{
+    border: 0.2rem solid var(--border-primary);
+}/*input 모드 스타일링추가*/
+
+.time-picker-top .period-selector {
+    margin-left: 1.2rem;
+    display: flex;  
+    flex-direction: column;
+    border-radius: 0.8rem;
+    border: 1px solid #E2E6ED;
+    overflow: hidden;
+    width: 5.4rem;
+}
+.time-picker-top .period-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    flex:1;
+    white-space: nowrap;
+}
+.time-picker-top .pm {
+     border-top: 1px solid #E2E6ED;
+}
+.time-picker-top .active {
+    background: #E7FCF6;
+    color:#39B695
+}
+
+.time-picker-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:2rem;
+}
+.time-picker-bottom  button {
+    color:#39B695
+}
+
+.time-picker-clock {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    background: #F2F3F5;
+    border-radius: 50%;
+    margin: 3.6rem auto 2rem;
+}
+
+.time-picker-clock .clock-face {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #f5f5f5;
+    position: relative;
+}
+
+.time-picker-clock .clock-number {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+}
+.time-picker-clock .clock-number.active {
+    color:#fff;
+}
+
+.time-picker-clock .clock-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 2px;
+    height: 40%;
+    background: #3db39e;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(0deg);
+    transition: transform 0.25s ease;
+}
+.time-picker-clock .clock-hand::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: #3db39e;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -21px;
+    transform: translateX(-50%);
+}
+
+.time-picker-clock .clock-center {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    background: #3db39e;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size:0;
+}

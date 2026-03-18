@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>혈압입력</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <!-- 전체 화면 모달 -->
+        <div
+            class="modal-overlay modal-fullscreen is-active"
+            id="modalFullscreen"
+        >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"></h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalFullscreen')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-cont">
+                        <div class="title-type">
+                            <h3 class="text-h5">혈압을 입력해주세요</h3>
+                        </div>
+                        <!--- 혈압 wheelpicker---->
+                        <div class="picker-title-columns">
+                            <div class="text-b-sm-m">
+                                수축기
+                                <span class="unit">(mmHg)</span>
+                            </div>
+                            <div class="text-b-sm-m">
+                                이완기
+                                <span class="unit">(mmHg)</span>
+                            </div>
+                        </div>
+                        <div class="wheel-picker-wrapper">
+                            <div class="highlight-bar">
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="picker-columns">
+                                <div class="wheel-column" id="sbp-integer">
+                                    <div class="wheel-items"></div>
+                                </div>
+                                <div class="wheel-column" id="dbp-decimals">
+                                    <div class="wheel-items"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-type middle">
+                            <h3 class="text-h6">혈압약은 챙겨드셨나요?</h3>
+                        </div>
+                        <div class="med-manage2">
+                            <div class="rut-item selected">
+                                <div class="pill-icon-mde">
+                                    <i class="pill-empty"></i>
+                                    <span class="text-b-sm-m">해당 없음</span>
+                                </div>
+                            </div>
+                            <div class="rut-item">
+                                <div class="pill-icon-mde">
+                                    <i class="pill-taken"></i>
+                                    <span class="text-b-sm-m">먹었어요</span>
+                                </div>
+                            </div>
+                            <div class="rut-item">
+                                <div class="pill-icon-mde">
+                                    <i class="pill-forgot"></i>
+                                    <span class="text-b-sm-m">깜빡했어요</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="link-arr-lists">
+                            <li>
+                                <div class="link-arr">
+                                    <div class="tit">
+                                        <i class="ico-date2"></i>
+                                        <span class="text-b-lg-sb">날짜</span>
+                                    </div>
+                                    <span class="text-b-lg-sb hc1">오늘</span>
+                                    <i class="ico-arr"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="link-arr">
+                                    <div class="tit">
+                                        <i class="ico-clock2"></i>
+                                        <span class="text-b-lg-sb">
+                                            기록시간
+                                        </span>
+                                    </div>
+                                    <span class="text-b-lg-sb hc1">
+                                        오후 2:32
+                                    </span>
+                                    <i class="ico-arr"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-fill btn-primary">
+                        <strong>추가</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module">
+            import { createWheel } from "../../utils/wheelpicker.js";
+
+            const sbpInteger = createWheel({
+                container: document.getElementById("sbp-integer"),
+                min: 99,
+                max: 200,
+                initialValue: 120,
+                step: 1,
+            });
+
+            const dbptInteger = createWheel({
+                container: document.getElementById("dbp-decimals"),
+                min: 30,
+                max: 110,
+                initialValue: 78,
+                step: 1,
+            });
+
+            function getBpless() {
+                return `${sbpInteger.getValue()}.${dbptInteger.getValue()}`;
+            }
+        </script>
+    </body>
+</html>

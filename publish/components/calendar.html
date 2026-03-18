@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendars</title>
+    <link rel="stylesheet" href="../../assets/styles/style.css" />
+
+</head>
+<body>
+
+<!-- 기본 -->
+<div class="calendar" data-type="basic">
+    <div class="calendar-header">
+        <button class="prev-btn">
+            <i class="ico-prev"></i><span class="sr-only">이전</span>
+        </button>
+        <button class="calendar-title">
+            <span class="year-month"></span>
+        </button>
+        <button class="next-btn">
+            <i class="ico-next"></i><span class="sr-only">다음</span>
+        </button>
+    </div>
+
+    <div class="calendar-weekdays"></div>
+    <div class="calendar-grid"></div>
+</div>
+
+<!-- 선택 -->
+<div class="calendar" data-type="select">
+    <div class="calendar-header">
+        <button class="calendar-title">
+            <span class="year-month"></span>
+            <span class="picker-arrow">▼</span>
+        </button>
+        <button class="prev-btn">
+            <i class="ico-arr"></i>
+            <span class="sr-only">이전</span>
+        </button>
+        <button class="next-btn">
+            <i class="ico-arr"></i>
+            <span class="sr-only">다음</span>
+        </button>
+    </div>
+    <div class="calendar-weekdays"></div>
+    <div class="calendar-grid"></div>
+</div>
+
+<!-- 루틴 -->
+<div class="calendar" data-type="routine">
+    <div class="calendar-header">
+        <button class="prev-btn">
+            <i class="ico-prev"></i><span class="sr-only">이전</span>
+        </button>
+        <button class="calendar-title">
+            <span class="year-month"></span>
+            <i class="icon-arrow"></i>
+        </button>
+        <button class="next-btn">
+            <i class="ico-next"></i><span class="sr-only">다음</span>
+        </button>
+    </div>
+
+    <div class="calendar-weekdays"></div>
+    <div class="calendar-grid"></div>
+</div>
+
+<script src="../../utils/plugin/dayjs.min.js"></script>
+<script src="../../utils/plugin/weekday.js"></script>
+<script src="../../utils/plugin/isoWeek.js"></script>
+<script src="../../utils/plugin/isToday.js"></script>
+<script type="module" src="../../utils/calendar_basic.js"></script>
+<script type="module" src="../../utils/calendar_select.js"></script>
+<script type="module" src="../../utils/calendar_routine.js"></script>
+
+</body>
+</html>

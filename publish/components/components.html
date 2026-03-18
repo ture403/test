@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>components</title>
+        <link rel="stylesheet" href="../../assets/styles/font.css" />
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+
+        <style>
+            .components-wrap {
+                margin: 0 auto;
+                max-width: 50rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 5rem;
+                padding: 4rem 1.6rem 10rem;
+            }
+
+            .comp-wrap {
+                padding: 1.6rem;
+                width: 100%;
+            }
+            .flex {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            .comp-wrap-tab {
+                width: 100%;
+            }
+
+            .btn-full {
+                width: 375px;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .wrap-title-wrap {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                border: 1px solid #ddd;
+                padding: 1.6rem;
+            }
+            .tag-a-wrap,
+            .pill-icon-wrap {
+                display: flex;
+                gap: 1rem;
+            }
+            .top-nav-wrap {
+                width: 100%;
+                padding: 1rem;
+            }
+            .bottom-nav {
+                position: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="components-wrap">
+            <div class="comp-wrap flex">
+                <i class="ico-h-search"></i>
+                <i class="ico-h-cart"></i>
+                <i class="ico-h-alarm"></i>
+                <i class="ico-back"></i>
+                <i class="ico-plus"></i>
+                <i class="ico-next"></i>
+                <i class="ico-trash"></i>
+                <i class="ico-cart"></i>
+                <i class="ico-hbot"></i>
+                <i class="ico-myh"></i>
+                <i class="ico-more"></i>
+                <i class="ico-trash"></i>
+                <i class="ico-camera"></i>
+                <i class="ico-arr-down"></i>
+                <i class="ico-arr-gr"></i>
+                <i class="ico-x"></i>
+                <i class="ico-sett"></i>
+                <i class="ico-date"></i>
+                <i class="ico-date2"></i>
+                <i class="ico-clock"></i>
+                <i class="ico-clock2"></i>
+                <i class="ico-timer"></i>
+                <i class="ico-wht"></i>
+                <i class="ico-arr"></i>
+                <i class="ico-trg-down"></i>
+                <i class="ico-keyboard"></i>
+                <i class="ico-recomm"></i>
+                <i class="ico-sh-clock"></i>
+                <i class="ico-sh-search"></i>
+                <i class="ico-arr2"></i>
+                <i class="ico-chk"></i>
+                <i class="ico-sliver"></i>
+                <i class="ico-scale"></i>
+                <i class="ico-ht-down"></i>
+                <i class="ico-ht-up"></i>
+                <i class="ht-running"></i>
+                <i class="ht-work"></i>
+                <i class="ht-fire"></i>
+                <i class="ht-weigth"></i>
+                <i class="ht-blood"></i>
+                <i class="ht-icn"></i>
+                <i class="ht-heart"></i>
+                <i class="ht-hs1"></i>
+                <i class="ht-hs2"></i>
+                <i class="ht-routine"></i>
+                <i class="ht-pf-day"></i>
+                <i class="ht-pf-week"></i>
+                <i class="ico-tropy"></i>
+                <i class="ico-asset"></i>
+                <i class="ico-info"></i>
+                <i class="ico-edit"></i>
+                <i class="ico-repeat"></i>
+                <i class="ico-q-repeat"></i>
+                <i class="ico-goal-sucess"></i>
+                <i class="ico-sshealth"></i>
+                <i class="ico-ioshealth"></i>
+                <i class="ico-bus"></i>
+                <i class="ico-meal"></i>
+                <i class="ico-sun"></i>
+                <i class="ico-moon"></i>
+                <i class="ico-meal active"></i>
+                <i class="ico-sun active"></i>
+                <i class="ico-moon active"></i>
+                <i class="ico-health"></i>
+                <i class="ico-health-aos"></i>
+                <i class="ico-alarm"></i>
+                <i class="ico-plus-gr"></i>
+                <i class="ico-point"></i>
+                <i class="ico-updown"></i>
+                <i class="ico-bookmark"></i>
+                <span class="is-active"><i class="ico-bookmark"></i></span>
+            </div>
+            <div class="comp-wrap flex">
+                <i class="ico-m-routine"></i>
+                <i class="ico-m-pill"></i>
+                <i class="ico-m-family"></i>
+                <i class="ico-m-news"></i>
+                <i class="ico-m-body"></i>
+                <i class="ico-m-report"></i>
+                <i class="ico-m-running"></i>
+                <i class="ico-m-exercise"></i>
+                <i class="ico-m-weight"></i>
+                <i class="ico-m-heartrate"></i>
+                <i class="ico-m-pressure"></i>
+                <i class="ico-m-sugar"></i>
+                <i class="ico-m-ai-report"></i>
+                <i class="ico-m-samsunghelth"></i>
+                <i class="ico-m-logout"></i>
+            </div>
+
+            <div class="comp-wrap flex">
+                <i class="ico-level-family"></i>
+                <i class="ico-level-silver"></i>
+                <i class="ico-level-gold"></i>
+                <i class="ico-level-vip"></i>
+                <i class="ico-level-family large"></i>
+                <i class="ico-level-silver large"></i>
+                <i class="ico-level-gold large"></i>
+                <i class="ico-level-vip large"></i>
+                <i class="ico-level-family md"></i>
+                <i class="ico-level-silver md"></i>
+                <i class="ico-level-gold md"></i>
+                <i class="ico-level-vip md"></i>
+                <i class="ico-point md"></i>
+                <i class="ico-gem md"></i>
+                <i class="ico-gem-gr md"></i>
+            </div>
+            <div class="comp-wrap flex">
+                <i class="ico-hc-all"></i>
+                <i class="ico-hc-brain"></i>
+                <i class="ico-hc-stress"></i>
+                <i class="ico-hc-eyes"></i>
+                <i class="ico-hc-skin"></i>
+                <i class="ico-hc-liver"></i>
+                <i class="ico-hc-stomach"></i>
+                <i class="ico-hc-intestine"></i>
+                <i class="ico-hc-diet"></i>
+                <i class="ico-hc-sugar"></i>
+                <i class="ico-hc-man-senior"></i>
+                <i class="ico-hc-woman-senior"></i>
+                <i class="ico-hc-blood-vessel"></i>
+                <i class="ico-hc-pressure"></i>
+                <i class="ico-hc-shield"></i>
+                <i class="ico-hc-bone"></i>
+                <i class="ico-hc-muscle"></i>
+                <i class="ico-hc-hair"></i>
+            </div>
+            <div class="comp-wrap flex">
+                <div class="pill-icon">
+                    <i class="pill-forgot"></i>
+                    <span class="tx tc3">깜박했어요</span>
+                </div>
+                <div class="pill-icon">
+                    <i class="pill-ignored"></i>
+                    <span class="tx tc2">다음에 먹을게요</span>
+                </div>
+                <div class="pill-icon">
+                    <i class="pill-rest"></i>
+                    <span class="tx tc0">대기 중</span>
+                </div>
+                <div class="pill-icon">
+                    <i class="pill-taken"></i>
+                    <span class="tx tc1">먹었어요</span>
+                </div>
+                <div class="pill-icon">
+                    <i class="pill-sad"></i>
+                    <span class="tx tc5">못 먹은 날</span>
+                </div>
+                <div class="pill-icon">
+                    <i class="pill-prohibited"></i>
+                    <span class="tx tc0">안 먹는 날</span>
+                </div>
+                <div class="pill-icon">
+                    <i class="pill-empty"></i>
+                    <span class="tx tc0">???</span>
+                </div>
+                <div></div>
+            </div>
+            <div class="comp-wrap flex">
+                <i class="report-top"></i>
+                <i class="report-md"></i>
+                <i class="report-bt"></i>
+            </div>
+            <div class="comp-wrap flex">
+                <i class="ico-mh-gold"></i>
+                <i class="ico-mh-silver"></i>
+                <i class="ico-mh-bronze"></i>
+                <i class="img-tt-gold"></i>
+                <i class="img-tt-silver"></i>
+                <i class="img-tt-bronze"></i>
+            </div>
+
+            <div class="comp-wrap flex">
+                <i class="t-diet"></i>
+                <i class="t-muscle"></i>
+                <i class="t-eyes"></i>
+                <i class="t-brain"></i>
+                <i class="t-sofa"></i>
+                <i class="t-stress"></i>
+                <i class="t-weight"></i>
+                <i class="t-all-in-one"></i>
+            </div>
+            <div>
+                <i class="ico-h-walk"></i>
+                <i class="ico-h-run"></i>
+                <i class="ico-h-stairs"></i>
+                <i class="ico-h-indoor"></i>
+                <i class="ico-h-bicycle"></i>
+            </div>
+            <div>
+                <i class="ico-ss-report"></i>
+                <i class="ico-ss-myhealth"></i>
+                <i class="ico-ss-cardnews"></i>
+                <i class="ico-ss-pill"></i>
+                <i class="ico-ss-routine"></i>
+                <i class="ico-ss-item"></i>
+                <i class="ico-ss-more"></i>
+            </div>
+            <div class="comp-wrap flex">
+                <i class="ico-md-bronze"></i>
+                <i class="ico-md-silver"></i>
+                <i class="ico-md-gold"></i>
+                <i class="ico-md-no"></i>
+            </div>
+            <div class="comp-wrap flex">
+                <span class="tag-a">tag-a</span>
+                <span class="tag-b">tag-b</span>
+                <span class="tag-c">tag-c</span>
+                <span class="tag-d">tag-d</span>
+                <span class="tag-e">tag-e</span>
+                <span class="tag-g">tag-g</span>
+            </div>
+            <div class="comp-wrap flex">
+                <i class="img-nodata"></i>
+                <i class="img-error"></i>
+            </div>
+            <div class="top-nav-wrap" style="background-color: #555">
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>복약</h2>
+                </div>
+                <br />
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>복약</h2>
+                    <button type="button" class="btn-resist">
+                        <i class="ico-plus"></i>
+                        <span>가족등록</span>
+                    </button>
+                </div>
+                <br />
+                <div class="top-header-nav">
+                    <i class="ico-back"></i>
+                    <h2>약 추가</h2>
+                    <button type="button" class="btn-trash">
+                        <i class="ico-trash"></i>
+                        <span>삭제</span>
+                    </button>
+                </div>
+                <br />
+                <div class="top-header-nav">
+                    <h2>약 추가</h2>
+                    <button type="button" class="btn-trash">
+                        <i class="ico-trash"></i>
+                        <span>삭제</span>
+                    </button>
+                </div>
+                <br />
+                <div class="top-header-nav">
+                    <h2>약 추가</h2>
+                    <button type="button" class="btn-close">
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <br />
+                <div class="top-header-nav trans">
+                    <i class="ico-back"></i>
+                    <h2>복약 투명</h2>
+                </div>
+                <br />
+                <div class="top-header-nav gray">
+                    <i class="ico-back"></i>
+                    <h2>복약 회색</h2>
+                </div>
+                <br />
+                <div class="top-main-nav">
+                    <h2>더보기</h2>
+                    <button type="button">
+                        <i class="ico-sett"></i>
+                        <span class="sr-only">설정</span>
+                    </button>
+                </div>
+                <br />
+                <div class="bottom-nav">
+                    <button type="button">
+                        <i class="ico-cart"></i>
+                        <span>쇼핑</span>
+                    </button>
+                    <button type="button">
+                        <i class="ico-hbot"></i>
+                        <span>건강봇</span>
+                    </button>
+                    <button type="button">
+                        <i class="ico-myh"></i>
+                        <span>내 건강</span>
+                    </button>
+                    <button type="button">
+                        <i class="ico-more"></i>
+                        <span>더보기</span>
+                    </button>
+                </div>
+                <br />
+                <div class="bottom-nav">
+                    <button type="button" class="active">
+                        <i class="ico-cart"></i>
+                        <span>쇼핑</span>
+                    </button>
+                    <button type="button" class="active">
+                        <i class="ico-hbot"></i>
+                        <span>건강봇</span>
+                    </button>
+                    <button type="button" class="active">
+                        <i class="ico-myh"></i>
+                        <span>내 건강</span>
+                    </button>
+                    <button type="button" class="active">
+                        <i class="ico-more"></i>
+                        <span>더보기</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="top-nav-wrap" style="background-color: #555">
+                <div class="top-header-search">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <input
+                        type="text"
+                        placeholder="약이나 영양제 이름을 검색할 수 있습니다."
+                        class="ipt"
+                    />
+                    <button type="button" class="btn-camera">
+                        <i class="ico-camera"></i>
+                    </button>
+                </div>
+                <br />
+                <div class="top-header-search">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <input
+                        type="text"
+                        placeholder="약이나 영양제 이름을 검색할 수 있습니다."
+                        class="ipt"
+                        value="타이레"
+                    />
+                    <button type="button" class="btn-close-circle">
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <ul class="top-header-search-list">
+                    <li class="first">
+                        <i></i>
+                        <span>타이레</span>
+                        <button type="button">직접 입력</button>
+                    </li>
+                    <li>
+                        <i class="ico-sh-clock"></i>
+                        <span>타이레놀</span>
+                    </li>
+                    <li>
+                        <i class="ico-sh-search"></i>
+                        <span>
+                            <strong>타이레</strong>
+                            놀
+                        </span>
+                    </li>
+                    <li>
+                        <i class="ico-sh-search"></i>
+                        <span>
+                            <strong>타이레</strong>
+                            놀정
+                        </span>
+                    </li>
+                </ul>
+                <br />
+                <div class="search-box">
+                    <i class="ico-sh-search"></i>
+                    <input
+                        type="text"
+                        placeholder="약이나 영양제 이름을 검색할 수 있습니다."
+                    />
+                </div>
+                <br />
+                <div class="search-box">
+                    <i class="ico-sh-search"></i>
+                    <input
+                        type="text"
+                        placeholder="약이나 영양제 이름을 검색할 수 있습니다."
+                        value="타이레놀"
+                    />
+                </div>
+            </div>
+            <div class="wrap-title-wrap">
+                <div class="title-type">
+                    <h3 class="text-h4">구매 영양제</h3>
+                    <div class="more">
+                        <button type="button" class="btn-detail">
+                            <span>더보기</span>
+                            <i class="ico-arr"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="title-type">
+                    <h3 class="text-h5">나의 루틴 통계</h3>
+                    <div class="more">
+                        <a href="#" class="btn-detail">
+                            <span>자세히 보기</span>
+                            <i class="ico-arr"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="title-type">
+                    <h3 class="text-h5">
+                        노화 속도에 따른
+                        <br />
+                        <span class="hc1">질환 위험</span>
+                        을 알려드려요
+                    </h3>
+                </div>
+                <div class="title-type">
+                    <h3 class="text-h6">검진 및 진료 내역</h3>
+                </div>
+                <div class="title-type">
+                    <h3 class="text-h6">
+                        구매 영양제
+                        <span class="text-b-sm-m">최근 3개월</span>
+                    </h3>
+                    <div class="more">
+                        <button type="button" class="btn-detail hc1">
+                            <span>더보기</span>
+                            <i class="ico-arr"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comp-wrap-tab">
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li><button type="button">건강 데이터</button></li>
+                        <li class="active">
+                            <button type="button">AI 건강 분석</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <br />
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li class="active">
+                            <button type="button">건강 데이터</button>
+                        </li>
+                        <li><button type="button">AI 건강 분석</button></li>
+                    </ul>
+                </div>
+
+                <br />
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li class="active">
+                            <button type="button">1주</button>
+                        </li>
+                        <li><button type="button">1개월</button></li>
+                        <li><button type="button">3개월</button></li>
+                        <li><button type="button">6개월</button></li>
+                        <li><button type="button">1년</button></li>
+                    </ul>
+                </div>
+                <ul class="inner-tab">
+                    <li class="is-active">
+                        <button type="button">1주차</button>
+                    </li>
+                    <li><button type="button">2주차</button></li>
+                    <li><button type="button">3주차</button></li>
+                    <li><button type="button">4주차</button></li>
+                </ul>
+                <br />
+            </div>
+
+            <div class="comp-wrap">
+                <div class="switch">
+                    <input type="checkbox" id="switchTg" />
+                    <label for="switchTg">
+                        <span class="sr-only">설정</span>
+                    </label>
+                </div>
+
+                <span class="checkForm">
+                    <input type="checkbox" id="chk1" />
+                    <label for="chk1">
+                        <span class="checkForm-custom"></span>
+                        <span class="checkForm-label">체크박스</span>
+                    </label>
+                </span>
+                <span class="checkForm">
+                    <input type="radio" id="rdo1" name="rdo" />
+                    <label for="rdo1">
+                        <span class="checkForm-custom"></span>
+                        <span class="checkForm-label">라디오</span>
+                    </label>
+                </span>
+                <span class="checkForm">
+                    <input type="radio" id="rdo2" name="rdo" />
+                    <label for="rdo2">
+                        <span class="checkForm-custom"></span>
+                        <span class="checkForm-label">라디오</span>
+                    </label>
+                </span>
+
+                <br />
+                <br />
+                <div class="line-step-wrapper">
+                    <div class="line-step active"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                </div>
+                <br />
+                <br />
+                <div class="progress-container">
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                        style="width: 50%"
+                    ></div>
+                    <div
+                        class="progress-thumb"
+                        id="progressThumb"
+                        style="left: 50%"
+                    ></div>
+                    <input
+                        type="range"
+                        class="range-progress"
+                        id="progress"
+                        value="50"
+                    />
+                </div>
+
+                <br />
+                <br />
+
+                <div style="width: 100%">
+                    <div class="input-cell">
+                        <div class="label">label</div>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                class="input"
+                                placeholder="키를 입력해주세요"
+                            />
+                            <span class="unit">cm</span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="input-cell">
+                        <div class="label">label</div>
+                        <div class="input-group selected">
+                            <input
+                                type="text"
+                                class="input"
+                                placeholder="키를 입력해주세요"
+                            />
+                            <span class="unit">cm</span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="input-cell">
+                        <div class="label">label</div>
+                        <div class="input-group hc">
+                            <input
+                                type="text"
+                                class="input"
+                                placeholder="키를 입력해주세요"
+                            />
+                            <span class="unit">cm</span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="input-cell">
+                        <div class="label">label</div>
+                        <div class="input-group error">
+                            <input
+                                type="text"
+                                class="input"
+                                placeholder="키를 입력해주세요"
+                            />
+                            <span class="unit">cm</span>
+                        </div>
+                        <p class="error-txt">error text</p>
+                    </div>
+                    <br />
+                    <div class="input-cell">
+                        <div class="label">label</div>
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                class="input"
+                                placeholder="8,000"
+                            />
+                            <!-- <span class="unit">cm</span> -->
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="custom-select">
+                        <select>
+                            <option value="">선택해주세요</option>
+                            <option value="1">옵션 1</option>
+                            <option value="2">옵션 2</option>
+                            <option value="3">옵션 3</option>
+                            <option value="4">옵션 4</option>
+                            <option value="5">옵션 5</option>
+                        </select>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="dropdown-menu">
+                        <button class="dropdown-button">선택해주세요</button>
+                        <div class="dropdown-list">
+                            <div
+                                class="dropdown-item"
+                                data-value="선택해주세요"
+                            >
+                                선택해주세요
+                            </div>
+                            <div class="dropdown-item" data-value="menu1">
+                                menu1
+                            </div>
+                            <div class="dropdown-item" data-value="menu2">
+                                menu2
+                            </div>
+                            <div class="dropdown-item" data-value="menu3">
+                                menu3
+                            </div>
+                            <div class="dropdown-item" data-value="menu4">
+                                menu4
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-button">선택해주세요</button>
+                        <div class="dropdown-list">
+                            <div
+                                class="dropdown-item"
+                                data-value="선택해주세요"
+                            >
+                                선택해주세요
+                            </div>
+                            <div class="dropdown-item" data-value="menu1">
+                                menu1
+                            </div>
+                            <div class="dropdown-item" data-value="menu2">
+                                menu2
+                            </div>
+                            <div class="dropdown-item" data-value="menu3">
+                                menu3
+                            </div>
+                            <div class="dropdown-item" data-value="menu4">
+                                menu4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div style="width: 100%">
+                    <div class="weekly-header">
+                        <button type="button" class="nav-btn">
+                            <i class="ico-prev"></i>
+                            <span class="sr-only">이전</span>
+                        </button>
+                        <div class="weekly-title">02.16 ~ 02.22</div>
+                        <button type="button" class="nav-btn dim">
+                            <i class="ico-next"></i>
+                            <span class="sr-only">다음</span>
+                        </button>
+                    </div>
+                    <div class="title-type">
+                        <h3 class="text-h6">복용 주기</h3>
+                    </div>
+                    <div class="weekly-cycle">
+                        <div class="weekly-cycle-name on">일</div>
+                        <div class="weekly-cycle-name">월</div>
+                        <div class="weekly-cycle-name">화</div>
+                        <div class="weekly-cycle-name on">수</div>
+                        <div class="weekly-cycle-name">목</div>
+                        <div class="weekly-cycle-name">금</div>
+                        <div class="weekly-cycle-name on">토</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            //sliderbar
+            const range = document.getElementById("progress");
+            const fill = document.getElementById("progressFill");
+            const thumb = document.getElementById("progressThumb");
+            const updateProgress = (value) => {
+                fill.style.width = `${value}%`;
+                thumb.style.left = `${value}%`;
+            };
+
+            updateProgress(range.value);
+
+            range.addEventListener("input", (e) => {
+                updateProgress(e.target.value);
+            });
+
+            //dropdown
+            document.addEventListener("click", (e) => {
+                const dropdown = e.target.closest(".dropdown-menu");
+                if (e.target.classList.contains("dropdown-button")) {
+                    const current = e.target.closest(".dropdown-menu");
+                    document
+                        .querySelectorAll(".dropdown-menu.is-open")
+                        .forEach((menu) => {
+                            if (menu !== current)
+                                menu.classList.remove("is-open");
+                        });
+                    current.classList.toggle("is-open");
+                    return;
+                }
+                if (e.target.classList.contains("dropdown-item")) {
+                    const item = e.target;
+                    const menu = item.closest(".dropdown-menu");
+                    const button = menu.querySelector(".dropdown-button");
+                    button.textContent = item.textContent;
+                    button.dataset.value = item.dataset.value;
+                    menu.classList.remove("is-open");
+                    return;
+                }
+                document
+                    .querySelectorAll(".dropdown-menu.is-open")
+                    .forEach((menu) => {
+                        menu.classList.remove("is-open");
+                    });
+            });
+        </script>
+    </body>
+</html>

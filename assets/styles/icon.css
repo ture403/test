@@ -1,0 +1,1831 @@
+.ico-h-search {
+    display: inline-block;
+    width:2.8rem;
+    height:2.8rem;
+    vertical-align: middle; 
+    background: #1A1A1A;
+    mask: url(../images/ico-h-search.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-h-search.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;       
+}
+.ico-h-cart {
+    display: inline-block;
+    width:2.8rem;
+    height:2.8rem;
+    vertical-align: middle; 
+    background: #1A1A1A;
+    mask: url(../images/ico-h-cart.svg) no-repeat 50% 50%;
+    mask-size:cover;
+    -webkit-mask: url(../images/ico-h-cart.svg) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+}
+.ico-h-alarm {
+    display: inline-block;
+    width:2.8rem;
+    height:2.8rem;
+    background: #1A1A1A;
+    vertical-align: middle; 
+    mask: url(../images/ico-h-alarm.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-h-alarm.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-back {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle; 
+    background-color:#000;
+    mask: url(../images/ico-back.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-back.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-plus {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle; 
+    background-color:#000;
+    mask: url(../images/ico-plus.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-plus.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-plus-b {
+    display: inline-block;
+    width: 3.6rem;
+    height: 3.6rem;
+    vertical-align: middle; 
+    background-color:#fff;
+    mask: url(../images/ico-plus-b.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-plus-b.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-next {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: middle; 
+    background-color:#000;
+    mask: url(../images/ico-next.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-next.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-prev {
+     display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: middle; 
+    background-color:#000;
+    mask: url(../images/ico-next.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-next.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    transform: rotate(180deg);
+} 
+
+.ico-cart {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: middle; 
+    background-color: var(--icon-disabled); 
+    mask: url(../images/ico-bottom-cart.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-bottom-cart.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+}
+.ico-hbot {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: middle; 
+    background-color: var(--icon-disabled);  
+    mask: url(../images/ico-bottom-hbot.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-bottom-hbot.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+}
+.ico-myh {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: middle; 
+    background-color: var(--icon-disabled);  
+    mask: url(../images/ico-bottom-myh.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-bottom-myh.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+}
+.ico-more {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: middle; 
+    background-color: var(--icon-disabled);  
+    mask: url(../images/ico-bottom-more.svg) no-repeat 50% 50%;
+    mask-size: auto 1.8rem;
+    -webkit-mask: url(../images/ico-bottom-more.svg) no-repeat 50% 50%;
+    -webkit-mask-size: auto 1.8rem;
+    vertical-align: middle;
+}
+
+.ico-refresh {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: middle; 
+    background-color: var(--icon-primary);
+    mask: url(../images/ico-refresh.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-refresh.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-arr-down {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    vertical-align: middle; 
+    background-color:#000;
+    mask: url(../images/ico-arr-down.svg) no-repeat 50% 70%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-arr-down.svg) no-repeat 50% 70%;
+    -webkit-mask-size: contain;    
+}
+
+.ico-trash {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    vertical-align: middle; 
+    background-color:var(--icon-neutral);
+    mask: url(../images/ico-trash.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-trash.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-x {
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    vertical-align: middle; 
+    background-color:#000;
+    mask: url(../images/ico-close.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-close.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-camera {
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    vertical-align: middle; 
+    background-color: var(--icon-primary);
+    mask: url(../images/ico-camera.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-camera.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-sett {
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    vertical-align: middle; 
+    background-color:#111827;
+    mask: url(../images/ico-sett.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-sett.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-date {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    vertical-align: middle; 
+    background: url(../images/ico-date.svg) no-repeat 50% 50%;
+}
+.ico-clock {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    vertical-align: middle; 
+    background-color:var(--icon-neutral);
+    mask: url(../images/ico-clock.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-clock.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-wht {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    vertical-align: middle; 
+    background-color:var(--icon-neutral);
+    mask: url(../images/ico-wht.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-wht.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-pen {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: middle; 
+    background-color:#49454F;
+    mask: url(../images/ico-pen.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-pen.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-arr {
+    display: inline-block;
+    width:1.4rem;
+    height:1.4rem;
+    vertical-align: middle; 
+    background: var(--icon-neutral);
+    mask: url(../images/ico-arr.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-arr.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-arr2{
+    display: inline-block;
+    width:2.4rem;
+    height:2.4rem;
+    vertical-align: middle; 
+    background: var(--icon-base);
+    mask: url(../images/ico-arr2.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-arr2.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-trg-down {
+    display: inline-block;
+    width:0.8rem;
+    height:0.8rem;
+    vertical-align: middle; 
+    background: #49454f;
+    mask: url(../images/ico-trg-down.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-trg-down.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+
+.ico-keyboard {
+    display: inline-block;
+    width:2rem;
+    height:2rem;
+    vertical-align: middle; 
+    background: #49454f;
+    mask: url(../images/ico-keyboard.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-keyboard.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-recomm {
+    display: inline-block;
+    width:1.8rem;
+    height:1.8rem;  
+    vertical-align: middle;   
+    background: url(../images/ico-recomm.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ico-sh-clock {
+    display: inline-block;
+    width:1.6rem;
+    height:1.6rem;
+    vertical-align: middle; 
+    background: var(--icon-neutral);
+    mask: url(../images/ico-sh-clock.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-sh-clock.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-sh-search {
+    display: inline-block;
+    width:2rem;
+    height:2rem;
+    background: var(--icon-neutral);
+    vertical-align: middle; 
+    mask: url(../images/ico-sh-search.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-sh-search.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-sliver {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ico-sliver.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ico-scale {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-scale.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.ico-ht-down {
+    display: inline-block;
+    width:2.8rem;
+    height: 2.8rem;
+    vertical-align: middle; 
+    background: url(../images/ico-ht-down.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ico-ht-up {
+    display: inline-block;
+    width:2.8rem;
+    height: 2.8rem;
+    vertical-align: middle; 
+    background: url(../images/ico-ht-up.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.pill-prohibited {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;  
+    vertical-align: middle; 
+    background: url(../images/pill-prohibited.svg) no-repeat 50% 50%;   
+    filter: grayscale(100%) brightness(1.3) contrast(0.8);
+}
+.pill-forgot {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;  
+    vertical-align: middle; 
+    background: url(../images/pill-forgot.svg) no-repeat 50% 50%;
+}
+.pill-taken {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem; 
+    vertical-align: middle; 
+    background: url(../images/pill-taken.svg) no-repeat 50% 50%; 
+}
+.pill-ignored {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;  
+    vertical-align: middle; 
+    background: url(../images/pill-ignored.svg) no-repeat 50% 50%;
+}
+.pill-empty {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;  
+    vertical-align: middle; 
+    background: url(../images/pill-empty.svg) no-repeat 50% 50%;
+}
+.pill-rest {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;  
+    vertical-align: middle; 
+    background: url(../images/pill-rest.svg) no-repeat 50% 50%;
+    filter: grayscale(100%) brightness(1.4) contrast(0.8);
+    
+}
+.pill-sad {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;  
+    vertical-align: middle; 
+    background: url(../images/pill-sad.svg) no-repeat 50% 50%;
+}
+
+.ht-running {
+    display: inline-block;
+    width: 5.4rem;
+    height: 5.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-running.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-work {
+    display: inline-block;
+    width: 5.4rem;
+    height: 5.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-work.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-fire {
+    display: inline-block;
+    width: 5.4rem;
+    height: 5.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-fire.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-weigth {
+    display: inline-block;
+    width: 5.4rem;
+    height: 5.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-weigth.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-blood {
+    display: inline-block;
+    width: 4.8rem;
+    height: 4.8rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-blood.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-icn {
+    display: inline-block;
+    width: 4.8rem;
+    height: 4.8rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-icn.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-heart {
+    display: inline-block;
+    width: 4.8rem;
+    height: 4.8rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-heart.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-hs1 {
+    display: inline-block;
+    width: 6.4rem;
+    height: 6.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-hs1.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-hs2 {
+    display: inline-block;
+    width: 6.4rem;
+    height: 6.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-hs2.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ht-routine{
+    display: inline-block;
+    width: 4.8rem;
+    height: 4.8rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-routine.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.ht-pf-day{
+    display: inline-block;
+    width: 4.8rem;
+    height: 4.8rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-pf-day.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+.ht-pf-week{
+    display: inline-block;
+    width: 4.8rem;
+    height: 4.8rem;  
+    vertical-align: middle; 
+    background: url(../images/ht-pf-week.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.ico-chk {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--green-500);
+    border-radius: 50%;
+}
+.ico-chk::after {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(../images/ico-chk-b.svg) no-repeat 50% 50%;
+}
+.star {
+    display: inline-block;
+    width:2.1rem;
+    height:2.1rem;
+    vertical-align: middle; 
+    background: #D9D9D9;
+    mask: url(../images/ico-star.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-star.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    font-size:0
+}
+.star.on {
+    background: #F9CE73;
+}
+.ico-go {
+    display: inline-block;
+    width:1.5rem;
+    height:1.5rem;
+    vertical-align: middle; 
+    background: #6157DC;
+    mask: url(../images/ico-go.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-go.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+}
+.ico-arrow {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #000; /* 원하는 색상 */
+    mask: url(../images/ico-Arrow.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-Arrow.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.ico-arrow.gray {
+    background-color: #ccc;
+}
+
+.ico-pie {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: var(--green-500);
+    mask: url(../images/ico-pie-0.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-pie-0.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    font-size: 0;
+    vertical-align: middle;
+}
+.ico-pie.pie-25 {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color:var(--green-500);
+    mask: url(../images/ico-pie-25.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-pie-25.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    font-size: 0;
+    vertical-align: middle;
+}
+.ico-pie.pie-50 {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: var(--green-500);
+    mask: url(../images/ico-pie-50.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-pie-50.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    font-size: 0;
+    vertical-align: middle;
+}
+.ico-pie.pie-75 {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: var(--green-500);
+    mask: url(../images/ico-pie-75.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-pie-75.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    font-size: 0;
+    vertical-align: middle;
+}
+.ico-pie.pie-100 {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color:var(--green-500);
+    mask: url(../images/ico-pie-100.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-pie-100.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.ico-q-repeat {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-c-repeat.svg) no-repeat 50% 50%;  
+    vertical-align: middle;
+}
+
+.ico-q-pill {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-c-pill.svg) no-repeat 50% 50%;    
+    vertical-align: middle;
+}
+.ico-q-work {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-c-work.svg) no-repeat 50% 50%;
+    vertical-align: middle;
+}
+.ico-q-blood {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-c-blood.svg) no-repeat 50% 50%;   
+    vertical-align: middle;
+}
+.ico-q-icn {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-c-icn.svg) no-repeat 50% 50%;
+    vertical-align: middle;
+}
+.ico-q-weight {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-c-wht.svg) no-repeat 50% 50%;
+    vertical-align: middle;
+}
+.ico-tropy {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: url(../images/tropy.svg) no-repeat 50% 50%;   
+    vertical-align: middle;
+    background-size: cover;
+}
+.ico-asset {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/asset.svg) no-repeat 50% 50%;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.bar {
+    display: inline-block;
+    width: 1px;
+    height: 0.9rem;
+    background: var(--gray-500);
+    vertical-align: middle;
+    margin:0 0.8rem;
+}
+
+.ico-info {
+    display: inline-block;
+    width: 2.1rem;
+    height: 2.1rem;
+    background: url(../images/ico-info.svg) no-repeat 50% 50%;   
+    vertical-align: middle;
+    background-size: contain;
+    font-size:0;
+}
+.rt-1 {
+    display: inline-block;
+    width: 3.6rem;
+    height: 3.6rem;
+    background: url(../images/rt-1.svg) no-repeat 50% 50%;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.rt-2 {
+    display: inline-block;
+    width: 3.6rem;
+    height: 3.6rem;
+    background: url(../images/rt-2.svg) no-repeat 50% 50%;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.ico-like {
+    display: inline-block;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: url(../images/like-button.svg) no-repeat 50% 50%;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-like.on{
+    background: url(../images/like-button-on.svg) no-repeat 50% 50%;  
+    background-size: contain;
+}
+.ico-edit {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: var(--icon-neutral);
+    mask: url(../images/ico-edit.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-edit.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+}
+
+.ico-goal {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/goal.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-repeat {
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--icon-primary);
+    mask: url(../images/ico-repeat.svg) no-repeat 50% 50%;
+    mask-size: contain;
+    -webkit-mask: url(../images/ico-repeat.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+}
+
+.ico-risk1 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/ico-risk1.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-risk2 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/ico-risk2.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-risk3 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/ico-risk3.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-risk4 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/ico-risk4.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-risk5 {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/ico-risk5.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.ico-wht2 {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: url(../images/ico-weight2.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-date2 {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: url(../images/ico-date2.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-clock2 {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: url(../images/ico-clock2.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+.ico-i {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(../images/ico-i.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.ico-goal-sucess{
+    display: inline-block;
+    width: 5.4rem;
+    height: 5.4rem;  
+    vertical-align: middle; 
+    background: url(../images/ico-goal-suceess.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+.ico-sshealth {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-health-connect.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.ico-ioshealth {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-ioshealth.svg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+.ico-h-walk {
+    display: inline-block;
+    width: 5.6rem;
+    height: 5.6rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-h-walk.svg) no-repeat 50% 50%;
+    background-size: 120% auto;
+}
+.ico-h-run {
+    display: inline-block;
+    width: 5.6rem;
+    height: 5.6rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-h-run.svg) no-repeat 50% 50%;
+    background-size: 120% auto;
+}
+
+.ico-h-stairs {
+    display: inline-block;
+    width: 5.6rem;
+    height: 5.6rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-h-stairs.svg) no-repeat 50% 50%;
+    background-size: 120% auto;
+}
+
+.ico-h-indoor {
+    display: inline-block;
+    width: 5.6rem;
+    height: 5.6rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-h-indoor.svg) no-repeat 50% 50%;
+    background-size: 120% auto;
+}
+
+.ico-h-bicycle {
+    display: inline-block;
+    width: 5.6rem;
+    height: 5.6rem; 
+    vertical-align: middle;  
+    background: url(../images/ico-h-bicycle.svg) no-repeat 50% 50%;
+    background-size: 120% auto;
+}
+.ico-square-check {
+    display: inline-block;
+    width: 4rem;
+    height: 4.5rem;
+    vertical-align: middle;  
+    background: url(../images/square-check.svg) no-repeat 50% 50%;
+}
+.ico-chker {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/ico-chker.svg) no-repeat 50% 50%;
+    vertical-align: middle;  
+}
+
+.ico-timer {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: url(../images/ico-timer.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.ico-bus {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: url(../images/ico-bus.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+
+.ico-meal {
+    display: inline-block;
+    width: 1.2rem;
+    height:1.2rem;
+    background: url(../images/ico-ss-meal.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+
+.ico-sun {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(../images/ico-ss-sun.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+
+.ico-moon {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(../images/ico-ss-moon.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.ico-megaphon {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/megaphon.svg) no-repeat 50% 0;   
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.t-diet {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-diet.svg) no-repeat 50% 50%;
+}
+.t-muscle {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-muscle.svg) no-repeat 50% 50%;
+}
+.t-eyes {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-eyes.svg) no-repeat 50% 50%;
+}
+.t-brain {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-brain.svg) no-repeat 50% 50%;
+}
+.t-sofa {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-sofa.svg) no-repeat 50% 50%;
+}
+.t-stress {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-stress.svg) no-repeat 50% 50%;
+}
+.t-weight {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-weight.svg) no-repeat 50% 50%;
+}
+.t-all-in-one {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../images/t-all-in-one.svg) no-repeat 50% 50%;
+}
+
+
+/* 더보기 아이콘 */
+.ico-m-routine{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-routine.svg) no-repeat 50% 50%;
+}
+
+.ico-m-pill{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-pill.svg) no-repeat 50% 50%;
+}
+
+.ico-m-family{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-family.svg) no-repeat 50% 50%;
+}
+
+.ico-m-news{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-news.svg) no-repeat 50% 50%;
+}
+
+.ico-m-body{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-body.svg) no-repeat 50% 50%;
+}
+
+.ico-m-report{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-report.svg) no-repeat 50% 50%;
+}
+
+.ico-m-running{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-running.svg) no-repeat 50% 50%;
+}
+
+
+.ico-m-exercise{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-exercise.svg) no-repeat 50% 50%;
+}
+
+.ico-m-weight{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-weight.svg) no-repeat 50% 50%;
+}
+
+.ico-m-heartrate{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-heartrate.svg) no-repeat 50% 50%;
+}
+
+
+.ico-m-pressure{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-pressure.svg) no-repeat 50% 50%;
+}
+
+.ico-m-sugar{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-sugar.svg) no-repeat 50% 50%;
+}
+
+.ico-m-ai-report{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-aireport.svg) no-repeat 50% 50%;
+}
+
+.ico-m-samsunghelth{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-samsunghelth.svg) no-repeat 50% 50%;
+}
+
+
+.ico-m-logout{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../images/ico-m-logout.svg) no-repeat 50% 50%;
+}
+
+
+.ico-health{
+    display: inline-block;
+    width: 3rem;
+    height:3rem;
+    background: url(../images/ico-health.svg) no-repeat 50% 50%;
+}
+
+.ico-health-aos{
+    display: inline-block;
+    width: 3rem;
+    height:3rem;
+    background: url(../images/ico-health-aos.svg) no-repeat 50% 50%;
+}
+
+.ico-plus-gr{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    background: url(../images/ico-plus-gr.svg) no-repeat 50% 50%;
+}
+
+
+/*레벨용 메달 아이콘**/
+.ico-level-family{
+    display: inline-block;
+    width: 2.2rem;
+    height:2.2rem;
+    background: url(../images/ico-level-family.svg) no-repeat 50% 50%;
+}
+
+.ico-level-silver{
+    display: inline-block;
+    width: 2.2rem;
+    height:2.2rem;
+    background: url(../images/ico-level-silver.svg) no-repeat 50% 50%;
+}
+
+.ico-level-gold{
+    display: inline-block;
+    width: 2.2rem;
+    height:2.2rem;
+    background: url(../images/ico-level-gold.svg) no-repeat 50% 50%;
+}
+
+.ico-level-vip{
+    display: inline-block;
+    width: 2.2rem;
+    height:2.2rem;
+    background: url(../images/ico-level-vip.svg) no-repeat 50% 50%;
+}
+
+
+
+.ico-point{
+    display: inline-block;
+    width: 2rem;
+    height:2rem;
+    background: url(../images/ico-point.svg) no-repeat 50% 50%;
+}
+
+
+
+.ico-gem{
+    display: inline-block;
+    width: 2.2rem;
+    height:1.8rem;
+    background: url(../images/ico-gem.svg) no-repeat 50% 50%;
+}
+.ico-gem-gr{
+    display: inline-block;
+    width: 3rem;
+    height:2.5rem;
+    background: url(../images/ico-gem-gr.svg) no-repeat 50% 50%;
+}
+
+
+
+.ico-level-family.large,
+.ico-level-silver.large,
+.ico-level-gold.large,
+.ico-level-vip.large{
+    width: 5rem;
+    height:5rem;
+    background-size: contain;
+}
+
+
+.ico-level-family.ss,
+.ico-level-silver.ss,
+.ico-level-gold.ss,
+.ico-level-vip.ss{
+    width: 1.5rem;
+    height:1.5rem;
+    background-size: contain;
+}
+
+
+.ico-level-family.md,
+.ico-level-silver.md,
+.ico-level-gold.md,
+.ico-level-vip.md,
+.ico-point.md{
+    width: 2.8rem;
+    height:2.8rem;
+    background-size: contain;
+}
+
+
+
+
+.ico-md-bronze{
+    display: inline-block;
+    width: 3rem;
+    height:3rem;
+    background: url(../images/img-md-bronze.png) no-repeat 50% 50%;
+}
+.ico-md-silver{
+    display: inline-block;
+    width: 3rem;
+    height:3rem;
+    background: url(../images/img-md-silver.png) no-repeat 50% 50%;
+}
+
+.ico-md-gold{
+    display: inline-block;
+    width: 3rem;
+    height:3rem;
+    background: url(../images/img-md-gold.png) no-repeat 50% 50%;
+}
+
+.ico-md-no{
+    display: inline-block;
+    width: 3rem;
+    height:3rem;
+    background: url(../images/img-md-nodata.png) no-repeat 50% 50%;
+}
+
+
+.ico-meal-bl{
+    display: inline-block;
+    width: 1.6rem;
+    height:1.6rem;
+    background: url(../images/ico-meal-bl.svg) no-repeat 50% 50%;
+}
+
+.ico-time-gr{
+    display: inline-block;
+    width: 1.6rem;
+    height:1.6rem;
+    background: url(../images/ico-time-gr.svg) no-repeat 50% 50%;
+}
+
+
+.ico-time-or{
+    display: inline-block;
+    width: 1.6rem;
+    height:1.6rem;
+    background: url(../images/ico-time-or.svg) no-repeat 50% 50%;
+}
+
+/**리포터용 건강유형 캐릭터**/
+.report-top{
+    display: inline-block;
+    width: 4.4rem;
+    height: 4.4rem;  
+    vertical-align: middle; 
+    background: url(../images/report-cs-top.svg) no-repeat 50% 50%;
+}
+.report-md{
+    display: inline-block;
+    width: 4.4rem;
+    height: 4.4rem;  
+    vertical-align: middle; 
+    background: url(../images/report-cs-md.svg) no-repeat 50% 50%;
+}
+.report-bt{
+    display: inline-block;
+    width: 4.4rem;
+    height: 4.4rem;  
+    vertical-align: middle; 
+    background: url(../images/report-cs-bt.svg) no-repeat 50% 50%;
+}
+
+/**건강유형 캐릭터**/
+
+.ht-cs-brain {
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-brain.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.ht-cs-stress {
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-stress.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.ht-cs-eyes {
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-eyes.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.ht-cs-skin{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-skin.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.ht-cs-liver{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-liver.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-stomach{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-stomach.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-intestine{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-intestine.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-diet{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-diet.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-sugar{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-sugar.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-man-senior{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-man-senior.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-woman-senior{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-woman-senior.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-blood-vessel{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-blood-vessel.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-pressure{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-pressure.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-shield{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-shield.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-bone{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-bone.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ht-cs-muscle{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-muscle.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.ht-cs-hair{
+    display: inline-block;
+    width: 13rem;
+    height:13rem;
+    background: url(../images/ht-cs-hair.png) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+/**건강유형 아이콘**/
+.ico-hc-all{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-all.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-brain{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-brain.svg) no-repeat 50% 50%;
+}
+
+
+.ico-hc-stress{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-stress.svg) no-repeat 50% 50%;
+}
+
+
+.ico-hc-eyes{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-eyes.svg) no-repeat 50% 50%;
+}
+
+
+.ico-hc-skin{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-skin.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-liver{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-liver.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-stomach{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-stomach.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-intestine{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-intestine.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-diet{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-diet.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-sugar{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-sugar.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-man-senior{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-man-senior.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-woman-senior{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-woman-senior.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-blood-vessel{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-blood-vessel.svg) no-repeat 50% 50%;
+}
+
+
+.ico-hc-pressure{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-pressure.svg) no-repeat 50% 50%;
+}
+
+
+.ico-hc-shield{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-shield.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-bone{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-bone.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-muscle{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-muscle.svg) no-repeat 50% 50%;
+}
+
+.ico-hc-hair{
+    display: inline-block;
+    width: 5rem;
+    height:5rem;
+    background: url(../images/ico-hc-hair.svg) no-repeat 50% 50%;
+}
+
+
+.ico-updown{
+    display: inline-block;
+    width: 1.4rem;
+    height:1.4rem;
+    background: url(../images/ico-updown.svg) no-repeat 50% 50%;
+}
+
+.ico-bookmark{
+    display: inline-block;
+    width: 2rem;
+    height:2rem;
+    background: url(../images/ico-bookmark.svg) no-repeat 50% 50%;
+}
+.is-active .ico-bookmark,
+.ico-bookmark.is-active{
+    display: inline-block;
+    width: 2rem;
+    height:2rem;
+    background: url(../images/ico-bookmark-active.svg) no-repeat 50% 50%;
+}
+
+
+.ico-link{
+    display: inline-block;
+    width: 2.4rem;
+    height:2.4rem;
+    background: url(../images/ico-link.svg) no-repeat 50% 50%;
+}
+
+
+.btn-bor > .ico-bookmark{
+    width: 2.4rem;
+    height: 2.4rem;
+    background-size: cover;
+}
+
+
+.ico-arr-gr{
+    display: inline-block;
+    width: 2rem;
+    height:2rem;
+    background: url(../images/ico-arr-down-gr.svg) no-repeat 50% 50%;
+}
+
+/**리포트 상세 메달**/
+.img-tt-gold{
+    display: inline-block;
+    width: 20.2rem;
+    height: 12rem;
+    background: url(../images/img-tt-gold.svg) no-repeat 50% 50%;
+}
+
+.img-tt-silver{
+    display: inline-block;
+    width: 20.2rem;
+    height: 12rem;
+    background: url(../images/img-tt-silver.svg) no-repeat 50% 50%;
+}
+
+.img-tt-bronze{
+    display: inline-block;
+    width: 20.2rem;
+    height: 12rem;
+    background: url(../images/img-tt-bronze.svg) no-repeat 50% 50%;
+}
+
+
+.ico-mh-gold{
+    display: inline-block;
+    width: 4rem;
+    height:4rem;
+    background: url(../images/ico-mh-gold.svg) no-repeat 50% 50%;
+}
+
+.ico-mh-silver{
+    display: inline-block;
+    width: 4rem;
+    height:4rem;
+    background: url(../images/ico-mh-silver.svg) no-repeat 50% 50%;
+}
+.ico-mh-bronze{
+    display: inline-block;
+    width: 4rem;
+    height:4rem;
+    background: url(../images/ico-mh-bronze.svg) no-repeat 50% 50%;
+}
+
+/**알람푸시용 아이콘**/
+
+.ico-ss-report{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    mask:url(../images/ico-ss-report.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-ss-report.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;   
+}
+.ico-ss-myhealth{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    mask: url(../images/ico-ss-myhealth.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-ss-myhealth.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;   
+}
+.ico-ss-cardnews{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    mask: url(../images/ico-ss-cardnews.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-ss-cardnews.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;   
+}
+.ico-ss-pill{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    mask:url(../images/ico-ss-pill.svg)  no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-ss-pill.svg)  no-repeat 50% 50%;
+    -webkit-mask-size: contain;   
+}
+
+.ico-ss-routine{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    background: url(../images/ico-ss-routine.svg) no-repeat 50% 50%;
+    mask: url(../images/ico-ss-routine.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-ss-routine.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;   
+}
+.ico-ss-item{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    mask: url(../images/ico-ss-item.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-ss-item.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;   
+}
+
+.ico-ss-more{
+    display: inline-block;
+    width: 1.8rem;
+    height:1.8rem;
+    mask: url(../images/ico-ss-more.svg) no-repeat 50% 50%;
+    mask-size:contain;
+    -webkit-mask: url(../images/ico-ss-more.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;   
+}
+
+
+.ico-alarm{
+     display: inline-block;
+    width: 3rem;
+    height:3rem;
+    background: url(../images/ico-alarm.svg) no-repeat 50% 50%;
+}
+
+.img-nodata{
+    display: inline-block;
+    width: 13.4rem;
+    height:13.4rem;
+    background: url(../images/img-nodata.svg) no-repeat 50% 50%;
+}
+
+.img-error{
+    display: inline-block;
+    width: 15.8rem;
+    height:15.8rem;
+    background: url(../images/img-error.svg) no-repeat 50% 50%;
+}
+
+/*간편인증수단 소셜 아이콘*/
+.ico-kakao{
+    display: inline-block;
+    width: 4.8rem;
+    height:4.8rem;
+    background: url(../images/img-social-kakao.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ico-naver{
+    display: inline-block;
+    width: 4.8rem;
+    height:4.8rem;
+    background: url(../images/img-social-naver.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ico-pass{
+    display: inline-block;
+    width: 4.8rem;
+    height:4.8rem;
+    background: url(../images/img-social-pass.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ico-samsung-pass{
+    display: inline-block;
+    width: 4.8rem;
+    height:4.8rem;
+    background: url(../images/img-social-samsung-pass.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ico-payco{
+    display: inline-block;
+    width: 4.8rem;
+    height:4.8rem;
+    background: url(../images/img-social-payco.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.ico-kb{
+    display: inline-block;
+    width: 4.8rem;
+    height:4.8rem;
+    background: url(../images/img-social-kb.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.ico-googleplay{
+    display: inline-block;
+    width: 1.6rem;
+    height:1.6rem;
+    background: url(../images/ico-googleplay.svg) no-repeat 50% 50%;
+}
+
+.ico-appstore{
+    display: inline-block;
+    width: 1.6rem;
+    height:1.6rem;
+    background: url(../images/ico-appstore.svg) no-repeat 50% 50%;
+}

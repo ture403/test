@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>복용 기간</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>복용 기간</h2>
+                </div>
+            </header>
+            <!--  weekly-calendar-top 삭제 -->
+            <div class="sub-wrap has-header">
+                <!-- <div class="health-sect1"> 덮고있는 부분삭제 -->
+                <ul class="link-arr-lists on-list">
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo1"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo1">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            기간 제한 없음
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo2"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo2">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            3일 후
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo3"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo3">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            5일 후
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo4"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo4">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            7일 후
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo5"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo5">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            14일 후
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo6"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo6">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            30일 후
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo7"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo7">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            60일 후
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link-arr">
+                            <div class="tit">
+                                <span class="checkForm">
+                                    <input
+                                        type="radio"
+                                        id="rdo8"
+                                        name="rdoList"
+                                    />
+                                    <label for="rdo8">
+                                        <span class="checkForm-custom"></span>
+                                        <span class="checkForm-label">
+                                            직접 선택
+                                        </span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div
+                                onclick="openModal(event)"
+                                modal-id="modalCalender"
+                            >
+                                <span class="text-b-lg-sb hc1">오후 2:32</span>
+                                <i class="ico-arr"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 중앙 모달 -->
+        <div class="modal-overlay modal-center" id="modalCalender">
+            <div class="modal-content">
+                <div class="calendar-top-info">
+                    <p class="text-b-sm-m">날짜 선택</p>
+                    <div class="title-type">
+                        <h1 class="text-h1">선택한 날짜</h1>
+                        <button type="button"><i class="ico-pen"></i></button>
+                    </div>
+                </div>
+
+                <!-- 선택 -->
+                <div class="calendar" data-type="select">
+                    <div class="calendar-header">
+                        <button class="calendar-title">
+                            <span class="year-month"></span>
+                            <span class="picker-arrow">▼</span>
+                        </button>
+                        <button class="prev-btn">
+                            <i class="ico-arr"></i>
+                            <span class="sr-only">이전</span>
+                        </button>
+                        <button class="next-btn">
+                            <i class="ico-arr"></i>
+                            <span class="sr-only">다음</span>
+                        </button>
+                    </div>
+                    <div class="calendar-weekdays"></div>
+                    <div class="calendar-grid"></div>
+                </div>
+
+                <div class="calendar-month-btns">
+                    <button
+                        type="button"
+                        class="btn hc1"
+                        onclick="closeModal('modalCalender')"
+                    >
+                        취소
+                    </button>
+                    <button
+                        type="button"
+                        class="btn hc1"
+                        onclick="closeModal('modalCalender')"
+                    >
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="../../utils/plugin/dayjs.min.js"></script>
+        <script src="../../utils/plugin/weekday.js"></script>
+        <script src="../../utils/plugin/isoWeek.js"></script>
+        <script src="../../utils/plugin/isToday.js"></script>
+        <script type="module" src="../../utils/calendar_select.js"></script>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

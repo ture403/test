@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>내건강 - 오늘</title>
+
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+
+        <script type="module" src="../../utils/ui_common.js"></script>
+        <script type="module">
+            import { rutSwiper } from "../../utils/ui_swiper.js";
+            rutSwiper();
+        </script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <div class="sub-wrap has-bg">
+                <div class="my-health-wrap">
+                    <div class="my-health-top">
+                        <h1 class="text-h4">내 건강</h1>
+                        <div class="more">
+                            <!-- 레벨아이콘 확인 -->
+                            <i class="ico-level-silver"></i>
+                            <!-- <i class="ico-level-family"></i>
+                            <i class="ico-level-gold"></i>
+                            <i class="ico-level-vip"></i> -->
+                            <span>Sliver</span>
+                        </div>
+                    </div>
+                    <div class="weekly-container">
+                        <div class="weekly-grid">
+                            <div class="weekly-day-col sun">
+                                <div class="weekly-day-name">일</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">25</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">월</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">26</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">화</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">27</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">수</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">28</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">목</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">29</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col selected">
+                                <div class="weekly-day-name">금</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">30</span>
+                                        <span class="weekly-date-tx">어제</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col today">
+                                <div class="weekly-day-name">토</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">31</span>
+                                        <span class="weekly-date-tx">오늘</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-health-today">
+                        <div class="my-health-today-title">
+                            <h2 class="text-b-lg-sb">
+                                <span class="hc1">오늘,</span>
+                                <span>2025.11.18 (화)</span>
+                            </h2>
+                            <a href="#" class="btn-bor btn-sm">
+                                <span>건강통계</span>
+                                <i class="ico-arr"></i>
+                            </a>
+                        </div>
+                        <div class="my-health-today-info">
+                            <div class="today-info">
+                                <i class="ht-running"></i>
+                                <span class="tit">걸음수</span>
+                                <span class="num">10,012</span>
+                            </div>
+                            <div class="today-info">
+                                <i class="ht-work"></i>
+                                <span class="tit">운동</span>
+                                <span class="num">103 분</span>
+                            </div>
+                            <div class="today-info">
+                                <i class="ht-fire"></i>
+                                <span class="tit">활동량</span>
+                                <span class="num">376 kcal</span>
+                            </div>
+                            <div class="today-info">
+                                <i class="ht-weigth"></i>
+                                <span class="tit">몸무게</span>
+                                <span class="num">68.3 kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-health2-wrap">
+                    <div class="title-type">
+                        <h3 class="text-h6">오늘의 루틴</h3>
+                    </div>
+                    <div class="rut-swiper">
+                        <div class="pagination">
+                            <span class="current-page"></span>
+                            /
+                            <span class="total-page"></span>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <!--  기본 루틴 추가 -->
+                            <div class="swiper-slide">
+                                <div class="rut-item">
+                                    <span class="tag-c">기본</span>
+                                    <div class="text-b-md-m">
+                                        영양제 잊지말고 먹기
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 나만의 루틴 추가하기 추가 -->
+                            <div class="swiper-slide">
+                                <div class="rut-item rut-plus">
+                                    <div class="text-c-lg-m">
+                                        나만의 루틴 추가하기
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rut-item selected">
+                                    <span class="tag-d">식사</span>
+                                    <div class="text-b-md-m">
+                                        견과류로 비타민E 보충하기
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rut-item">
+                                    <span class="tag-e">생활</span>
+                                    <div class="text-b-md-m">
+                                        견과류로 비타민E 보충하기
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rut-item">
+                                    <span class="tag-d">식사</span>
+                                    <div class="text-b-md-m">
+                                        견과류로 비타민E 보충하기
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rut-item">
+                                    <span class="tag-d">식사</span>
+                                    <div class="text-b-md-m">
+                                        견과류로 비타민E 보충하기
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 헬스 커넥트 연동안내 추가 -->
+                <div class="health-data-box">
+                    <h7 class="text-h7">
+                        헬스 커넥트와
+                        <br />
+                        데이터를 연동해 주세요
+                    </h7>
+                    <div class="text-c-lg-r">
+                        헬스 커넥트에서 걸음수를 비롯해 운동 기록, 몸무게,
+                        혈압/혈당 등의 건강 데이터를 가져옵니다
+                    </div>
+                    <!-- aos 일경우 -->
+                    <button type="button" class="btn-fill btn-primary">
+                        <strong>헬스 커넥트와 연동하기</strong>
+                    </button>
+                    <!-- ios 일경우 -->
+                    <button type="button" class="btn-fill btn-primary">
+                        <strong>건강 앱과 연동하기</strong>
+                    </button>
+                </div>
+                <div class="my-health3-wrap">
+                    <div class="title-type">
+                        <h3 class="text-h6">히스토리</h3>
+                    </div>
+                    <div class="pill-history-wrap">
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 7:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-empty"></i>
+                                        <span class="tx tc0">???</span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                인진오령산가인삼액(1)
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <button
+                                                type="button"
+                                                class="btn-fill btn-md btn-hc"
+                                            >
+                                                <span>복용관리</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 7:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-taken"></i>
+                                        <span class="tx tc1">먹었어요</span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                ZMA, 운동 후 회복, 베지 캡슐
+                                                90정 ZMA, 운동 후 회복, 베지
+                                                캡슐 90정
+                                            </div>
+                                            <div class="txts">
+                                                <i class="ico-sh-clock"></i>
+                                                <span>복용한 시간 : 08:11</span>
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-ignored"></i>
+                                        <span class="tx tc2">
+                                            다음에 먹을게요
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                ZMA, 운동 후 회복, 베지 캡슐
+                                                90정
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-banner">
+                            <div class="pill-banner-ico">
+                                <i class="ico-megaphon"></i>
+                            </div>
+                            <div class="pill-banner-desc">
+                                <p class="text-c-sm-m">30일 리뷰 작성 알림</p>
+                                <p class="text-c-lg-m">
+                                    <span class="hc1">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </span>
+                                    상품을 복용한지 30일이 지났습니다. 리뷰를
+                                    작성해 주세요.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 7:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-prohibited"></i>
+                                        <span class="tx tc0">안 먹는 날</span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                인진오령산가인삼액(1)
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 8:00 ~ 8:23</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-running"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-b">
+                                                    2,123걸음
+                                                </span>
+                                                <span class="tag-c">
+                                                    1,563m
+                                                </span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                23분 48초 걷기
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-banner">
+                            <div class="pill-banner-ico">
+                                <i class="ico-megaphon"></i>
+                            </div>
+                            <div class="pill-banner-desc">
+                                <p class="text-c-sm-m">장바구니 알림</p>
+                                <p class="text-c-lg-m">
+                                    장바구니에 구매하지 않은 상품이 남아있어요
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 8:00 ~ 8:23</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-work"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-d">
+                                                    378kcal
+                                                </span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                67분 19초 달리기
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 8:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-blood"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">
+                                                    복용완료
+                                                </span>
+                                                <span class="tag-c">
+                                                    측정존
+                                                </span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                혈압 121/82 mmHg
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 8:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-blood"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">
+                                                    미복용
+                                                </span>
+                                                <span class="tag-c">
+                                                    측정존
+                                                </span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                혈압 121/82 mmHg
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 8:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-icn"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-e">
+                                                    식후 측정 (2시간이내)
+                                                </span>
+                                                <span class="tag-c">
+                                                    의료버스
+                                                </span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                혈당 102 mmHg
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 8:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-icn"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-e">
+                                                    공복 측정
+                                                </span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                혈당 102 mmHg
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <h4 class="pill-history-time">오전 8:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-weigth"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-f">
+                                                    21.1 BMI
+                                                </span>
+                                                <span class="tag-c">
+                                                    측정존
+                                                </span>
+                                            </div>
+                                            <div class="text-b-sm-sb">
+                                                몸무게 65.7 kg
+                                                <span class="tc6">-1.1 kg</span>
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history is-last">
+                            <h4 class="pill-history-time">오전 8:00</h4>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <span class="circle-bg">
+                                            <i class="ht-heart"></i>
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="text-b-sm-sb">
+                                                심박수 49~170 bpm
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!----260206 더보기버튼 삭제 ----->
+                </div>
+            </div>
+            <div class="quick-talk">
+                <span>
+                    <em>복약과 루틴</em>
+                    을
+                    <br />
+                    함께 관리해보세요!
+                </span>
+                <button type="button" class="btn-x">
+                    <i class="ico-x"></i>
+                </button>
+            </div>
+            <button type="button" class="btn-quick">
+                <i class="ico-plus-b"></i>
+                <span class="sr-only">퀵메뉴펼침</span>
+            </button>
+            <div class="quick-overlay">
+                <div class="quick-wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>루틴 관리하기</span>
+                                <i class="ico-q-repeat"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>약 등록하기</span>
+                                <i class="ico-q-pill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>운동 기록하기</span>
+                                <i class="ico-q-work"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>혈압 입력하기</span>
+                                <i class="ico-q-blood"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>혈당 입력하기</span>
+                                <i class="ico-q-icn"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>몸무게 입력하기</span>
+                                <i class="ico-q-weight"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-include-path="../components/_inc/bottom-nav.html"></div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

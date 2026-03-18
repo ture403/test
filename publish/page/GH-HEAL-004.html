@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>등급안내 - 내 레벨</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap my-level">
+            <header>
+                <div class="top-header-nav trans">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>내 레벨</h2>
+                </div>
+            </header>
+            <div class="sub-wrap has-header trans">
+                <div class="level-symbol-wrap">
+                    <div class="symbol-img">
+                        <i class="ico-level-silver large"></i>
+                        <!-- 레벨별 케이스
+                        <i class="ico-level-family large"></i>
+                        <i class="ico-level-gold large"></i>
+                        <i class="ico-level-vip large"></i>
+                    -->
+                    </div>
+                    <div class="my-level">
+                        <div class="text-b-sm-m">나의 현재 레벨</div>
+                        <div class="text-h6">Silver</div>
+                    </div>
+                    <div class="next-level">
+                        다음 달 예상 레벨
+                        <span class="level-name">
+                            <i class="ico-level-gold ss"></i>
+                            Gold
+                        </span>
+                        <!-- 레벨별 케이스
+                        <span class="level-name">
+                            <i class="ico-level-silver ss"></i>
+                            Silver
+                        </span>
+                        <span class="level-name">
+                            <i class="ico-level-family ss"></i>
+                            Family
+                        </span>
+                        <span class="level-name">
+                            <i class="ico-level-vip ss"></i>
+                            Vip
+                        </span>
+                        -->
+                    </div>
+                </div>
+                <div class="point-num-wrap">
+                    <div class="point-num-box">
+                        <div class="text-b-sm-m">
+                            이번 달 활동 포인트
+
+                            <div class="tooltip-wrap">
+                                <i class="ico-i"></i>
+                                <div class="tooltip-content">
+                                    <ul>
+                                        <li>
+                                            일정한 활동 포인트를 모으게 되면
+                                            레벨이 상승하며 레벨에 맞는 젬을
+                                            받을 수 있어요
+                                        </li>
+                                        <li>
+                                            젬을 모아 쇼핑몰 적립금으로
+                                            교환해보세요
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="point-num">
+                            <div class="num-detail">
+                                <p class="text-h6">99,999</p>
+                                <i class="ico-point"></i>
+                            </div>
+                            <div class="text-c-lg-m tc1">
+                                달성 퍼펙트 위크 : 2회
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-info-wrap">
+                    <h7 class="tit text-h7">레벨 정보</h7>
+                    <p class="text text-c-lg-r">
+                        각 레벨을 눌러 레벨별 상세 정보를 확인해보세요
+                    </p>
+                    <div class="levelTab-wrap">
+                        <div class="levelTab-menu family">
+                            <div
+                                class="levelTab-item active"
+                                data-level="family"
+                            >
+                                Family
+                            </div>
+                            <div class="levelTab-item" data-level="silver">
+                                Silver
+                            </div>
+                            <div class="levelTab-item" data-level="gold">
+                                Gold
+                            </div>
+                            <div class="levelTab-item" data-level="vip">
+                                VIP
+                            </div>
+                        </div>
+
+                        <div class="level-infoBx family">
+                            <div class="content-group family">
+                                <dl class="level-info-list">
+                                    <div class="level-tit">
+                                        <i class="ico-level-family"></i>
+                                        Family
+                                    </div>
+                                    <div class="info-item">
+                                        <dt>조건</dt>
+                                        <dd>
+                                            <p>조건 없음</p>
+                                        </dd>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <dt>보상</dt>
+                                        <dd>
+                                            <p>없음</p>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="content-group silver">
+                                <dl class="level-info-list">
+                                    <div class="level-tit">
+                                        <i class="ico-level-silver"></i>
+                                        Silver
+                                    </div>
+                                    <div class="info-item">
+                                        <dt>조건</dt>
+                                        <dd>
+                                            <p>레벨 업 : 250 포인트 이상</p>
+                                            <p>레벨 유지 : 200 포인트 이상</p>
+                                        </dd>
+                                    </div>
+                                    <div class="info-item">
+                                        <dt>보상</dt>
+                                        <dd>
+                                            <p>레벨 업 시 10,000젬 지급</p>
+                                            <p>레벨 유지 시 5,000젬 지급</p>
+                                            <p class="notice">
+                                                * 매월 1일 00시, 레벨 판정
+                                                결과에 따라 젬 지급
+                                            </p>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="content-group gold">
+                                <dl class="level-info-list">
+                                    <div class="level-tit">
+                                        <i class="ico-level-gold"></i>
+                                        Gold
+                                    </div>
+                                    <div class="info-item">
+                                        <dt>조건</dt>
+                                        <dd>
+                                            <p>
+                                                레벨 업 : 400 포인트 이상 /
+                                                퍼펙트 위크 1회 달성
+                                            </p>
+                                            <p>
+                                                레벨 유지 : 350 포인트 이상 /
+                                                퍼펙트 위크 1회 달성
+                                            </p>
+                                        </dd>
+                                    </div>
+                                    <div class="info-item">
+                                        <dt>보상</dt>
+                                        <dd>
+                                            <p>레벨 업 시 30,000젬 지급</p>
+                                            <p>레벨 유지 시 20,000젬 지급</p>
+                                            <p class="notice">
+                                                * 매월 1일 00시, 레벨 판정
+                                                결과에 따라 젬 지급
+                                            </p>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="content-group vip">
+                                <dl class="level-info-list">
+                                    <div class="level-tit">
+                                        <i class="ico-level-vip"></i>
+                                        VIP
+                                    </div>
+                                    <div class="info-item">
+                                        <dt>조건</dt>
+                                        <dd>
+                                            <p>
+                                                레벨 업 : 500 포인트 이상 /
+                                                퍼펙트 위크 2회 달성
+                                            </p>
+                                            <p>
+                                                레벨 유지 : 400 포인트 이상 /
+                                                퍼펙트 위크 2회 달성
+                                            </p>
+                                        </dd>
+                                    </div>
+                                    <div class="info-item">
+                                        <dt>보상</dt>
+                                        <dd>
+                                            <p>레벨 업 시 50,000젬 지급</p>
+                                            <p>레벨 유지 시 40,000젬 지급</p>
+                                            <p class="notice">
+                                                * 매월 1일 00시, 레벨 판정
+                                                결과에 따라 젬 지급
+                                            </p>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-info-wrap">
+                    <h7 class="tit text-h7">포인트 미션</h7>
+                    <p class="text text-c-lg-r">
+                        미션을 수행하면 활동 포인트를 드려요
+                    </p>
+                    <!-- 이벤트시 표기 -->
+                    <p class="text text-c-lg-r point">
+                        상품 구매 효과로 포인트 2배 적용 중 (종료 : 2026-01-07)
+                    </p>
+                    <div class="point-history-cont">
+                        <div class="point-history-item">
+                            <div class="point-icon">
+                                <span class="circle-bg">
+                                    <i class="ht-running"></i>
+                                </span>
+                            </div>
+                            <div class="point-conts">
+                                <div class="info">
+                                    <div class="text-b-sm-sb">
+                                        하루 5,000 걸음 달성
+                                    </div>
+                                    <div class="text-c-md-m txts">
+                                        <p>삼성헬스 연동 필수</p>
+                                    </div>
+                                </div>
+                                <div class="ctrl">
+                                    <i class="ico-point"></i>
+                                    +5
+                                    <strong>x2</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="point-history-item">
+                            <div class="point-icon">
+                                <span class="circle-bg">
+                                    <i class="ht-routine"></i>
+                                </span>
+                            </div>
+                            <div class="point-conts">
+                                <div class="info">
+                                    <div class="text-b-sm-sb">
+                                        루틴 2개 이상 진행
+                                    </div>
+                                    <div class="text-c-md-m txts">
+                                        <p>1개 완료 시 2P 적립</p>
+                                    </div>
+                                </div>
+                                <div class="ctrl">
+                                    <i class="ico-point"></i>
+                                    +5
+                                    <strong>x2</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="point-history-item">
+                            <div class="point-icon">
+                                <span class="circle-bg">
+                                    <i class="ht-work"></i>
+                                </span>
+                            </div>
+                            <div class="point-conts">
+                                <div class="info">
+                                    <div class="text-b-sm-sb">
+                                        10분 이상 운동하기
+                                    </div>
+                                    <div class="text-c-md-m txts">
+                                        <p>운동 종류 무관</p>
+                                    </div>
+                                </div>
+                                <div class="ctrl">
+                                    <i class="ico-point"></i>
+                                    +5
+                                    <strong>x2</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="point-history-item">
+                            <div class="point-icon">
+                                <span class="circle-bg">
+                                    <i class="ht-pf-day"></i>
+                                </span>
+                            </div>
+                            <div class="point-conts">
+                                <div class="info">
+                                    <div class="text-b-sm-sb">퍼펙트 데이</div>
+                                    <div class="text-c-md-m txts">
+                                        <p>걸음 수 5,000 걸음</p>
+                                        <p>루틴 2개 이상</p>
+                                        <p>운동 10분 이상 모두 달성</p>
+                                    </div>
+                                </div>
+                                <div class="ctrl">
+                                    <i class="ico-point"></i>
+                                    +5
+                                    <strong>x2</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="point-history-item">
+                            <div class="point-icon">
+                                <span class="circle-bg">
+                                    <i class="ht-pf-week"></i>
+                                </span>
+                            </div>
+                            <div class="point-conts">
+                                <div class="info">
+                                    <div class="text-b-sm-sb">퍼펙트 위크</div>
+                                    <div class="text-c-md-m txts">
+                                        <p>
+                                            월~금 평일 5일 연속 퍼펙트 데이 달성
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ctrl">
+                                    <i class="ico-point"></i>
+                                    +15
+                                    <strong>x2</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="health-ai-noti">
+                    <p>
+                        - 젬은 10만젬 단위로 쇼핑몰 적립금으로 10:1 교환
+                        가능합니다.
+                    </p>
+                    <p>
+                        - 퍼펙트 위크 보상은 매주 금요일이 속한 달의 포인트로
+                        합산 적립됩니다. 예) 1/30(월)~2/3(금) 성공 시, 금요일
+                        기준인 2월 포인트로 적립
+                    </p>
+                    <p>- 젬은 적립 후 180일이 지나면 소멸 됩니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>혈당 - 3개월</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>혈당</h2>
+                </div>
+            </header>
+
+            <div class="sub-wrap has-header">
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li><button type="button">1주</button></li>
+                        <li><button type="button">1개월</button></li>
+                        <li class="active">
+                            <button type="button">3개월</button>
+                        </li>
+                        <li><button type="button">6개월</button></li>
+                        <li><button type="button">1년</button></li>
+                    </ul>
+                </div>
+                <div class="health-sect2">
+                    <div class="calendar-header-week">
+                        <button type="button" class="nav-btn">
+                            <i class="ico-prev"></i>
+                            <span class="sr-only">이전</span>
+                        </button>
+                        <h3 class="header-title">2025.12 ~ 2026.02</h3>
+                        <button type="button" class="nav-btn dim">
+                            <i class="ico-next"></i>
+                            <span class="sr-only">다음</span>
+                        </button>
+                    </div>
+                    <div class="health-sect2-info">
+                        <div class="health-sect2-info-detail">
+                            <div class="text-b-md-sb hc3">평균 혈당</div>
+                            <div class="dt-data">
+                                <span class="text-h1">104</span>
+                                <span class="text-h6">mg/dL</span>
+                            </div>
+                        </div>
+                        <div class="graph">
+                            <img
+                                src="../../assets/images/graph7.png"
+                                alt="그래프 영역"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="health-sect3">
+                    <div class="health-sect3-top">
+                        <div class="switch-bmi">
+                            <div class="switch">
+                                <input type="checkbox" id="switchTg" checked />
+                                <label for="switchTg">
+                                    <span class="sr-only">설정</span>
+                                </label>
+                            </div>
+                            <span class="text-b-md-m">전체 평균 보기</span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <button
+                                class="dropdown-button"
+                                onclick="openModal(event)"
+                                modal-id="modalBottom"
+                            >
+                                식후 측정(2시간 이내)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-history-wp is-first">
+                        <!--child 속성제거, is-first클래스 추가-->
+                        <div class="card-date">02.15 ~ 02.21</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">평균 121 mg/dL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-history-wp">
+                        <div class="card-date">02.15 ~ 02.21</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">평균 121 mg/dL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-history-wp">
+                        <div class="card-date">02.15 ~ 02.21</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">평균 121 mg/dL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-history-wp">
+                        <div class="card-date">02.15 ~ 02.21</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">평균 121 mg/dL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-history-wp">
+                        <div class="card-date">02.15 ~ 02.21</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">평균 121 mg/dL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-history-wp">
+                        <div class="card-date">02.15 ~ 02.21</div>
+                        <div class="card-history">
+                            <div class="info">
+                                <div class="info-data">
+                                    <span class="text-h7">평균 121 mg/dL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!----260206 더보기버튼 삭제 ----->
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <button type="button" class="btn-fill btn-primary">
+                    <strong>혈당 기록하기</strong>
+                </button>
+            </div>
+        </div>
+        <!-- 하단 슬라이드 모달 : 측정시기 -->
+        <div class="modal-overlay modal-bottom" id="modalBottom">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="radiobx-wrap text-type">
+                        <label
+                            class="radio-item"
+                            onclick="closeModal('modalBottom')"
+                        >
+                            <input type="radio" name="status" checked />
+                            <span class="box">공복 측정</span>
+                        </label>
+                        <label
+                            class="radio-item"
+                            onclick="closeModal('modalBottom')"
+                        >
+                            <input type="radio" name="status" />
+                            <span class="box">식전 측정</span>
+                        </label>
+                        <label
+                            class="radio-item"
+                            onclick="closeModal('modalBottom')"
+                        >
+                            <input type="radio" name="status" />
+                            <span class="box">식후 측정(2시간 이내)</span>
+                        </label>
+                        <label
+                            class="radio-item"
+                            onclick="closeModal('modalBottom')"
+                        >
+                            <input type="radio" name="status" />
+                            <span class="box">평상시</span>
+                        </label>
+                        <label
+                            class="radio-item"
+                            onclick="closeModal('modalBottom')"
+                        >
+                            <input type="radio" name="status" value="none" />
+                            <span class="box">취침 전</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

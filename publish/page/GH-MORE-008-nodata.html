@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>루틴</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <!-- top-header-nav trans 에서 trans 삭제 gray 추가 -->
+                <div class="top-header-nav gray">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>루틴</h2>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="weekly-calendar-top">
+                    <!-- weekly Calendar -->
+                    <div class="weekly-container">
+                        <div class="weekly-header">
+                            <h3 class="header-title" id="regularTitle">
+                                2026. 01
+                                <span class="picker-arrow">▼</span>
+                            </h3>
+                            <button type="button" class="btn-bor btn-md">
+                                <span>주간 리포트</span>
+                            </button>
+                        </div>
+                        <div class="weekly-grid">
+                            <div class="weekly-day-col sun">
+                                <div class="weekly-day-name">일</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <svg
+                                            class="weekly-donut"
+                                            width="34"
+                                            height="34"
+                                            viewBox="0 0 34 34"
+                                        >
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#E9ECF3"
+                                                stroke-width="4"
+                                            />
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#39B695"
+                                                stroke-width="4"
+                                                stroke-linecap="round"
+                                                stroke-dasharray="94.25"
+                                                stroke-dashoffset="70"
+                                                transform="rotate(-90 17 17)"
+                                            />
+                                        </svg>
+                                        <span class="weekly-date-num">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">월</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <svg
+                                            class="weekly-donut"
+                                            width="34"
+                                            height="34"
+                                            viewBox="0 0 34 34"
+                                        >
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#E9ECF3"
+                                                stroke-width="4"
+                                            />
+                                            <circle
+                                                cx="17"
+                                                cy="17"
+                                                r="15"
+                                                fill="transparent"
+                                                stroke="#39B695"
+                                                stroke-width="4"
+                                                stroke-linecap="round"
+                                                stroke-dasharray="94.25"
+                                                stroke-dashoffset="40"
+                                                transform="rotate(-90 17 17)"
+                                            />
+                                        </svg>
+                                        <span class="weekly-date-num">13</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">화</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">14</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">수</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">15</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col selected">
+                                <div class="weekly-day-name">목</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">16</span>
+                                        <span class="weekly-date-tx">오늘</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col today">
+                                <div class="weekly-day-name">금</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">17</span>
+                                        <span class="weekly-date-tx">내일</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">토</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">18</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="routine-sect">
+                    <div class="health-data-wrap no-data">
+                        <span class="text-b-md">진행 중인 루틴이 없어요</span>
+                    </div>
+                    <div class="bottom-button-fixed">
+                        <button type="button" class="btn-fill btn-primary">
+                            <strong>루틴팩 추가하기</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

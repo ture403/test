@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강정보</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+        <script type="module">
+            import { healthCardSwiper } from "../../utils/ui_swiper.js";
+            healthCardSwiper();
+        </script>
+        <script type="module" src="../../utils/ui_main.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>건강정보</h2>
+                </div>
+            </header>
+            <div class="sub-wrap has-header gray">
+                <div class="health-card-wrap">
+                    <div class="card-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item-card">
+                                    <img
+                                        src="../../assets/images/@card-news-sp01.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item-card">
+                                    <img
+                                        src="../../assets/images/@card-news-sp02.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item-card">
+                                    <img
+                                        src="../../assets/images/@card-news-sp03.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="health-card-info">
+                    <div class="text-h5">
+                        치매 유발하는 실내 환경, 당장 바꾸어야 할 것은?
+                    </div>
+                    <div class="card-tag-container">
+                        <div class="card-tag-wrap">
+                            <span class="tag-g">뇌 건강</span>
+                            <span class="tag-g">스트레스/수면/피로개선</span>
+                            <span class="tag-g">체지방 감소</span>
+                            <span class="tag-g">뇌 건강</span>
+                            <span class="tag-g">스트레스/수면/피로개선</span>
+                            <span class="tag-g">체지방 감소</span>
+                        </div>
+                        <button type="button" class="btn-tag-toggle">
+                            <i class="ico-arr-gr"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="health-item-wrap">
+                    <div class="title-type">
+                        <h7 class="text-h7">관련 추천 상품</h7>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                    <!-- <div class="item-price">
+                                        <div class="percent">20%</div>
+                                        <div class="last-price">
+                                            58,000
+                                            <span>원</span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim active">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card2.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like on"></i>
+                                    </div>
+                                    <div class="info">
+                                        <span>
+                                            ZMA, 운동 후 회복, 베지 캡슐 90정
+                                        </span>
+                                    </div>
+                                    <!-- <div class="item-price">
+                                        <div class="percent">20%</div>
+                                        <div class="last-price">
+                                            58,000
+                                            <span>원</span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card3.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                    <!-- <div class="item-price">
+                                        <div class="percent">20%</div>
+                                        <div class="last-price">
+                                            58,000
+                                            <span>원</span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-zzim">
+                                    <div class="thumb">
+                                        <img
+                                            src="../../assets/images/item-card.jpg"
+                                            alt=""
+                                        />
+                                        <i class="ico-like"></i>
+                                    </div>
+                                    <div class="info">
+                                        ZMA, 운동 후 회복, 베지 캡슐 90정
+                                    </div>
+                                    <!-- <div class="item-price">
+                                        <div class="percent">20%</div>
+                                        <div class="last-price">
+                                            58,000
+                                            <span>원</span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-button-fixed half">
+                <button type="button" class="btn-bor">
+                    <i class="ico-link"></i>
+                    공유하기
+                </button>
+                <button
+                    type="button"
+                    class="btn-bor"
+                    onclick="toastOpen(event)"
+                    modal-id="toastMessage"
+                >
+                    <i class="ico-bookmark"></i>
+                    찜하기
+                </button>
+                <!-- 찜하기 is-active 
+                <button type="button" class="btn-bor is-active">
+                    <i class="ico-bookmark"></i>
+                    찜하기
+                </button>
+                -->
+            </div>
+        </div>
+        <!-- 토스트 메세지 찜 리스트에 추가되었습니다 -->
+        <div class="modal-overlay modal-center type-toast" id="toastMessage">
+            <div class="modal-content">
+                <div class="modal-body">찜 리스트에 추가되었습니다</div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

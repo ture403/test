@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>복약관리-알람</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap alarm-on">
+            <div class="sub-wrap">
+                <div class="alarm-info">
+                    <div class="alarm-time text-h1">
+                        <span>10</span>
+                        <span class="comm">:</span>
+                        <span>11</span>
+                    </div>
+                    <h3 class="text-h3">약 드실 시간이에요</h3>
+                    <p class="text-h7 pill-info-detail">
+                        대웅제약 우루사 연질캡슐, 간 기능 개선 및 피로회복,
+                        120정
+                    </p>
+                </div>
+
+                <div class="bottom-button-fixed trans">
+                    <button type="button" class="btn-fill btn-primary">
+                        복용 체크하러가기
+                    </button>
+                    <button type="button" class="btn-fill trans">
+                        10분 후 다시 알람
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

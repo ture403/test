@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>진행방법 선택</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <!-- top-header-nav trans 에서 trans 삭제 -->
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2></h2>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="my-routine-wrap">
+                    <div class="title-type">
+                        <h3 class="text-h5">어떤 루틴으로 진행할까요?</h3>
+                    </div>
+                    <div class="myRoutine-item is-selected">
+                        <button type="button" class="checkFormCir"></button>
+                        <div class="myRoutine-item-tit">
+                            <i class="t-weight"></i>
+                            <h4 class="text-h7">식사 루틴으로 진행</h4>
+                            <p class="text-c-lg-m">
+                                매주 다른 식사 습관을 하루 1개 추가합니다
+                            </p>
+                        </div>
+                        <div class="myRoutine-item-con">
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 1</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            취침 전 3시간부터 금식(공복 12시간
+                                            유지하기)
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 2</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            오늘 하루 액상과당 음료 마시지 않기
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 3</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            하루 한번 샐러드/야채 섭취하기
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 4</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            무가당 두유 마시기
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myRoutine-item">
+                        <button type="button" class="checkFormCir"></button>
+                        <div class="myRoutine-item-tit">
+                            <i class="t-sofa"></i>
+                            <h4 class="text-h7">생활 루틴으로 진행</h4>
+                            <p class="text-c-lg-m">
+                                매주 다른 생활 습관을 하루 1개 추가합니다
+                            </p>
+                        </div>
+                        <div class="myRoutine-item-con">
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 1</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            취침 전 3취침 전 3시간부터 금식(공복
+                                            12시간 유지하기)
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 2</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            오늘 하루 액상과당 음료 마시지 않기
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 3</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            하루 한번 샐러드/야채 섭취하기
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 4</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            무가당 두유 마시기
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myRoutine-item">
+                        <button type="button" class="checkFormCir"></button>
+                        <div class="myRoutine-item-tit">
+                            <i class="t-all-in-one"></i>
+                            <h4 class="text-h7">전체 루틴으로 진행</h4>
+                            <p class="text-c-lg-m">
+                                매주 다른 식사/생활 습관을 하루 2개 추가합니다
+                            </p>
+                        </div>
+                        <div class="myRoutine-item-con">
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 1</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            취침 전 3취침 전 3시간부터 금식(공복
+                                            12시간 유지하기)
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            자기 전 10분 모관 운동하기
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 2</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            오늘 하루 액상과당 음료 마시지 않기
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            의자 스쿼트 5분하기
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 3</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            하루 한번 샐러드/야채 섭취하기
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            취침 전 3시간부터 금식(공복 12시간
+                                            유지하기)
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="routine-week-item">
+                                <div class="week-tit">Week 4</div>
+                                <div class="week-items">
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            아침식사로 단백질 메뉴 챙겨 먹기
+                                        </span>
+                                        <span class="tag-d">식사</span>
+                                    </div>
+                                    <div class="week-item">
+                                        <span class="text-c-lg-r">
+                                            자기 전 10분 모관운동하기
+                                        </span>
+                                        <span class="tag-e">생활</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <button type="button" class="btn-fill btn-primary">
+                    <strong>루틴팩 시작하기</strong>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            const targetChks = document.querySelectorAll(".checkFormCir");
+            targetChks.forEach((tg) => {
+                tg.addEventListener("click", (e) => {
+                    e.currentTarget.parentElement.classList.toggle(
+                        "is-selected",
+                    );
+                });
+            });
+        </script>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

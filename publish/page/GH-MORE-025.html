@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강 앱 연동</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>건강 앱 연동</h2>
+                </div>
+            </header>
+
+            <div class="sub-wrap has-header">
+                <div class="health-connect-wrap">
+                    <img src="../../assets/images/ios_health_connect.png" />
+                    <ul class="dot-list">
+                        <li>
+                            <span class="tc1">
+                                설정 > 앱 > 건강 > 데이터 접근 및 기기 > Onione
+                            </span>
+                            접속 후
+                            <span class="tc1">'모두 켜기'</span>
+                            를 선택하면 연동이 완료됩니다
+                        </li>
+                        <li>
+                            애플 워치 사용자는 건강 앱에
+                            <span class="tc1">걸음수가 자동 연동</span>
+                            됩니다.
+                        </li>
+                        <li>
+                            <span class="tc1">애플 워치가 없어도</span>
+                            건강 앱을 통해 스마트폰 걸음수 측정이 가능합니다
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

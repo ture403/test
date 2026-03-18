@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강유형 아이콘 리스트</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <div class="sub-wrap has-header">
+                <div class="health-target-wrap">
+                    <div class="title-type">
+                        <h3 class="text-h5">건강유형 리스트</h3>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-brain"></i>
+                        <h4 class="text-b-lg">뇌 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-stress"></i>
+                        <h4 class="text-b-lg">스트레스/ 수면 /피로개선</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-eyes"></i>
+                        <h4 class="text-b-lg">눈 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-skin"></i>
+                        <h4 class="text-b-lg">피부 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-liver"></i>
+                        <h4 class="text-b-lg">간 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-stomach"></i>
+                        <h4 class="text-b-lg">소화 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-intestine"></i>
+                        <h4 class="text-b-lg">장 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-diet"></i>
+                        <h4 class="text-b-lg">다이어트</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-sugar"></i>
+                        <h4 class="text-b-lg">혈당 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-man-senior"></i>
+                        <h4 class="text-b-lg">갱년기 남성</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-woman-senior"></i>
+                        <h4 class="text-b-lg">갱년기 여성</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-blood-vessel"></i>
+                        <h4 class="text-b-lg">이상지질혈증</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-pressure"></i>
+                        <h4 class="text-b-lg">혈압 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-shield"></i>
+                        <h4 class="text-b-lg">면역 / 황산화</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-bone"></i>
+                        <h4 class="text-b-lg">관절 / 뼈 건강</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-muscle"></i>
+                        <h4 class="text-b-lg">근력 개선</h4>
+                    </div>
+                    <div class="target-item-tit">
+                        <i class="ico-hc-hair"></i>
+                        <h4 class="text-b-lg">모발 건강</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const targetChks = document.querySelectorAll(".checkFormCir");
+            targetChks.forEach((tg) => {
+                tg.addEventListener("click", (e) => {
+                    e.currentTarget.parentElement.classList.toggle(
+                        "is-selected",
+                    );
+                });
+            });
+
+            const btnTg = document.querySelector(".btn-tg");
+            const targetOverlay = document.querySelector(
+                ".health-target-overlay",
+            );
+            btnTg.addEventListener("click", () => {
+                targetOverlay.classList.toggle("is-active");
+            });
+        </script>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

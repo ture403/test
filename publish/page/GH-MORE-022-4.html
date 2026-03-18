@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>약 검색</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+        <script type="module">
+            import { cardSwiper } from "../../utils/ui_swiper.js";
+            cardSwiper();
+        </script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-search">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <input
+                        type="text"
+                        placeholder="약이나 영양제 이름을 검색할 수 있습니다."
+                        class="ipt"
+                        value="타이레"
+                    />
+                    <button type="button" class="btn-close-circle">
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <ul class="top-header-search-list">
+                    <li class="first">
+                        <i></i>
+                        <span>타이레</span>
+                        <button type="button">직접 입력</button>
+                    </li>
+                    <li>
+                        <i class="ico-sh-clock"></i>
+                        <span>타이레놀</span>
+                    </li>
+                    <li>
+                        <i class="ico-sh-search"></i>
+                        <span>
+                            <strong>타이레</strong>
+                            놀
+                        </span>
+                    </li>
+                    <li>
+                        <i class="ico-sh-search"></i>
+                        <span>
+                            <strong>타이레</strong>
+                            놀정
+                        </span>
+                    </li>
+                </ul>
+            </header>
+            <!-- has-header gray추가 -->
+            <div class="sub-wrap has-header gray">
+                <div class="gh-more22-wrap">
+                    <div class="title-type">
+                        <h3 class="text-h6">
+                            구매 영양제
+                            <span class="text-b-sm-m">최근 3개월</span>
+                        </h3>
+                        <div class="more">
+                            <button type="button" class="btn-detail hc1">
+                                <span>더보기</span>
+                                <i class="ico-arr"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-presc">
+                                    <p class="text-b-lg-sb">
+                                        칼슘 마그네슘 아연, 120정
+                                    </p>
+                                    <p class="text-b-sm-m">2025-07-11 구매</p>
+                                    <div class="info">
+                                        <i class="ico-recomm"></i>
+                                        <span class="text-c-lg-m">
+                                            1회 투약량 :
+                                            <em class="hc1">1</em>
+                                        </span>
+                                        <span class="bar"></span>
+                                        <span class="text-c-lg-m">
+                                            1일 투여횟수 :
+                                            <em class="hc1">3</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-presc">
+                                    <p class="text-b-lg-sb">
+                                        칼슘 마그네슘 아연, 120정
+                                    </p>
+                                    <p class="text-b-sm-m">2025-07-11 구매</p>
+                                    <div class="info">
+                                        <i class="ico-recomm"></i>
+                                        <span class="text-c-lg-m">
+                                            1회 투약량 :
+                                            <em class="hc1">1</em>
+                                        </span>
+                                        <span class="bar"></span>
+                                        <span class="text-c-lg-m">
+                                            1일 투여횟수 :
+                                            <em class="hc1">3</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-presc">
+                                    <p class="text-b-lg-sb">
+                                        칼슘 마그네슘 아연, 120정
+                                    </p>
+                                    <p class="text-b-sm-m">2025-07-11 구매</p>
+                                    <div class="info">
+                                        <i class="ico-recomm"></i>
+                                        <span class="text-c-lg-m">
+                                            1회 투약량 :
+                                            <em class="hc1">1</em>
+                                        </span>
+                                        <span class="bar"></span>
+                                        <span class="text-c-lg-m">
+                                            1일 투여횟수 :
+                                            <em class="hc1">3</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-type">
+                        <h3 class="text-h6">
+                            처방받은 약
+                            <span class="text-b-sm-m">최근 3개월</span>
+                        </h3>
+                        <div class="more">
+                            <button type="button" class="btn-detail hc1">
+                                <span>더보기</span>
+                                <i class="ico-arr"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-presc">
+                                    <p class="text-b-lg-sb">
+                                        칼슘 마그네슘 아연, 120정
+                                    </p>
+                                    <p class="text-b-sm-m">2025-07-11 구매</p>
+                                    <div class="info">
+                                        <i class="ico-recomm"></i>
+                                        <span class="text-c-lg-m">
+                                            1회 투약량 :
+                                            <em class="hc1">1</em>
+                                        </span>
+                                        <span class="bar"></span>
+                                        <span class="text-c-lg-m">
+                                            1일 투여횟수 :
+                                            <em class="hc1">3</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-presc">
+                                    <p class="text-b-lg-sb">
+                                        칼슘 마그네슘 아연, 120정
+                                    </p>
+                                    <p class="text-b-sm-m">2025-07-11 구매</p>
+                                    <div class="info">
+                                        <i class="ico-recomm"></i>
+                                        <span class="text-c-lg-m">
+                                            1회 투약량 :
+                                            <em class="hc1">1</em>
+                                        </span>
+                                        <span class="bar"></span>
+                                        <span class="text-c-lg-m">
+                                            1일 투여횟수 :
+                                            <em class="hc1">3</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-presc">
+                                    <p class="text-b-lg-sb">
+                                        칼슘 마그네슘 아연, 120정
+                                    </p>
+                                    <p class="text-b-sm-m">2025-07-11 구매</p>
+                                    <div class="info">
+                                        <i class="ico-recomm"></i>
+                                        <span class="text-c-lg-m">
+                                            1회 투약량 :
+                                            <em class="hc1">1</em>
+                                        </span>
+                                        <span class="bar"></span>
+                                        <span class="text-c-lg-m">
+                                            1일 투여횟수 :
+                                            <em class="hc1">3</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 최근 구매한 영양제가 없습니다 -->
+                    <div class="title-type">
+                        <h3 class="text-h6">
+                            구매 영양제
+                            <span class="text-b-sm-m">최근 3개월</span>
+                        </h3>
+                    </div>
+                    <div class="text-type bdr-line">
+                        <div class="nodata-txts">최근 구매한 내역이 없습니다</div>
+                    </div>
+                    <!-- 최근 구매한 영양제가 없습니다 -->
+                    <div class="title-type">
+                        <h3 class="text-h6">
+                            처방 받은약
+                            <span class="text-b-sm-m">최근 3개월</span>
+                        </h3>
+                    </div>
+                    <div class="text-type">
+                    <div class="nodata-txts">
+                        최근 처방받은 내역이 없습니다
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

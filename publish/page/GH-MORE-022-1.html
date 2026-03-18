@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>복약관리</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <!-- top-header-nav trans 에서 trans 삭제 gray 추가 -->
+                <div class="top-header-nav gray">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>복약</h2>
+                </div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="weekly-calendar-top">
+                    <!-- Calendar -->
+                    <div class="weekly-container">
+                        <div class="weekly-header">
+                            <button type="button" class="nav-btn">
+                                <i class="ico-prev"></i>
+                                <span class="sr-only">이전</span>
+                            </button>
+                            <div class="weekly-title">02.16 ~ 02.22</div>
+                            <button type="button" class="nav-btn dim">
+                                <i class="ico-next"></i>
+                                <span class="sr-only">다음</span>
+                            </button>
+                        </div>
+                        <div class="weekly-grid">
+                            <div class="weekly-day-col sun">
+                                <div class="weekly-day-name">일</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">월</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">13</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">화</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">14</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">수</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">15</span>
+                                        <span class="weekly-date-tx">어제</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col selected">
+                                <div class="weekly-day-name">목</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">16</span>
+                                        <span class="weekly-date-tx">오늘</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col today">
+                                <div class="weekly-day-name">금</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">17</span>
+                                        <span class="weekly-date-tx">내일</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weekly-day-col">
+                                <div class="weekly-day-name">토</div>
+                                <div class="weekly-chart-area">
+                                    <div class="weekly-donut-wrap">
+                                        <span class="weekly-date-num">18</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gh-more-wrap">
+                    <div class="pill-history-wrap">
+                        <div class="pill-history">
+                            <div class="pill-history-top">
+                                <h4 class="pill-history-time">오전 7:00</h4>
+                            </div>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-empty"></i>
+                                        <span class="tx tc0">???</span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-md-sb">
+                                                메디오스정600밀리그램
+                                                (디오스민)dfadrafr d
+                                                메디오스정600밀리그램 (디오스민)
+                                                메디오스정600밀리그램
+                                                (디오스민)메디오스정600밀리그램
+                                                (디오스민)
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <button
+                                                type="button"
+                                                class="btn-fill btn-md primary-soft"
+                                            >
+                                                <span>복용 관리</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history">
+                            <div class="pill-history-top">
+                                <h4 class="pill-history-time">오전 7:00</h4>
+                                <button
+                                    type="button"
+                                    class="btn-chker"
+                                    onclick="openModal(event)"
+                                    modal-id="modalPillAll"
+                                >
+                                    <i class="ico-chker"></i>
+                                    <span>전부 복용 완료하기</span>
+                                </button>
+                            </div>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-taken"></i>
+                                        <span class="tx tc1">먹었어요</span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-md-sb">
+                                                바실리포미스캡슐
+                                                <br />
+                                                (바실루스리케니포르미스균)
+                                            </div>
+                                            <div class="text-c-lg-m">
+                                                <i class="ico-sh-clock"></i>
+                                                <span>복용한 시간 : 08:11</span>
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-ignored"></i>
+                                        <span class="tx tc2">
+                                            다음에 먹을게요
+                                        </span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-md-sb">
+                                                바실리포미스캡슐
+                                                <br />
+                                                (바실루스리케니포르미스균)
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pill-history is-last">
+                            <!--child 속성제거, is-last추가-->
+                            <div class="pill-history-top">
+                                <h4 class="pill-history-time">오전 7:00</h4>
+                                <button
+                                    type="button"
+                                    class="btn-chker"
+                                    onclick="openModal(event)"
+                                    modal-id="modalPillAll"
+                                >
+                                    <i class="ico-chker"></i>
+                                    <span>전부 복용 완료하기</span>
+                                </button>
+                            </div>
+                            <div class="pill-history-cont">
+                                <div class="pill-history-item">
+                                    <div class="pill-icon">
+                                        <i class="pill-prohibited"></i>
+                                        <span class="tx tc0">안 먹는 날</span>
+                                    </div>
+                                    <div class="pill-conts">
+                                        <div class="info">
+                                            <div class="info-tags">
+                                                <span class="tag-a">복약</span>
+                                            </div>
+                                            <div class="text-b-md-sb">
+                                                인진오령산가인삼액(1)
+                                            </div>
+                                        </div>
+                                        <div class="ctrl">
+                                            <i class="ico-arr"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-button-fixed">
+                        <button type="button" class="btn-fill btn-primary">
+                            <strong>먹는 약 추가하기</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 모달 : 전부복용완료-->
+        <div class="modal-overlay modal-center" id="modalPillAll">
+            <div class="modal-content">
+                <div class="modal-header flex-center">
+                    <h2 class="modal-title">오후 7:00 약을 전부 드셨나요?</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-center">
+                        <p class="text-b-md-r hc3">
+                            선택한 시간의 모든 약이 복용 완료 처리 됩니다
+                        </p>
+                    </div>
+                    <div class="modal-center-btn">
+                        <button
+                            type="button"
+                            class="btn hc3"
+                            onclick="closeModal('modalPillAll')"
+                        >
+                            취소
+                        </button>
+                        <button
+                            type="button"
+                            class="btn hc1"
+                            onclick="closeModal('modalPillAll')"
+                        >
+                            전부 먹었어요
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달 : 전부복용완료-->
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

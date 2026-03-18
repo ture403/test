@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>등급안내 - 내 보유잼 (데이터 없음)</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap my-level">
+            <header>
+                <div class="top-header-nav trans">
+                    <button type="button" class="btn-back">
+                        <i class="ico-back"></i>
+                        <span class="sr-only">이전</span>
+                    </button>
+                    <h2>내 보유잼</h2>
+                </div>
+            </header>
+            <div class="sub-wrap has-header trans no-button">
+                <div class="point-info-wrap inner">
+                    <div class="point-info">
+                        <span class="hc3">현재 보유 잼</span>
+                        <h2 class="text-h2">99,999</h2>
+                        <p class="noti">30일 내 소멸 예정 500젬</p>
+                    </div>
+                    <button
+                        type="button"
+                        class="btn-fill btn-primary"
+                        onclick="openModal(event)"
+                        modal-id="modalBottom"
+                    >
+                        적립금 교환하러 가기
+                    </button>
+                    <button type="button" class="btn-fill btn-disabled">
+                        적립금 교환하러 가기
+                    </button>
+                </div>
+                <div class="tab-wrap">
+                    <ul class="tab">
+                        <li class="active">
+                            <button type="button">전체</button>
+                        </li>
+                        <li><button type="button">보상</button></li>
+                        <li><button type="button">교환</button></li>
+                    </ul>
+                </div>
+                <div class="health-sect3 gem-history">
+                    <div class="health-data-wrap no-data">
+                        <span class="text-b-md-m">
+                            아직 사용한 내역이 없어요.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 적립금 교환 모달 -->
+        <div class="modal-overlay modal-bottom" id="modalBottom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">적립금으로 교환</h2>
+                    <button
+                        class="modal-close"
+                        onclick="closeModal('modalBottom')"
+                    >
+                        <i class="ico-x"></i>
+                        <span class="sr-only">닫기</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="gem-exchange">
+                        <div class="point-num-wrap">
+                            <div class="point-num-box">
+                                <div class="text-b-sm-m">현재 보유잼</div>
+                                <div class="point-detail">
+                                    <i class="ico-gem"></i>
+                                    +40,000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-cell">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    class="input"
+                                    placeholder="교환할 젬을 입력해주세요"
+                                />
+                                <span class="unit">젬</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-button-fixed">
+                        <button type="button" class="btn-fill btn-disabled">
+                            교환하기
+                        </button>
+                        <button
+                            type="button"
+                            class="btn-fill btn-primary"
+                            onclick="closeModal('modalBottom')"
+                        >
+                            교환하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <title>건강검진 가져오기 실패</title>
+        <link rel="stylesheet" href="../../assets/styles/style.css" />
+        <script type="module" src="../../utils/ui_common.js"></script>
+    </head>
+    <body>
+        <div class="common-wrap">
+            <header>
+                <div class="top-header-nav"></div>
+            </header>
+            <div class="sub-wrap has-header">
+                <div class="randing-wrap loading-data">
+                    <!-- 실패 이미지 공통-->
+                    <div class="loading-img-wrapper is-error"></div>
+
+                    <!-- 안내 텍스트 : 진료내역만 가져오기 실패  -->
+                    <div class="loading-text-wrap">
+                        <h5 class="text-h5">병의원 진료내역이 없어요</h5>
+                        <p class="loading-text">
+                            진료 내역이 없더라도, 건강검진 결과를 통해
+                            <br />
+                            제한적이지만 건강 위험 요소를 평가하고
+                            <br />
+                            일부 건강 상태를 추정할 수 있어요
+                        </p>
+                    </div>
+                    <div class="auth-loading-wrap">
+                        <div class="loading-item is-error">
+                            <div class="circle"></div>
+                            <div class="text">병의원 진료내역</div>
+                        </div>
+                        <div class="loading-item is-completed is-last">
+                            <div class="circle"></div>
+                            <div class="text">건강검진 결과</div>
+                        </div>
+                    </div>
+
+                    <!-- 안내 텍스트 : 건강검진결과만 가져오기 실패  -->
+                    <div class="loading-text-wrap">
+                        <h5 class="text-h5">건강검진 결과가 없어요</h5>
+                        <p class="loading-text">
+                            건강검진 결과가 없더라도, 진료 내역을 통해
+                            <br />
+                            제한적이지만 건강 위험 요소를 평가하고
+                            <br />
+                            일부 건강 상태를 추정할 수 있어요
+                        </p>
+                    </div>
+                    <div class="auth-loading-wrap">
+                        <div class="loading-item is-completed">
+                            <div class="circle"></div>
+                            <div class="text">병의원 진료내역</div>
+                        </div>
+                        <div class="loading-item is-error is-last">
+                            <div class="circle"></div>
+                            <div class="text">건강검진 결과</div>
+                        </div>
+                    </div>
+                    <!-- 안내 텍스트 : 스크래핑 정보 모두 없음  -->
+                    <div class="loading-text-wrap">
+                        <h5 class="text-h5">분석에 필요한 정보가 없어요</h5>
+                        <p class="loading-text">
+                            추후 건강 검진을 받거나, 병원에 방문한다면
+                            <br />
+                            맞춤형 건강 분석을 해보세요
+                        </p>
+                    </div>
+                    <div class="auth-loading-wrap">
+                        <div class="loading-item is-error">
+                            <div class="circle"></div>
+                            <div class="text">병의원 진료내역</div>
+                        </div>
+                        <div class="loading-item is-error is-last">
+                            <div class="circle"></div>
+                            <div class="text">건강검진 결과</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-button-fixed">
+                <button type="button" class="btn-fill btn-primary">
+                    <strong>AI 건강 분석 시작</strong>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function () {
+                var allElements = document.getElementsByTagName("*");
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open("GET", includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

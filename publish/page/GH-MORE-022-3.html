@@ -15,11 +15,13 @@
       html {
         margin: 0;
         padding: 0;
-        /* 중요: 바디 전체 스크롤을 막아 키보드 대응 시 화면 밀림 방지 */
         height: var(--vh);
         overflow: hidden;
-        position: fixed;
+        position: fixed; /* 고정 */
+        top: 0; /* 추가 */
+        left: 0; /* 추가 */
         width: 100%;
+        background-color: #fff; /* 배경색을 맞춰서 흰 줄처럼 보이는 현상 방지 */
       }
       /* --- 디버깅 패널 스타일 (이미지 레이아웃 재현) --- */
       #debug-info {
@@ -92,47 +94,52 @@
       </div>
     </div>
 
-    작성하신 스크립트에서 발생할 수 있는 잠재적인 오류(요소를 찾지 못할 경우의 예외 처리 등)를 방지하고, 성능을 위해 약간의 최적화를 더한
-    수정본입니다. 특히 scroll-area 요소가 동적으로 생성되거나 HTML에 없을 경우 에러가 나지 않도록 처리했습니다. JavaScript
+    111 작성하신 스크립트에서 발생할 수 있는 잠재적인 오류(요소를 찾지 못할 경우의 예외 처리 등)를 방지하고, 성능을 위해 약간의 최적화를
+    더한 수정본입니다. 특히 scroll-area 요소가 동적으로 생성되거나 HTML에 없을 경우 에러가 나지 않도록 처리했습니다. JavaScript
     <script>
-      // 1. 요소 선택 (null 체크를 위해 함수 밖에서 선언만 하거나 안에서 처리)
       const getEl = (id) => document.getElementById(id);
 
       function updateDebugInfo() {
-        // 수치 계산
         const winH = window.innerHeight;
         const vH = window.visualViewport ? window.visualViewport.height : winH;
-        const bH = document.body.scrollHeight;
-        const wScroll = window.scrollY || document.documentElement.scrollTop;
         const vOffset = window.visualViewport ? window.visualViewport.offsetTop : 0;
 
-        // 화면 업데이트 (요소가 존재할 때만 innerText 삽입)
-        if (getEl("win-h")) getEl("win-h").innerText = Math.round(winH);
-        if (getEl("v-h")) getEl("v-h").innerText = Math.round(vH);
-        if (getEl("b-h")) getEl("b-h").innerText = bH;
-        if (getEl("w-scroll")) getEl("w-scroll").innerText = Math.round(wScroll);
-        if (getEl("v-scroll")) getEl("v-scroll").innerText = Math.round(vOffset);
-
-        // CSS 변수 업데이트 (키보드 대응 핵심)
+        // 1. CSS 변수 업데이트
         document.documentElement.style.setProperty("--vh", `${vH}px`);
 
-        // 키보드가 올라올 때 브라우저 기본 스크롤이 발생하여 레이아웃이 밀리는 것 방지
+        // 2. 디버깅 수치 업데이트
+        if (getEl("win-h")) getEl("win-h").innerText = Math.round(winH);
+        if (getEl("v-h")) getEl("v-h").innerText = Math.round(vH);
+        if (getEl("v-scroll")) getEl("v-scroll").innerText = Math.round(vOffset);
+
+        // 3. 핵심: 키보드가 올라왔을 때(vOffset > 0) 화면이 위로 밀리는 것을 원천 차단
         if (vOffset > 0) {
           window.scrollTo(0, 0);
+          // body의 위치를 0으로 강제 고정
+          document.body.style.top = "0px";
         }
       }
 
-      // 2. 이벤트 바인딩
-      window.addEventListener("load", updateDebugInfo);
-      window.addEventListener("resize", updateDebugInfo);
-      window.addEventListener("scroll", updateDebugInfo);
+      // 브라우저의 기본 스크롤 동작을 완전히 막음 (common-wrap 밖으로 나가는 스크롤 방지)
+      window.addEventListener(
+        "scroll",
+        (e) => {
+          if (window.visualViewport && window.visualViewport.offsetTop > 0) {
+            window.scrollTo(0, 0);
+          }
+        },
+        { passive: false },
+      );
 
+      // 비주얼 뷰포트 이벤트 리스너
       if (window.visualViewport) {
         window.visualViewport.addEventListener("resize", updateDebugInfo);
         window.visualViewport.addEventListener("scroll", updateDebugInfo);
       }
 
-      // 3. 내부 영역 스크롤 시 업데이트 (요소 존재 여부 확인 후 바인딩)
+      window.addEventListener("load", updateDebugInfo);
+      window.addEventListener("resize", updateDebugInfo);
+
       const scrollArea = document.getElementById("scroll-area");
       if (scrollArea) {
         scrollArea.addEventListener("scroll", updateDebugInfo);

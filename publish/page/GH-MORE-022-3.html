@@ -104,7 +104,7 @@
         const vH = window.visualViewport ? window.visualViewport.height : winH;
         const vOffset = window.visualViewport ? window.visualViewport.offsetTop : 0;
 
-        // 1. CSS 변수 업데이트
+        // 1. 실제 보이는 영역만큼만 높이 설정
         document.documentElement.style.setProperty("--vh", `${vH}px`);
 
         // 2. 디버깅 수치 업데이트
@@ -112,26 +112,37 @@
         if (getEl("v-h")) getEl("v-h").innerText = Math.round(vH);
         if (getEl("v-scroll")) getEl("v-scroll").innerText = Math.round(vOffset);
 
-        // 3. 핵심: 키보드가 올라왔을 때(vOffset > 0) 화면이 위로 밀리는 것을 원천 차단
-        if (vOffset > 0) {
+        // 3. 키보드가 올라왔을 때 브라우저 뷰포트 강제 고정
+        if (vOffset !== 0) {
           window.scrollTo(0, 0);
-          // body의 위치를 0으로 강제 고정
-          document.body.style.top = "0px";
         }
       }
 
-      // 브라우저의 기본 스크롤 동작을 완전히 막음 (common-wrap 밖으로 나가는 스크롤 방지)
-      window.addEventListener(
-        "scroll",
+      // --- [핵심 추가] 브라우저 바운스 및 강제 스크롤 방지 ---
+
+      // 터치 이동 시 뷰포트가 위로 밀리는 현상 방지
+      document.addEventListener(
+        "touchmove",
         (e) => {
+          // 키보드가 올라온 상태(vOffset > 0)에서
+          // 실제 스크롤 영역(#scroll-area)이 아닌 곳을 터치하면 이벤트를 막음
           if (window.visualViewport && window.visualViewport.offsetTop > 0) {
-            window.scrollTo(0, 0);
+            if (!e.target.closest("#scroll-area")) {
+              e.preventDefault();
+            }
           }
         },
         { passive: false },
       );
 
-      // 비주얼 뷰포트 이벤트 리스너
+      // 스크롤 이벤트 발생 시 즉시 0으로 복구
+      window.addEventListener("scroll", () => {
+        if (window.visualViewport && window.visualViewport.offsetTop !== 0) {
+          window.scrollTo(0, 0);
+        }
+      });
+
+      // 비주얼 뷰포트 리스너
       if (window.visualViewport) {
         window.visualViewport.addEventListener("resize", updateDebugInfo);
         window.visualViewport.addEventListener("scroll", updateDebugInfo);

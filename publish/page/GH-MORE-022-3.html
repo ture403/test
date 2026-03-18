@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="../../assets/styles/style.css" />
 
     <style>
-      body {
-        min-height: auto;
+      :root {
+        /* 초기값 100vh, JS에서 실제 뷰포트 높이(px)로 업데이트 */
+        --vh: 100vh;
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        /* 중요: 바디 전체 스크롤을 막아 키보드 대응 시 화면 밀림 방지 */
+        height: var(--vh);
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
       }
       /* --- 디버깅 패널 스타일 (이미지 레이아웃 재현) --- */
       #debug-info {
@@ -29,6 +40,16 @@
         border: 0;
         border-top: 1px solid #777;
         margin: 5px 0;
+      }
+      .common-wrap {
+        display: flex;
+        flex-direction: column;
+        height: var(--vh);
+        width: 100%;
+        overflow: hidden;
+        position: fixed; /* 키보드 대응 시 레이아웃 고정에 유리 */
+        top: 0;
+        left: 0;
       }
     </style>
 
@@ -71,14 +92,11 @@
       </div>
     </div>
 
+    작성하신 스크립트에서 발생할 수 있는 잠재적인 오류(요소를 찾지 못할 경우의 예외 처리 등)를 방지하고, 성능을 위해 약간의 최적화를 더한
+    수정본입니다. 특히 scroll-area 요소가 동적으로 생성되거나 HTML에 없을 경우 에러가 나지 않도록 처리했습니다. JavaScript
     <script>
-      const debugEls = {
-        wScroll: document.getElementById("w-scroll"),
-        vScroll: document.getElementById("v-scroll"),
-        bodyH: document.getElementById("b-h"),
-        winH: document.getElementById("win-h"),
-        vH: document.getElementById("v-h"),
-      };
+      // 1. 요소 선택 (null 체크를 위해 함수 밖에서 선언만 하거나 안에서 처리)
+      const getEl = (id) => document.getElementById(id);
 
       function updateDebugInfo() {
         // 수치 계산
@@ -86,30 +104,39 @@
         const vH = window.visualViewport ? window.visualViewport.height : winH;
         const bH = document.body.scrollHeight;
         const wScroll = window.scrollY || document.documentElement.scrollTop;
-        const vScroll = window.visualViewport ? window.visualViewport.offsetTop : 0;
+        const vOffset = window.visualViewport ? window.visualViewport.offsetTop : 0;
 
-        // 화면 업데이트
-        debugEls.winH.innerText = Math.round(winH);
-        debugEls.vH.innerText = Math.round(vH);
-        debugEls.bodyH.innerText = bH;
-        debugEls.wScroll.innerText = Math.round(wScroll);
-        debugEls.vScroll.innerText = Math.round(vScroll);
+        // 화면 업데이트 (요소가 존재할 때만 innerText 삽입)
+        if (getEl("win-h")) getEl("win-h").innerText = Math.round(winH);
+        if (getEl("v-h")) getEl("v-h").innerText = Math.round(vH);
+        if (getEl("b-h")) getEl("b-h").innerText = bH;
+        if (getEl("w-scroll")) getEl("w-scroll").innerText = Math.round(wScroll);
+        if (getEl("v-scroll")) getEl("v-scroll").innerText = Math.round(vOffset);
 
-        // CSS 변수 업데이트 (키보드 대응)
+        // CSS 변수 업데이트 (키보드 대응 핵심)
         document.documentElement.style.setProperty("--vh", `${vH}px`);
+
+        // 키보드가 올라올 때 브라우저 기본 스크롤이 발생하여 레이아웃이 밀리는 것 방지
+        if (vOffset > 0) {
+          window.scrollTo(0, 0);
+        }
       }
 
-      // 이벤트 바인딩
+      // 2. 이벤트 바인딩
       window.addEventListener("load", updateDebugInfo);
       window.addEventListener("resize", updateDebugInfo);
       window.addEventListener("scroll", updateDebugInfo);
+
       if (window.visualViewport) {
         window.visualViewport.addEventListener("resize", updateDebugInfo);
         window.visualViewport.addEventListener("scroll", updateDebugInfo);
       }
 
-      // 내부 영역 스크롤 시에도 수치 업데이트
-      document.getElementById("scroll-area").addEventListener("scroll", updateDebugInfo);
+      // 3. 내부 영역 스크롤 시 업데이트 (요소 존재 여부 확인 후 바인딩)
+      const scrollArea = document.getElementById("scroll-area");
+      if (scrollArea) {
+        scrollArea.addEventListener("scroll", updateDebugInfo);
+      }
     </script>
   </body>
 </html>
